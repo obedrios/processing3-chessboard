@@ -3,229 +3,234 @@ package com.orios.javachessboard;
 import com.orios.javachessboard.utils.ForsythEdwardsPos;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Objects;
 import processing.core.PApplet;
 
-/**
- *
- * @author obedrios
- */
-public class ChessBoard {
-    private PApplet pApplet;
-    private HashMap<String, SquareBoard> boardCoordinatesMap;
-    private SquareBoard[] chessBoard = new SquareBoard[64];
-    private BoardImagePieces boardImagePieces;
-    private String[] columns = {"A","B","C","D","E","F","G","H"};
-    private float squareSize = 60;
+/** A Processing-backed, editable representation of a chessboard. */
+public final class ChessBoard {
+
+    public static final int BOARD_SIZE = 8;
+    public static final int SQUARE_COUNT = BOARD_SIZE * BOARD_SIZE;
+
+    private static final String[] COLUMNS = {"A", "B", "C", "D", "E", "F", "G", "H"};
+
+    private final PApplet pApplet;
+    private final Map<String, SquareBoard> boardCoordinates = new HashMap<>();
+    private final SquareBoard[] squares = new SquareBoard[SQUARE_COUNT];
+    private final BoardImagePieces boardImagePieces;
+    private final float squareSize;
+
     private boolean whiteToMove = true;
     private boolean whiteCanShortCastle = true;
     private boolean whiteCanLongCastle = true;
     private boolean blackCanShortCastle = true;
     private boolean blackCanLongCastle = true;
-    private int currentMoveNumber = 0;
-    //
-    int xcount = 0;
-    int ycount = 8;
-    int scount = 0;
-    //float[] boardOffset = {60,60};
+    private boolean selectionEnabled = true;
+    private String enPassantTarget = "-";
+    private int halfmoveClock;
+    private int currentMoveNumber = 1;
 
-    public ChessBoard(){
-    }
-
-    public ChessBoard(PApplet pApplet, float squareSize){
-        this.pApplet = pApplet;
+    public ChessBoard(PApplet pApplet, float squareSize) {
+        this.pApplet = Objects.requireNonNull(pApplet, "pApplet must not be null");
+        if (!Float.isFinite(squareSize) || squareSize <= 0) {
+            throw new IllegalArgumentException("Square size must be a positive finite number");
+        }
         this.squareSize = squareSize;
-        this.boardCoordinatesMap = new HashMap<>();
-        init();
+        this.boardImagePieces = new BoardImagePieces(pApplet);
+        initializeSquares();
     }
 
-    private void init(){
-        boardImagePieces = new BoardImagePieces(pApplet);
-        boolean flag = true;
-        for(int i = 0; i < 64; i++){
-            chessBoard[i] = new SquareBoard(pApplet, boardImagePieces);
-            chessBoard[i].setSquareSize(squareSize);
-            chessBoard[i].setWhiteSquare(flag);
-            chessBoard[i].setEmpty(true);
-            chessBoard[i].setSquareIndex(i);
-            chessBoard[i].setCoordinate(columns[xcount]+pApplet.str(ycount));
-            boardCoordinatesMap.put(columns[xcount]+pApplet.str(ycount), chessBoard[i]);
-            //chessBoard[i].setVisibleCoordinates(false);
-            flag = !flag;
-            xcount++;
-            if(xcount > 7) {
-                flag = !flag;
-                xcount = 0;
-                ycount = ycount - 1;
+    private void initializeSquares() {
+        for (int row = 0; row < BOARD_SIZE; row++) {
+            for (int column = 0; column < BOARD_SIZE; column++) {
+                int index = row * BOARD_SIZE + column;
+                String coordinate = COLUMNS[column] + (BOARD_SIZE - row);
+                SquareBoard square = new SquareBoard(pApplet, boardImagePieces);
+                square.setSquareSize(squareSize);
+                square.setWhiteSquare((row + column) % 2 == 0);
+                square.setSquareIndex(index);
+                square.setCoordinate(coordinate);
+                squares[index] = square;
+                boardCoordinates.put(coordinate, square);
             }
         }
-        //
-        xcount = 0;
-        ycount = 0;
     }
 
-    public void setDefaultNewGamePosition(){
-        /*
-          //This is an initial concept using hardcoded positions, now we can use FEN Strings
-            for(int i=0; i<8; i++){
-                chessBoard[i].setEmpty(false);
-                chessBoard[i].setWhitePiece(false);
-                //
-                chessBoard[i+8].setBoardPiece(BoardImagePieces.PAWN);
-                chessBoard[i+8].setEmpty(false);
-                chessBoard[i+8].setWhitePiece(false);
-                //
-                chessBoard[i+48].setBoardPiece(BoardImagePieces.PAWN);
-                chessBoard[i+48].setEmpty(false);
-                chessBoard[i+48].setWhitePiece(true);
-                //
-                chessBoard[i+56].setEmpty(false);
-                chessBoard[i+56].setWhitePiece(true);
-            }
-            //
-            chessBoard[56].setBoardPiece(BoardImagePieces.ROOK);
-            chessBoard[63].setBoardPiece(BoardImagePieces.ROOK);
-            chessBoard[0].setBoardPiece(BoardImagePieces.ROOK);
-            chessBoard[7].setBoardPiece(BoardImagePieces.ROOK);
-            //
-            chessBoard[57].setBoardPiece(BoardImagePieces.KNIGHT);
-            chessBoard[62].setBoardPiece(BoardImagePieces.KNIGHT);
-            chessBoard[1].setBoardPiece(BoardImagePieces.KNIGHT);
-            chessBoard[6].setBoardPiece(BoardImagePieces.KNIGHT);
-            //
-            chessBoard[58].setBoardPiece(BoardImagePieces.BISHOP);
-            chessBoard[61].setBoardPiece(BoardImagePieces.BISHOP);
-            chessBoard[2].setBoardPiece(BoardImagePieces.BISHOP);
-            chessBoard[5].setBoardPiece(BoardImagePieces.BISHOP);
-            //
-            chessBoard[59].setBoardPiece(BoardImagePieces.QUEEN);
-            chessBoard[60].setBoardPiece(BoardImagePieces.KING);
-            chessBoard[3].setBoardPiece(BoardImagePieces.QUEEN);
-            chessBoard[4].setBoardPiece(BoardImagePieces.KING);
-        */
-        ForsythEdwardsPos fenProcessor = new ForsythEdwardsPos();
-        setPositionFromFENString(fenProcessor.getDefaultNewPosString());
+    public void setDefaultNewGamePosition() {
+        setPositionFromFENString(ForsythEdwardsPos.DEFAULT_POSITION);
     }
 
-    public void setVisibleCoordinates(boolean visibleCoordinates){
-        for(int i = 0; i < 64; i++)
-          chessBoard[i].setVisibleCoordinates(visibleCoordinates);
+    public void setVisibleCoordinates(boolean visibleCoordinates) {
+        for (SquareBoard square : squares) {
+            square.setVisibleCoordinates(visibleCoordinates);
+        }
     }
 
-    public BoardImagePieces getBoardImagePieces(){
+    public BoardImagePieces getBoardImagePieces() {
         return boardImagePieces;
     }
 
-    public SquareBoard[] getChessBoard(){
-        return chessBoard;
+    /**
+     * Returns a shallow copy so callers can edit squares but cannot reorder the
+     * board's internal storage.
+     */
+    public SquareBoard[] getChessBoard() {
+        return squares.clone();
     }
 
-    public SquareBoard getCoordinate(String coordinate){
-        return boardCoordinatesMap.get(coordinate);
-    }
-
-    public SquareBoard getCoordinate(int i, int j){
-        int index = 8*i + j; //using row-major addressing
-        return chessBoard[index];
-    }
-
-    public SquareBoard[] getBoardRow(int row){
-        SquareBoard[] boardRow = new SquareBoard[8];
-        for(int i = 0; i < 8; ++i){
-            boardRow[i] = getCoordinate(row, i);
+    public SquareBoard getCoordinate(String coordinate) {
+        String normalized = Objects.requireNonNull(coordinate, "coordinate must not be null")
+                .trim()
+                .toUpperCase(Locale.ROOT);
+        SquareBoard square = boardCoordinates.get(normalized);
+        if (square == null) {
+            throw new IllegalArgumentException("Invalid board coordinate: " + coordinate);
         }
-        //
+        return square;
+    }
+
+    public SquareBoard getCoordinate(int row, int column) {
+        if (row < 0 || row >= BOARD_SIZE || column < 0 || column >= BOARD_SIZE) {
+            throw new IndexOutOfBoundsException("Board row and column must be between 0 and 7");
+        }
+        return squares[row * BOARD_SIZE + column];
+    }
+
+    public SquareBoard[] getBoardRow(int row) {
+        if (row < 0 || row >= BOARD_SIZE) {
+            throw new IndexOutOfBoundsException("Board row must be between 0 and 7");
+        }
+        SquareBoard[] boardRow = new SquareBoard[BOARD_SIZE];
+        System.arraycopy(squares, row * BOARD_SIZE, boardRow, 0, BOARD_SIZE);
         return boardRow;
     }
 
-    public void setSelectedHightLightSquares(boolean selectedHightLightSquares){
-        for(int i=0; i<64; i++ )chessBoard[i].setSelectedWithHighLight(selectedHightLightSquares);
+    public void setSelectedHighlightSquares(boolean selectedHighlightSquares) {
+        for (SquareBoard square : squares) {
+            square.setSelectedWithHighLight(selectedHighlightSquares);
+        }
     }
 
-
-    public void setClearBoard(){
-        for(int i=0; i<64; i++) chessBoard[i].setEmpty(true);
+    /** @deprecated Use {@link #setSelectedHighlightSquares(boolean)}. */
+    @Deprecated(forRemoval = false)
+    public void setSelectedHightLightSquares(boolean selectedHighlightSquares) {
+        setSelectedHighlightSquares(selectedHighlightSquares);
     }
 
-    public void setPositionFromFENString(String fenPosition){
-        //TODO: Pending validate Fen position processing
-        ForsythEdwardsPos positionProcessor = new ForsythEdwardsPos(fenPosition);
-        List<String[]> boardPosition = positionProcessor.getDecodedPositionFromFen();
-        setClearBoard();
+    public void clearSelection() {
+        for (SquareBoard square : squares) {
+            square.clearSelection();
+        }
+    }
+
+    public boolean isSelectionEnabled() {
+        return selectionEnabled;
+    }
+
+    public void setSelectionEnabled(boolean selectionEnabled) {
+        this.selectionEnabled = selectionEnabled;
+        if (!selectionEnabled) {
+            clearSelection();
+        }
+    }
+
+    public void setClearBoard() {
+        for (SquareBoard square : squares) {
+            square.clearPiece();
+            square.clearSelection();
+        }
+        whiteCanShortCastle = false;
+        whiteCanLongCastle = false;
+        blackCanShortCastle = false;
+        blackCanLongCastle = false;
+        enPassantTarget = "-";
+        halfmoveClock = 0;
+        currentMoveNumber = 1;
+    }
+
+    public void setPositionFromFENString(String fenPosition) {
+        ForsythEdwardsPos parser = new ForsythEdwardsPos(fenPosition);
+        List<String[]> boardPosition = parser.getDecodedPositionFromFen();
+
         int squareIndex = 0;
-        //
-        for(String[] decodedRow : boardPosition){
-            for(String code : decodedRow){
-                chessBoard[squareIndex].setBoardPiece(code);
-                squareIndex++;
+        for (String[] decodedRow : boardPosition) {
+            for (String code : decodedRow) {
+                squares[squareIndex++].setBoardPiece(code);
             }
         }
-        //
-        setWhiteToMove(positionProcessor.isWhiteToMove());
-        setWhiteCanShortCastle(positionProcessor.isWhiteCanShortCastle());
-        setWhiteCanLongCastle(positionProcessor.isWhiteCanLongCastle());
-        setBlackCanShortCastle(positionProcessor.isBlackCanShortCastle());
-        setBlackCanLongCastle(positionProcessor.isBlackCanLongCastle());
-        setCurrentMoveNumber(positionProcessor.getCurrentMoveNumber());
+        clearSelection();
+
+        whiteToMove = parser.isWhiteToMove();
+        whiteCanShortCastle = parser.isWhiteCanShortCastle();
+        whiteCanLongCastle = parser.isWhiteCanLongCastle();
+        blackCanShortCastle = parser.isBlackCanShortCastle();
+        blackCanLongCastle = parser.isBlackCanLongCastle();
+        enPassantTarget = parser.getEnPassant();
+        halfmoveClock = parser.getHalfmoveClock();
+        currentMoveNumber = parser.getCurrentMoveNumber();
     }
 
-    public String getFENStringFromCurrentPosition(){
-        //TODO: PENDING
-        //String fenPosition = "r2q1rk1/pp2ppbp/2p2np1/6B1/3PP1b1/Q1P2N2/P4PPP/3RKB1R b K - 0 13";
-        StringBuilder fenPosition = new StringBuilder();
-        SquareBoard[] currentRow;
-        String strCurrentCode = "";
-        String strRow = "";
-        int emptyCount = 0;
-        //Iterate over the rows of boards
-        for(int row = 0; row < 8; row++){
-            currentRow = getBoardRow(row);
-            for(SquareBoard square : currentRow){
-                strCurrentCode = square.getPieceCode();
-                if(strCurrentCode.equals("-")){
-                    emptyCount++;
-                } else {
-                    strRow += emptyCount+strCurrentCode;
-                    emptyCount = 0;
-                }
+    public String getFENStringFromCurrentPosition() {
+        StringBuilder fen = new StringBuilder();
+        for (int row = 0; row < BOARD_SIZE; row++) {
+            if (row > 0) {
+                fen.append('/');
             }
-            // Avoid last "/" character
-            if(row == 7) strRow = strRow+emptyCount;
-            else strRow = strRow+emptyCount+"/";
-            emptyCount = 0;
-            fenPosition.append(strRow.replace("0",""));
-            strRow = "";
+            appendFenRow(fen, getBoardRow(row));
         }
-        // Complete FEN string
-        String whiteToMove = "b";
-        String canCastle = "-";
-        if(isWhiteToMove()) whiteToMove = "w";
-        fenPosition.append(" " + whiteToMove);
-        if(!getBlackCanCastleFENCode().isEmpty() || !getWhiteCanCastleFENCode().isEmpty()) {
-            canCastle = getWhiteCanCastleFENCode()+getBlackCanCastleFENCode();
+
+        String castling = getWhiteCanCastleFENCode() + getBlackCanCastleFENCode();
+        fen.append(whiteToMove ? " w " : " b ")
+                .append(castling.isEmpty() ? "-" : castling)
+                .append(' ')
+                .append(enPassantTarget)
+                .append(' ')
+                .append(halfmoveClock)
+                .append(' ')
+                .append(currentMoveNumber);
+        return fen.toString();
+    }
+
+    private static void appendFenRow(StringBuilder fen, SquareBoard[] row) {
+        int emptySquares = 0;
+        for (SquareBoard square : row) {
+            if (square.isSquareEmpty()) {
+                emptySquares++;
+                continue;
+            }
+            if (emptySquares > 0) {
+                fen.append(emptySquares);
+                emptySquares = 0;
+            }
+            fen.append(square.getPieceCode());
         }
-        fenPosition.append(" "+canCastle);
-        fenPosition.append(" - "); //TODO: enpassant code pending
-        fenPosition.append("0");
-        fenPosition.append(" " + getCurrentMoveNumber());
-        return fenPosition.toString() ;
+        if (emptySquares > 0) {
+            fen.append(emptySquares);
+        }
     }
 
-    public void move(String from, String to){
-        SquareBoard squareFrom = getCoordinate(from);
-        getCoordinate(to).setBoardPiece(squareFrom.getPieceCode());
-        squareFrom.setEmpty(true);
+    public void move(String from, String to) {
+        SquareBoard source = getCoordinate(from);
+        if (source.isSquareEmpty()) {
+            throw new IllegalArgumentException("Cannot move from an empty square: " + from);
+        }
+        SquareBoard destination = getCoordinate(to);
+        destination.setBoardPiece(source.getPieceCode());
+        source.clearPiece();
+        clearSelection();
     }
 
-
-    public float getSquareSize(){
-        return this.squareSize;
+    public float getSquareSize() {
+        return squareSize;
     }
 
-    public boolean isWhiteToMove(){
+    public boolean isWhiteToMove() {
         return whiteToMove;
     }
 
-    public void setWhiteToMove(boolean whiteToMove){
+    public void setWhiteToMove(boolean whiteToMove) {
         this.whiteToMove = whiteToMove;
     }
 
@@ -261,90 +266,93 @@ public class ChessBoard {
         this.blackCanLongCastle = blackCanLongCastle;
     }
 
+    public String getEnPassantTarget() {
+        return enPassantTarget;
+    }
+
+    public int getHalfmoveClock() {
+        return halfmoveClock;
+    }
+
     public int getCurrentMoveNumber() {
         return currentMoveNumber;
     }
 
     public void setCurrentMoveNumber(int currentMoveNumber) {
+        if (currentMoveNumber < 1) {
+            throw new IllegalArgumentException("Fullmove number must be at least 1");
+        }
         this.currentMoveNumber = currentMoveNumber;
     }
 
-    public String getWhiteCanCastleFENCode(){
-        String code = "";
-        if(whiteCanShortCastle){
-            code += "K";
-        }
-        //
-        if(whiteCanLongCastle){
-            code += "Q";
-        }
-        return code;
+    public String getWhiteCanCastleFENCode() {
+        return (whiteCanShortCastle ? "K" : "") + (whiteCanLongCastle ? "Q" : "");
     }
 
-    public String getBlackCanCastleFENCode(){
-        String code = "";
-        if(blackCanShortCastle){
-            code += "k";
-        }
-        //
-        if(blackCanLongCastle){
-            code += "q";
-        }
-        return code;
+    public String getBlackCanCastleFENCode() {
+        return (blackCanShortCastle ? "k" : "") + (blackCanLongCastle ? "q" : "");
     }
 
-    public void draw(float xpos, float ypos, boolean boardCoordinates){
-        // Board Frame drawing
-        float bframe_backsize = squareSize*8;
-        float bframe_c2 = bframe_backsize*0.05f + bframe_backsize;
-        float bframe_c1 = bframe_backsize*0.025f;
+    public void handleMousePressed(float boardX, float boardY) {
+        if (!selectionEnabled || pApplet.mouseButton != PApplet.LEFT) {
+            return;
+        }
+        float relativeX = pApplet.mouseX - boardX;
+        float relativeY = pApplet.mouseY - boardY;
+        float boardPixels = squareSize * BOARD_SIZE;
+        if (relativeX >= 0 && relativeX < boardPixels && relativeY >= 0 && relativeY < boardPixels) {
+            int column = (int) (relativeX / squareSize);
+            int row = (int) (relativeY / squareSize);
+            getCoordinate(row, column).toggleSelected();
+        }
+    }
+
+    public void draw(float x, float y, boolean boardCoordinates) {
+        float boardPixels = squareSize * BOARD_SIZE;
+        float framePadding = boardPixels * 0.025f;
+
+        pApplet.pushStyle();
         pApplet.fill(0);
-        pApplet.rect(xpos-bframe_c1, ypos-bframe_c1, bframe_c2, bframe_c2);
-        // Plot Coordinates selection
-        if(boardCoordinates) {
-            for (int i = 0; i < 8; i++) {
+        pApplet.rect(x - framePadding, y - framePadding,
+                boardPixels + framePadding * 2, boardPixels + framePadding * 2);
+
+        if (boardCoordinates) {
+            for (int index = 0; index < BOARD_SIZE; index++) {
                 pApplet.fill(0);
-                pApplet.text(columns[i], i * squareSize + xpos + squareSize / 2.0f,
-                          ypos - bframe_backsize * 0.05f);
-                pApplet.text(pApplet.str(8 - i), xpos - bframe_backsize * 0.08f,
-                          i * squareSize + ypos + squareSize / 2);
+                pApplet.text(COLUMNS[index], index * squareSize + x + squareSize / 2.0f,
+                        y - framePadding * 1.5f);
+                pApplet.text(Integer.toString(BOARD_SIZE - index), x - framePadding * 2.5f,
+                        index * squareSize + y + squareSize / 2.0f);
             }
         }
-        // Visualize when black or white plays
-        if(isWhiteToMove()) pApplet.fill(255);
-        else pApplet.fill(0);
-        pApplet.ellipse(xpos - bframe_backsize*0.05f, ypos - bframe_backsize*0.05f,
-                        squareSize/4,squareSize/4);
-        // Draw square boards
-        for(int i = 0; i < 64; i++) {
-            if (xcount > 7) {
-                xcount = 0;
-                ycount++;
-                if (ycount > 7) ycount = 0;
+
+        pApplet.fill(whiteToMove ? 255 : 0);
+        pApplet.ellipse(x - framePadding * 2, y - framePadding * 2,
+                squareSize / 4.0f, squareSize / 4.0f);
+
+        for (int row = 0; row < BOARD_SIZE; row++) {
+            for (int column = 0; column < BOARD_SIZE; column++) {
+                getCoordinate(row, column).draw(
+                        column * squareSize + x,
+                        row * squareSize + y);
             }
-            if (scount > 64) scount = 0;
-            chessBoard[scount].draw(xcount * squareSize + xpos, ycount * squareSize + ypos);
-            //System.out.println(chessBoard[scount].getCoordinate());
-            xcount++;
-            scount++;
         }
-        //
-        xcount = 0; ycount = 0; scount = 0;
+        pApplet.popStyle();
     }
 
     @Override
-    public String toString(){
-        StringBuilder strChessBoard = new StringBuilder();
-        SquareBoard[] boardRow = new SquareBoard[8];
-        for(int row = 0; row < 8; row++){
-            boardRow = getBoardRow(row);
-            strChessBoard.append("[ ");
-            for(SquareBoard currentSquare : boardRow) {
-                strChessBoard.append(currentSquare.getPieceCode() + ", ");
+    public String toString() {
+        StringBuilder board = new StringBuilder();
+        for (int row = 0; row < BOARD_SIZE; row++) {
+            board.append("[ ");
+            for (int column = 0; column < BOARD_SIZE; column++) {
+                if (column > 0) {
+                    board.append(", ");
+                }
+                board.append(getCoordinate(row, column).getPieceCode());
             }
-            strChessBoard.append("]\n");
+            board.append(" ]").append(System.lineSeparator());
         }
-        return strChessBoard.toString();
+        return board.toString();
     }
 }
-

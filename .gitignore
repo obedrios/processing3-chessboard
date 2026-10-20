@@ -9,6 +9,8 @@ target/
 .project
 .settings/
 .vscode/
+.metals/
+.bloop/
 
 # Operating-system files
 .DS_Store

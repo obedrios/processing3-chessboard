@@ -3,12 +3,18 @@ package com.orios.demos;
 import com.orios.javachessboard.BoardImagePieces;
 import com.orios.javachessboard.ChessBoard;
 import com.orios.javachessboard.SquareBoard;
+import com.orios.javachessboard.utils.ForsythEdwardsPos;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.nio.file.Path;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -32,10 +38,11 @@ import processing.core.PSurface;
  */
 public class ChessBoardDemoFrame  extends JFrame {
 
-    private String sketchPath = "F:\\Shared\\Projects\\IdeaProjects\\orios.edu.processing3.default";
+    private final String sketchPath = Path.of("").toAbsolutePath().normalize().toString();
     private ChessBoardDemoSketch chessBoardSketch;
     private PSurface ps;
     private PSurfaceAWT.SmoothCanvas smoothCanvas;
+    private BoardImagePieces pieceImages;
 
     private JTextField textFieldStrFen;
     private JButton buttonSetFenPos;
@@ -79,10 +86,17 @@ public class ChessBoardDemoFrame  extends JFrame {
         chessBoardSketch = new ChessBoardDemoSketch();
         chessBoardSketch.sketchPath(sketchPath);
         ps = chessBoardSketch.getInitSurface();
-        ps.setSize(600,600);
+        ps.setSize(ChessBoardDemoSketch.CANVAS_SIZE, ChessBoardDemoSketch.CANVAS_SIZE);
 
         //Get the SmoothCanvas that holds the PSurface
         smoothCanvas = (PSurfaceAWT.SmoothCanvas)ps.getNative();
+        Frame processingFrame = smoothCanvas.getFrame();
+        processingFrame.remove(smoothCanvas);
+        processingFrame.dispose();
+        smoothCanvas.setPreferredSize(new Dimension(
+                ChessBoardDemoSketch.CANVAS_SIZE,
+                ChessBoardDemoSketch.CANVAS_SIZE));
+        pieceImages = new BoardImagePieces(chessBoardSketch);
 
         // Configure frame
         JPanel contentPanel = new JPanel();
@@ -154,6 +168,9 @@ public class ChessBoardDemoFrame  extends JFrame {
         outputPanel.setLayout(new BorderLayout());
         outputPanel.setBorder(BorderFactory.createTitledBorder("Board Messages"));
         textAreaOutput = new JTextArea();
+        textAreaOutput.setEditable(false);
+        textAreaOutput.setLineWrap(true);
+        textAreaOutput.setWrapStyleWord(true);
         outputPanel.add(new JScrollPane(textAreaOutput),BorderLayout.CENTER);
 
         optionsPanel.add(castlePanel);
@@ -163,15 +180,18 @@ public class ChessBoardDemoFrame  extends JFrame {
 
         boardPanel.add(optionsPanel, BorderLayout.EAST);
 
-        //Let's the Magick begins
-        setTitle("ChessBoard Demo #1");
-        setSize(800,720);
-        setVisible(true);
+        setTitle("Processing 3 Chessboard");
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosed(WindowEvent event) {
+                ps.stopThread();
+            }
+        });
         ps.startThread();
     }
 
     private void initWidgets(){
-        textFieldStrFen = new JTextField("r2q1rk1/pp2ppbp/2p2np1/6B1/3PP1b1/Q1P2N2/P4PPP/3RKB1R b K - 0 13");
+        textFieldStrFen = new JTextField(ForsythEdwardsPos.DEFAULT_POSITION);
         buttonSetFenPos = new JButton("Set Position");
         buttonGetFenStr = new JButton("Get FEN Position");
         buttonClearBoard = new JButton("Clear Board");
@@ -207,6 +227,7 @@ public class ChessBoardDemoFrame  extends JFrame {
         checkBoxWhiteLongCastle.setSelected(true);
         checkBoxBlackShortCastle.setSelected(true);
         checkBoxBlackLongCastle.setSelected(true);
+        checkBoxEnableBoardSelection.setSelected(true);
         setColorPieceSelection(true);
 
         checkBoxWhiteToMove.addActionListener(new ActionListener() {
@@ -269,15 +290,29 @@ public class ChessBoardDemoFrame  extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 boolean flag = checkBoxHighlightCoords.isSelected();
-                chessBoardSketch.getChessBoard().setSelectedHightLightSquares(flag);
+                chessBoardSketch.getChessBoard().setSelectedHighlightSquares(flag);
             }
         });
+
+        checkBoxEnableBoardSelection.addActionListener(event ->
+                chessBoardSketch.getChessBoard().setSelectionEnabled(
+                        checkBoxEnableBoardSelection.isSelected()));
 
         //
         buttonSetFenPos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chessBoardSketch.getChessBoard().setPositionFromFENString(textFieldStrFen.getText());
+                try {
+                    chessBoardSketch.getChessBoard().setPositionFromFENString(textFieldStrFen.getText());
+                    syncBoardStateToControls();
+                    showMessage("Position loaded successfully.");
+                } catch (IllegalArgumentException exception) {
+                    JOptionPane.showMessageDialog(
+                            ChessBoardDemoFrame.this,
+                            exception.getMessage(),
+                            "Invalid FEN position",
+                            JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
 
@@ -293,20 +328,26 @@ public class ChessBoardDemoFrame  extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 chessBoardSketch.getChessBoard().setClearBoard();
+                syncBoardStateToControls();
             }
         });
+
+        buttonClearSquareSel.addActionListener(event ->
+                chessBoardSketch.getChessBoard().clearSelection());
 
         buttonSetDefaultPos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 chessBoardSketch.getChessBoard().setDefaultNewGamePosition();
+                syncBoardStateToControls();
+                textFieldStrFen.setText(chessBoardSketch.getChessBoard().getFENStringFromCurrentPosition());
             }
         });
 
         buttonGetTextBoard.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textAreaOutput.append(chessBoardSketch.getChessBoard().toString());
+                showMessage(chessBoardSketch.getChessBoard().toString());
             }
         });
 
@@ -376,8 +417,7 @@ public class ChessBoardDemoFrame  extends JFrame {
     }
 
     private Image getPieceImage(int pcode, int w, int h, boolean isWhite){
-        BoardImagePieces boardImagePieces = new BoardImagePieces(chessBoardSketch);
-        PImage img = boardImagePieces.getImagePiece(pcode, isWhite);
+        PImage img = pieceImages.getImagePiece(pcode, isWhite);
         img.resize(w, h);
         return img.getImage();
     }
@@ -389,5 +429,22 @@ public class ChessBoardDemoFrame  extends JFrame {
         buttonKnightPiece.setIcon(new ImageIcon(getPieceImage(BoardImagePieces.KNIGHT, 30, 30,isWhite)));
         buttonBishopPiece.setIcon(new ImageIcon(getPieceImage(BoardImagePieces.BISHOP, 30, 30, isWhite)));
         buttonPawnPiece.setIcon(new ImageIcon(getPieceImage(BoardImagePieces.PAWN, 30, 30, isWhite)));
+    }
+
+    private void syncBoardStateToControls() {
+        ChessBoard board = chessBoardSketch.getChessBoard();
+        checkBoxWhiteToMove.setSelected(board.isWhiteToMove());
+        checkBoxWhiteShortCastle.setSelected(board.isWhiteCanShortCastle());
+        checkBoxWhiteLongCastle.setSelected(board.isWhiteCanLongCastle());
+        checkBoxBlackShortCastle.setSelected(board.isBlackCanShortCastle());
+        checkBoxBlackLongCastle.setSelected(board.isBlackCanLongCastle());
+    }
+
+    private void showMessage(String message) {
+        if (!textAreaOutput.getText().isEmpty()) {
+            textAreaOutput.append(System.lineSeparator());
+        }
+        textAreaOutput.append(message);
+        textAreaOutput.setCaretPosition(textAreaOutput.getDocument().getLength());
     }
 }
