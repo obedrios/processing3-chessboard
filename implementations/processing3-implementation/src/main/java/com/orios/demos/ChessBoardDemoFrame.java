@@ -4,8 +4,15 @@ import com.orios.javachessboard.BoardImagePieces;
 import com.orios.javachessboard.ChessBoard;
 import com.orios.javachessboard.SquareBoard;
 import com.orios.javachessboard.utils.ForsythEdwardsPos;
+import com.orios.pgn.GamePlaybackController;
+import com.orios.pgn.PgnGame;
+import com.orios.pgn.PgnGameReader;
+import com.orios.pgn.ui.PgnGameSelectionDialog;
+import com.orios.pgn.ui.PgnPlaybackPanel;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.GridLayout;
@@ -16,6 +23,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.swing.BorderFactory;
@@ -23,13 +31,21 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
+import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
+import javax.swing.SwingWorker;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 import processing.awt.PSurfaceAWT;
 import processing.core.PImage;
@@ -76,6 +92,19 @@ public class ChessBoardDemoFrame  extends JFrame {
     private JCheckBox checkBoxHighlightCoords;
     private JCheckBox checkBoxEnableBoardSelection;
     private JButton buttonAbout;
+
+    private final GamePlaybackController playbackController = new GamePlaybackController();
+    private final PgnGameReader pgnReader = new PgnGameReader();
+    private PgnPlaybackPanel playbackPanel;
+    private JPanel editorPanel;
+    private JTabbedPane sideTabs;
+    private JButton buttonPlaybackStart;
+    private JButton buttonPlaybackPrevious;
+    private JButton buttonPlaybackNext;
+    private JButton buttonPlaybackEnd;
+    private JMenuItem menuClosePgn;
+    private String prePlaybackFen;
+    private boolean prePlaybackSelectionEnabled;
 
     public ChessBoardDemoFrame(){
         initWidgets();
@@ -130,8 +159,16 @@ public class ChessBoardDemoFrame  extends JFrame {
         boardActionsPanel.add(buttonSetDefaultPos);
         boardActionsPanel.add(buttonGetTextBoard);
         boardActionsPanel.add(buttonAbout);
-        boardPanel.add(boardActionsPanel, BorderLayout.SOUTH);
-        contentPanel.add(boardPanel, BorderLayout.CENTER);
+        JPanel southPanel = new JPanel(new GridLayout(2, 1));
+        southPanel.add(boardActionsPanel);
+        JPanel transportPanel = new JPanel();
+        transportPanel.setBorder(BorderFactory.createTitledBorder("Game navigation"));
+        transportPanel.add(buttonPlaybackStart);
+        transportPanel.add(buttonPlaybackPrevious);
+        transportPanel.add(buttonPlaybackNext);
+        transportPanel.add(buttonPlaybackEnd);
+        southPanel.add(transportPanel);
+        boardPanel.add(southPanel, BorderLayout.SOUTH);
         //
         JPanel optionsPanel = new JPanel();
         optionsPanel.setBorder(BorderFactory.createTitledBorder("Board Options"));
@@ -181,7 +218,19 @@ public class ChessBoardDemoFrame  extends JFrame {
         optionsPanel.add(miscPanel);
         optionsPanel.add(outputPanel);
 
-        boardPanel.add(optionsPanel, BorderLayout.EAST);
+        editorPanel = optionsPanel;
+        playbackPanel = new PgnPlaybackPanel(playbackController);
+        sideTabs = new JTabbedPane();
+        sideTabs.addTab("Editor", editorPanel);
+        sideTabs.addTab("Notation", playbackPanel.notationPanel());
+        sideTabs.addTab("Scoresheet", playbackPanel.scoresheetPanel());
+        sideTabs.setPreferredSize(new Dimension(430, ChessBoardDemoSketch.CANVAS_SIZE));
+
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, boardPanel, sideTabs);
+        splitPane.setResizeWeight(0.67);
+        splitPane.setContinuousLayout(true);
+        contentPanel.add(splitPane, BorderLayout.CENTER);
+        setJMenuBar(createMenuBar());
 
         setTitle("Processing 3 Chessboard");
         addWindowListener(new WindowAdapter() {
@@ -221,10 +270,30 @@ public class ChessBoardDemoFrame  extends JFrame {
         checkBoxHighlightCoords = new JCheckBox("Enable Highlight Squares");
         checkBoxEnableBoardSelection = new JCheckBox("Enable Board Selection");
         buttonAbout = new JButton("About");
+        buttonPlaybackStart = new JButton("|< Start");
+        buttonPlaybackPrevious = new JButton("< Previous");
+        buttonPlaybackNext = new JButton("Next >");
+        buttonPlaybackEnd = new JButton("End >|");
+        setTransportEnabled(false, false);
     }
 
     private void configWidgetActions(){
         chessBoardSketch.setSwapConfirmation(this::confirmPieceSwap);
+        playbackController.addListener(state -> SwingUtilities.invokeLater(() -> {
+            chessBoardSketch.getChessBoard().setPositionFromFENString(state.fen());
+            textFieldStrFen.setText(state.fen());
+            syncBoardStateToControls();
+            playbackPanel.update(state);
+            buttonPlaybackStart.setEnabled(!state.atStart());
+            buttonPlaybackPrevious.setEnabled(!state.atStart());
+            buttonPlaybackNext.setEnabled(!state.atEnd());
+            buttonPlaybackEnd.setEnabled(!state.atEnd());
+        }));
+
+        buttonPlaybackStart.addActionListener(event -> playbackController.goToStart());
+        buttonPlaybackPrevious.addActionListener(event -> playbackController.previous());
+        buttonPlaybackNext.addActionListener(event -> playbackController.next());
+        buttonPlaybackEnd.addActionListener(event -> playbackController.goToEnd());
 
         checkBoxWhitePiece.setSelected(true);
         checkBoxWhiteToMove.setSelected(true);
@@ -408,6 +477,105 @@ public class ChessBoardDemoFrame  extends JFrame {
             }
         });
 
+    }
+
+    private JMenuBar createMenuBar() {
+        JMenuBar menuBar = new JMenuBar();
+        JMenu fileMenu = new JMenu("File");
+        JMenuItem openPgn = new JMenuItem("Open PGN…");
+        menuClosePgn = new JMenuItem("Close game");
+        menuClosePgn.setEnabled(false);
+        openPgn.addActionListener(event -> choosePgnFile());
+        menuClosePgn.addActionListener(event -> closePlayback());
+        fileMenu.add(openPgn);
+        fileMenu.add(menuClosePgn);
+        menuBar.add(fileMenu);
+        return menuBar;
+    }
+
+    private void choosePgnFile() {
+        JFileChooser chooser = new JFileChooser();
+        chooser.setDialogTitle("Open PGN file");
+        chooser.setFileFilter(new FileNameExtensionFilter("Portable Game Notation (*.pgn)", "pgn"));
+        if (chooser.showOpenDialog(this) != JFileChooser.APPROVE_OPTION) return;
+
+        Path selectedPath = chooser.getSelectedFile().toPath();
+        setCursor(java.awt.Cursor.getPredefinedCursor(java.awt.Cursor.WAIT_CURSOR));
+        new SwingWorker<List<PgnGame>, Void>() {
+            @Override protected List<PgnGame> doInBackground() throws Exception {
+                return pgnReader.read(selectedPath);
+            }
+
+            @Override protected void done() {
+                setCursor(java.awt.Cursor.getDefaultCursor());
+                try {
+                    List<PgnGame> games = get();
+                    PgnGameSelectionDialog.choose(ChessBoardDemoFrame.this, games)
+                            .ifPresent(ChessBoardDemoFrame.this::startPlayback);
+                } catch (Exception exception) {
+                    Throwable cause = exception.getCause() == null ? exception : exception.getCause();
+                    JOptionPane.showMessageDialog(ChessBoardDemoFrame.this,
+                            cause.getMessage(), "Unable to open PGN", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        }.execute();
+    }
+
+    private void startPlayback(PgnGame game) {
+        if (!playbackController.hasGame()) {
+            ChessBoard board = chessBoardSketch.getChessBoard();
+            prePlaybackFen = board.getFENStringFromCurrentPosition();
+            prePlaybackSelectionEnabled = board.isSelectionEnabled();
+        }
+        setEditorModeEnabled(false);
+        chessBoardSketch.getChessBoard().setSelectionEnabled(false);
+        menuClosePgn.setEnabled(true);
+        sideTabs.setSelectedIndex(1);
+        playbackController.load(game);
+        showMessage("Loaded PGN: " + game.white() + " – " + game.black()
+                + " " + game.result());
+    }
+
+    private void closePlayback() {
+        if (!playbackController.hasGame()) return;
+        playbackController.clear();
+        playbackPanel.clear();
+        ChessBoard board = chessBoardSketch.getChessBoard();
+        board.setPositionFromFENString(prePlaybackFen);
+        board.setSelectionEnabled(prePlaybackSelectionEnabled);
+        textFieldStrFen.setText(prePlaybackFen);
+        syncBoardStateToControls();
+        setEditorModeEnabled(true);
+        menuClosePgn.setEnabled(false);
+        setTransportEnabled(false, false);
+        sideTabs.setSelectedIndex(0);
+        showMessage("PGN game closed; the previous editor position was restored.");
+    }
+
+    private void setTransportEnabled(boolean backward, boolean forward) {
+        if (buttonPlaybackStart == null) return;
+        buttonPlaybackStart.setEnabled(backward);
+        buttonPlaybackPrevious.setEnabled(backward);
+        buttonPlaybackNext.setEnabled(forward);
+        buttonPlaybackEnd.setEnabled(forward);
+    }
+
+    private void setEditorModeEnabled(boolean enabled) {
+        setEnabledRecursively(editorPanel, enabled);
+        textFieldStrFen.setEnabled(enabled);
+        buttonSetFenPos.setEnabled(enabled);
+        buttonClearBoard.setEnabled(enabled);
+        buttonClearSquareSel.setEnabled(enabled);
+        buttonSetDefaultPos.setEnabled(enabled);
+    }
+
+    private static void setEnabledRecursively(Component component, boolean enabled) {
+        component.setEnabled(enabled);
+        if (component instanceof Container container) {
+            for (Component child : container.getComponents()) {
+                setEnabledRecursively(child, enabled);
+            }
+        }
     }
 
     private void setPieceForSelectedSquares(String pieceCode){

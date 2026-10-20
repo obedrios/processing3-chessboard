@@ -19,6 +19,7 @@
         <maven.compiler.release>17</maven.compiler.release>
 
         <processing.version>3.3.7</processing.version>
+        <chesslib.version>1.3.7</chesslib.version>
         <junit.version>6.1.3</junit.version>
 
         <maven.clean.plugin.version>3.5.0</maven.clean.plugin.version>
@@ -40,12 +41,25 @@
         </dependency>
 
         <dependency>
+            <groupId>com.github.bhlangonijr</groupId>
+            <artifactId>chesslib</artifactId>
+            <version>${chesslib.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
