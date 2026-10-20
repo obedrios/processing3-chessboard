@@ -1,240 +1,238 @@
 package com.orios.javachessboard;
 
+import java.util.Arrays;
+import java.util.Objects;
 import processing.core.PApplet;
-/**
- *
- * @author obedrios
- */
-public class SquareBoard {
 
-    private PApplet pApplet;
-    private BoardImagePieces boardPieces;
+/** A drawable square and the chess piece currently occupying it. */
+public final class SquareBoard {
+
+    private static final int COLOR_COMPONENTS = 3;
+    private static final int[] DEFAULT_HIGHLIGHT_COLOR = {0, 255, 0};
+    private static final int[] DEFAULT_DARK_COLOR = {112, 133, 182};
+    private static final int[] DEFAULT_LIGHT_COLOR = {238, 238, 238};
+
+    private final PApplet pApplet;
+    private final BoardImagePieces boardPieces;
+
     private boolean squareEmpty = true;
     private boolean whiteSquare = true;
     private boolean whitePiece = true;
-    private boolean highLightedSquare = false;
-    private boolean visibleCoordinates = false;
+    private boolean highlightedSquare;
+    private boolean visibleCoordinates;
     private float squareSize = 110.0f;
-    private float ratio = 0.0f;
-    private float imgDefaultSize = 110.0f;
     private int boardPiece = BoardImagePieces.PAWN;
     private String coordinate = "";
-    private int squareIndex = 0;
-    private boolean selectedSquare = false;
-    private boolean selectedWithHighLight = false;
-    //
-    private int[] highLightSquareColor = {0,255,0};
-    private int[] darkSquaresColor     = {112,133,182};
-    private int[] lightSquaresColor    = {238,238,238};
+    private int squareIndex;
+    private boolean selectedSquare;
+    private boolean selectedWithHighlight;
+    private int[] highlightSquareColor = DEFAULT_HIGHLIGHT_COLOR.clone();
+    private int[] darkSquaresColor = DEFAULT_DARK_COLOR.clone();
+    private int[] lightSquaresColor = DEFAULT_LIGHT_COLOR.clone();
 
-    public SquareBoard(){
+    public SquareBoard(PApplet pApplet, BoardImagePieces boardPieces) {
+        this.pApplet = Objects.requireNonNull(pApplet, "pApplet must not be null");
+        this.boardPieces = Objects.requireNonNull(boardPieces, "boardPieces must not be null");
     }
 
-    public SquareBoard(PApplet pApplet, BoardImagePieces boardPieces){
-        this.pApplet = pApplet;
-        this.boardPieces = boardPieces;
-    }
-
-    public boolean isSquareEmpty(){
+    public boolean isSquareEmpty() {
         return squareEmpty;
     }
 
-    public void setEmpty(boolean empty){
-        this.squareEmpty = empty;
+    public void setEmpty(boolean empty) {
+        squareEmpty = empty;
     }
 
-    public void setSquareSize(float squareSize){
+    public void clearPiece() {
+        squareEmpty = true;
+    }
+
+    public void setSquareSize(float squareSize) {
+        if (!Float.isFinite(squareSize) || squareSize <= 0) {
+            throw new IllegalArgumentException("Square size must be a positive finite number");
+        }
         this.squareSize = squareSize;
     }
 
-    public float getSquareSize(){
-        return this.squareSize;
+    public float getSquareSize() {
+        return squareSize;
     }
 
-    public boolean isWhiteSquare(){
-        return this.whiteSquare;
+    public boolean isWhiteSquare() {
+        return whiteSquare;
     }
 
-    public void setWhiteSquare(boolean isWhiteSquare){
-        this.whiteSquare = isWhiteSquare;
+    public void setWhiteSquare(boolean whiteSquare) {
+        this.whiteSquare = whiteSquare;
     }
 
-    public void setBoardPiece(int boardPiece){
+    public void setBoardPiece(int boardPiece) {
+        // Validation is centralized in the sprite/code lookup.
+        boardPieces.getBoardPieceCode(boardPiece, true, false);
         this.boardPiece = boardPiece;
-        setEmpty(false);
+        squareEmpty = false;
     }
 
-    public void setBoardPiece(String pieceCode){
-        int pcode = boardPieces.getImageCodePieceFromStringCode(pieceCode);
-        //
-        if(pcode == 0) {
-            setEmpty(true);
-        } else {
-           boolean isWhite = Character.isUpperCase(pieceCode.charAt(0));
-           setWhitePiece(isWhite);
-           setBoardPiece(pcode);
-           setEmpty(false);
+    public void setBoardPiece(String pieceCode) {
+        if ("-".equals(pieceCode)) {
+            clearPiece();
+            return;
         }
+        int imageCode = boardPieces.getImageCodePieceFromStringCode(pieceCode);
+        if (imageCode == 0) {
+            throw new IllegalArgumentException("Invalid chess piece code: " + pieceCode);
+        }
+        whitePiece = Character.isUpperCase(pieceCode.charAt(0));
+        setBoardPiece(imageCode);
     }
 
-    public void setWhitePiece(boolean pieceColor){
-        this.whitePiece = pieceColor;
+    public void setWhitePiece(boolean whitePiece) {
+        this.whitePiece = whitePiece;
     }
 
-    public boolean isWhitePiece(){
-        return this.whitePiece;
+    public boolean isWhitePiece() {
+        return whitePiece;
     }
 
-    public int getBoardPiece(){
+    public int getBoardPiece() {
         return boardPiece;
     }
 
-    public int getSquareIndex(){
+    public int getSquareIndex() {
         return squareIndex;
     }
 
-    public void setSquareIndex(int index){
-        this.squareIndex = index;
+    public void setSquareIndex(int index) {
+        if (index < 0 || index >= ChessBoard.SQUARE_COUNT) {
+            throw new IllegalArgumentException("Square index must be between 0 and 63");
+        }
+        squareIndex = index;
     }
 
-    public void setCoordinate(String coordinate){
-        this.coordinate = coordinate;
+    public void setCoordinate(String coordinate) {
+        this.coordinate = Objects.requireNonNull(coordinate, "coordinate must not be null");
     }
 
-    public String getCoordinate(){
+    public String getCoordinate() {
         return coordinate;
     }
 
-    public void setVisibleCoordinates(boolean visible){
-        this.visibleCoordinates = visible;
+    public void setVisibleCoordinates(boolean visible) {
+        visibleCoordinates = visible;
     }
 
-    public boolean isVisibleCoordinates(){
-        return this.visibleCoordinates;
+    public boolean isVisibleCoordinates() {
+        return visibleCoordinates;
     }
 
-    public void setLightSquaresColor(int[] lightSquaresColor){
-        this.lightSquaresColor = lightSquaresColor;
+    public void setLightSquaresColor(int[] color) {
+        lightSquaresColor = copyColor(color);
     }
 
-    public void setDarkSquaresColor(int[] darkSquaresColor){
-        this.darkSquaresColor = darkSquaresColor;
+    public void setDarkSquaresColor(int[] color) {
+        darkSquaresColor = copyColor(color);
     }
 
-    public void setHighLightSquareColor(int[]highLightSquareColor){
-        this.highLightSquareColor = highLightSquareColor;
+    public void setHighLightSquareColor(int[] color) {
+        highlightSquareColor = copyColor(color);
     }
 
-    public void setHighLightedSquare(boolean highLightedSquare){
-        this.highLightedSquare = highLightedSquare;
+    public void setHighLightedSquare(boolean highlighted) {
+        highlightedSquare = highlighted;
     }
 
-    public boolean isHighLightedSquare(){
-       return this.highLightedSquare;
+    public boolean isHighLightedSquare() {
+        return highlightedSquare;
     }
 
-    public boolean isSelectedWithHighLight(){
-        return this.selectedWithHighLight;
+    public boolean isSelectedWithHighLight() {
+        return selectedWithHighlight;
     }
 
-    public void setSelectedWithHighLight(boolean selectedWithHighLight){
-        this.selectedWithHighLight = selectedWithHighLight;
+    public void setSelectedWithHighLight(boolean selectedWithHighlight) {
+        this.selectedWithHighlight = selectedWithHighlight;
+        if (!selectedWithHighlight) {
+            highlightedSquare = false;
+        } else if (selectedSquare) {
+            highlightedSquare = true;
+        }
     }
 
-    public boolean isSelectedSquare(){
-        return this.selectedSquare;
+    public boolean isSelectedSquare() {
+        return selectedSquare;
     }
 
-    public void setSelectedSquare(boolean selectedSquare){
+    public void setSelectedSquare(boolean selectedSquare) {
         this.selectedSquare = selectedSquare;
+        if (selectedWithHighlight) {
+            highlightedSquare = selectedSquare;
+        }
     }
 
-    public String getPieceCode(){
-        return boardPieces.getBoardPieceCode(getBoardPiece(), isWhitePiece(), isSquareEmpty());
+    public void toggleSelected() {
+        setSelectedSquare(!selectedSquare);
     }
 
-    public void draw(float posx, float posy){
-        // Verify if the square board is white or black
-        if(isWhiteSquare()){
-            pApplet.fill(lightSquaresColor[0],lightSquaresColor[1],lightSquaresColor[2]);
-            pApplet.stroke(lightSquaresColor[0],lightSquaresColor[1],lightSquaresColor[2]);
-        } else {
-            pApplet.fill(darkSquaresColor[0],darkSquaresColor[1],darkSquaresColor[2]);
-            pApplet.stroke(darkSquaresColor[0],darkSquaresColor[1],darkSquaresColor[2]);
+    public void clearSelection() {
+        setSelectedSquare(false);
+    }
+
+    public String getPieceCode() {
+        return boardPieces.getBoardPieceCode(boardPiece, whitePiece, squareEmpty);
+    }
+
+    public void draw(float x, float y) {
+        pApplet.pushStyle();
+        int[] squareColor = whiteSquare ? lightSquaresColor : darkSquaresColor;
+        pApplet.fill(squareColor[0], squareColor[1], squareColor[2]);
+        pApplet.stroke(squareColor[0], squareColor[1], squareColor[2]);
+        pApplet.rect(x, y, squareSize, squareSize);
+
+        if (highlightedSquare) {
+            pApplet.fill(highlightSquareColor[0], highlightSquareColor[1], highlightSquareColor[2], 128);
+            pApplet.rect(x, y, squareSize, squareSize);
         }
-        // Draw the square board
-        pApplet.rect(posx, posy, getSquareSize(),getSquareSize());
-        ratio = imgDefaultSize/getSquareSize();
-        //
-        // Highlight Square
-        if(isHighLightedSquare()){
-            pApplet.fill(highLightSquareColor[0], highLightSquareColor[1], highLightSquareColor[2],128);
-            pApplet.rect(posx, posy, getSquareSize(), getSquareSize());
+
+        if (!squareEmpty) {
+            pApplet.image(boardPieces.getImagePiece(boardPiece, whitePiece), x, y, squareSize, squareSize);
         }
-        //
-        // Draw the piece image if square not empty
-        if(!isSquareEmpty()){
-            pApplet.image(boardPieces.getImagePiece(boardPiece, whitePiece), posx,posy,
-                       imgDefaultSize/ratio, imgDefaultSize/ratio);
-        }
-        // Draw index and coordinate for visual debug purposes
-        if(isVisibleCoordinates()) {
+
+        if (visibleCoordinates) {
             pApplet.fill(0, 0, 255);
-            pApplet.text(getCoordinate()+" : "+pApplet.str(getSquareIndex()),
-                         posx, posy + squareSize);
+            pApplet.text(coordinate + " : " + squareIndex, x, y + squareSize);
         }
 
-
-        // Verify if mouse over square boards and detect mouse left press
-        // TODO: How to select an specific action for selected square (highlight, setpiece, move, etc)
-        // TODO: Listeners for mouse_events in board (observer)
-        float midx = posx + squareSize/2.0f;
-        float midy = posy + squareSize/2.0f;
-        if(!isSelectedSquare()){
-            if(isMouseOverSquare(posx, posy)){
-                pApplet.fill(0,255,255);
-                pApplet.ellipse(midx, midy, 10,10);
-                pApplet.noFill();
-                pApplet.stroke(0,255,255);
-                pApplet.rect(posx, posy, squareSize-squareSize*0.015f, squareSize-squareSize*0.025f);
-                //
-                if(pApplet.mouseButton == pApplet.LEFT){
-                    setSelectedSquare(true);
-                    if(selectedWithHighLight) setHighLightedSquare(true);
-                    pApplet.delay(300);
-                }
-            }
-        } else {
-            pApplet.fill(0,255,0);
-            pApplet.ellipse(midx, midy, 10,10);
+        if (selectedSquare || isMouseOverSquare(x, y)) {
+            int blue = selectedSquare ? 0 : 255;
+            pApplet.fill(0, 255, blue);
+            pApplet.ellipse(x + squareSize / 2.0f, y + squareSize / 2.0f, 10, 10);
             pApplet.noFill();
-            pApplet.stroke(0,255,0);
-            pApplet.rect(posx, posy, squareSize-squareSize*0.015f, squareSize-squareSize*0.025f);
-            //
-            if(isMouseOverSquare(posx, posy)){
-                if(pApplet.mouseButton == pApplet.LEFT){
-                    setSelectedSquare(false);
-                    if(selectedWithHighLight) setHighLightedSquare(false);
-                    pApplet.delay(300);
-                }
-            }
+            pApplet.stroke(0, 255, blue);
+            pApplet.rect(x, y, squareSize, squareSize);
         }
-
+        pApplet.popStyle();
     }
 
-    public boolean isMouseOverSquare(float posx, float posy){
-       return  pApplet.mouseX  > posx  &&  pApplet.mouseX  < posx + squareSize &&
-               pApplet.mouseY > posy  &&  pApplet.mouseY  < posy + squareSize;
+    public boolean isMouseOverSquare(float x, float y) {
+        return pApplet.mouseX >= x && pApplet.mouseX < x + squareSize
+                && pApplet.mouseY >= y && pApplet.mouseY < y + squareSize;
     }
 
-    public String getPieceCoordinate(){
-        return getPieceCode() + ":" + getCoordinate();
+    public String getPieceCoordinate() {
+        return getPieceCode() + ":" + coordinate;
     }
 
     @Override
-    public String toString(){
-        //TODO: Pending for a some representation such YAML or XML
-        return null;
+    public String toString() {
+        return getPieceCoordinate();
     }
 
+    private static int[] copyColor(int[] color) {
+        Objects.requireNonNull(color, "color must not be null");
+        if (color.length != COLOR_COMPONENTS
+                || Arrays.stream(color).anyMatch(component -> component < 0 || component > 255)) {
+            throw new IllegalArgumentException("Color must contain three components between 0 and 255");
+        }
+        return color.clone();
+    }
 }

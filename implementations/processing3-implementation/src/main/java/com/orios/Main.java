@@ -11,17 +11,13 @@ import javax.swing.SwingUtilities;
 public class Main {
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                JFrame.setDefaultLookAndFeelDecorated(true);
-
-                // Create your Frame
-                ChessBoardDemoFrame frame = new ChessBoardDemoFrame();
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.pack();
-            }
+        SwingUtilities.invokeLater(() -> {
+            JFrame.setDefaultLookAndFeelDecorated(true);
+            ChessBoardDemoFrame frame = new ChessBoardDemoFrame();
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.pack();
+            frame.setLocationByPlatform(true);
+            frame.setVisible(true);
         });
     }
-
 }
