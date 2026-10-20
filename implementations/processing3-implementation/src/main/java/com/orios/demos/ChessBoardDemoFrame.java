@@ -14,7 +14,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Path;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -25,6 +27,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.SwingUtilities;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -221,6 +224,8 @@ public class ChessBoardDemoFrame  extends JFrame {
     }
 
     private void configWidgetActions(){
+        chessBoardSketch.setSwapConfirmation(this::confirmPieceSwap);
+
         checkBoxWhitePiece.setSelected(true);
         checkBoxWhiteToMove.setSelected(true);
         checkBoxWhiteShortCastle.setSelected(true);
@@ -414,6 +419,7 @@ public class ChessBoardDemoFrame  extends JFrame {
                 currentSquare.setWhitePiece(checkBoxWhitePiece.isSelected());
             }
         }
+        chessBoard.clearSelection();
     }
 
     private Image getPieceImage(int pcode, int w, int h, boolean isWhite){
@@ -446,5 +452,45 @@ public class ChessBoardDemoFrame  extends JFrame {
         }
         textAreaOutput.append(message);
         textAreaOutput.setCaretPosition(textAreaOutput.getDocument().getLength());
+    }
+
+    private boolean confirmPieceSwap(String sourceCoordinate, String destinationCoordinate) {
+        if (SwingUtilities.isEventDispatchThread()) {
+            return showSwapDialog(sourceCoordinate, destinationCoordinate);
+        }
+
+        AtomicBoolean confirmed = new AtomicBoolean(false);
+        try {
+            SwingUtilities.invokeAndWait(() -> confirmed.set(
+                    showSwapDialog(sourceCoordinate, destinationCoordinate)));
+        } catch (InterruptedException exception) {
+            Thread.currentThread().interrupt();
+        } catch (InvocationTargetException exception) {
+            Throwable cause = exception.getCause();
+            String detail = cause == null ? exception.getMessage() : cause.getMessage();
+            SwingUtilities.invokeLater(() ->
+                    showMessage("Unable to request piece exchange: " + detail));
+        }
+        return confirmed.get();
+    }
+
+    private boolean showSwapDialog(String sourceCoordinate, String destinationCoordinate) {
+        Object[] options = {"Swap pieces", "Cancel"};
+        int choice = JOptionPane.showOptionDialog(
+                this,
+                "The destination square " + destinationCoordinate + " is occupied.\n"
+                        + "Do you want to exchange the pieces on " + sourceCoordinate
+                        + " and " + destinationCoordinate + "?",
+                "Occupied destination",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[1]);
+        boolean confirmed = choice == 0;
+        showMessage(confirmed
+                ? "Pieces exchanged: " + sourceCoordinate + " ↔ " + destinationCoordinate
+                : "Move cancelled: " + sourceCoordinate + " → " + destinationCoordinate);
+        return confirmed;
     }
 }

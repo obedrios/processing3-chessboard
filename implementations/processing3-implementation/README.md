@@ -27,6 +27,8 @@ mvn exec:java
 - Validate piece placement, active color, castling rights, en-passant target,
   halfmove clock, and fullmove number.
 - Select squares and place white or black pieces.
+- Move a piece by selecting its origin and destination; occupied destinations
+  request confirmation before exchanging both pieces.
 - Clear selections or reset the board to the initial chess position.
 - Toggle coordinate labels and selected-square highlighting.
 

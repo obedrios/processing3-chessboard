@@ -31,6 +31,8 @@ public final class ChessBoard {
     private String enPassantTarget = "-";
     private int halfmoveClock;
     private int currentMoveNumber = 1;
+    private SquareBoard moveSource;
+    private PieceSwapConfirmation swapConfirmation = (source, destination) -> false;
 
     public ChessBoard(PApplet pApplet, float squareSize) {
         this.pApplet = Objects.requireNonNull(pApplet, "pApplet must not be null");
@@ -123,6 +125,7 @@ public final class ChessBoard {
         for (SquareBoard square : squares) {
             square.clearSelection();
         }
+        moveSource = null;
     }
 
     public boolean isSelectionEnabled() {
@@ -134,6 +137,11 @@ public final class ChessBoard {
         if (!selectionEnabled) {
             clearSelection();
         }
+    }
+
+    public void setSwapConfirmation(PieceSwapConfirmation swapConfirmation) {
+        this.swapConfirmation = Objects.requireNonNull(
+                swapConfirmation, "swapConfirmation must not be null");
     }
 
     public void setClearBoard() {
@@ -217,8 +225,7 @@ public final class ChessBoard {
             throw new IllegalArgumentException("Cannot move from an empty square: " + from);
         }
         SquareBoard destination = getCoordinate(to);
-        destination.setBoardPiece(source.getPieceCode());
-        source.clearPiece();
+        movePiece(source, destination);
         clearSelection();
     }
 
@@ -303,8 +310,53 @@ public final class ChessBoard {
         if (relativeX >= 0 && relativeX < boardPixels && relativeY >= 0 && relativeY < boardPixels) {
             int column = (int) (relativeX / squareSize);
             int row = (int) (relativeY / squareSize);
-            getCoordinate(row, column).toggleSelected();
+            handleSquareClick(getCoordinate(row, column));
         }
+    }
+
+    private void handleSquareClick(SquareBoard clickedSquare) {
+        if (moveSource == null) {
+            if (clickedSquare.isSquareEmpty()) {
+                clickedSquare.toggleSelected();
+            } else {
+                clearSelection();
+                moveSource = clickedSquare;
+                moveSource.setSelectedSquare(true);
+            }
+            return;
+        }
+
+        if (clickedSquare == moveSource) {
+            clearSelection();
+            return;
+        }
+
+        SquareBoard source = moveSource;
+        if (clickedSquare.isSquareEmpty()) {
+            movePiece(source, clickedSquare);
+            clearSelection();
+            return;
+        }
+
+        try {
+            if (swapConfirmation.confirmSwap(source.getCoordinate(), clickedSquare.getCoordinate())) {
+                swapPieces(source, clickedSquare);
+            }
+        } finally {
+            clearSelection();
+        }
+    }
+
+    private static void movePiece(SquareBoard source, SquareBoard destination) {
+        destination.setBoardPiece(source.getPieceCode());
+        source.clearPiece();
+    }
+
+    private static void swapPieces(SquareBoard source, SquareBoard destination) {
+        String sourcePiece = source.getPieceCode();
+        String destinationPiece = destination.getPieceCode();
+        source.setBoardPiece(destinationPiece);
+        destination.setBoardPiece(sourcePiece);
     }
 
     public void draw(float x, float y, boolean boardCoordinates) {

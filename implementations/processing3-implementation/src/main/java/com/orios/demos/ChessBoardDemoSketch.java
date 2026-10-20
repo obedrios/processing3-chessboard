@@ -1,6 +1,8 @@
 package com.orios.demos;
 
 import com.orios.javachessboard.ChessBoard;
+import com.orios.javachessboard.PieceSwapConfirmation;
+import java.util.Objects;
 import processing.core.PApplet;
 import processing.core.PSurface;
 
@@ -15,6 +17,7 @@ public class ChessBoardDemoSketch extends PApplet {
     public static final float SQUARE_SIZE = 60.0f;
 
     private ChessBoard chessBoard;
+    private PieceSwapConfirmation swapConfirmation = (source, destination) -> false;
 
     @Override
     public void settings() {
@@ -24,6 +27,7 @@ public class ChessBoardDemoSketch extends PApplet {
     @Override
     public void setup() {
         chessBoard = new ChessBoard(this, SQUARE_SIZE);
+        chessBoard.setSwapConfirmation(swapConfirmation);
         chessBoard.setDefaultNewGamePosition();
     }
 
@@ -40,6 +44,14 @@ public class ChessBoardDemoSketch extends PApplet {
 
     public ChessBoard getChessBoard() {
         return chessBoard;
+    }
+
+    public void setSwapConfirmation(PieceSwapConfirmation swapConfirmation) {
+        this.swapConfirmation = Objects.requireNonNull(
+                swapConfirmation, "swapConfirmation must not be null");
+        if (chessBoard != null) {
+            chessBoard.setSwapConfirmation(swapConfirmation);
+        }
     }
 
     public PSurface getInitSurface() {
