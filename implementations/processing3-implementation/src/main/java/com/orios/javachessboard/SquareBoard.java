@@ -183,6 +183,7 @@ public final class SquareBoard {
 
     public void draw(float x, float y) {
         pApplet.pushStyle();
+        pApplet.strokeWeight(Math.max(1.0f, squareSize / 80.0f));
         int[] squareColor = whiteSquare ? lightSquaresColor : darkSquaresColor;
         pApplet.fill(squareColor[0], squareColor[1], squareColor[2]);
         pApplet.stroke(squareColor[0], squareColor[1], squareColor[2]);
@@ -199,13 +200,16 @@ public final class SquareBoard {
 
         if (visibleCoordinates) {
             pApplet.fill(0, 0, 255);
+            pApplet.textSize(Math.max(7.0f, squareSize * 0.12f));
             pApplet.text(coordinate + " : " + squareIndex, x, y + squareSize);
         }
 
         if (selectedSquare || isMouseOverSquare(x, y)) {
             int blue = selectedSquare ? 0 : 255;
             pApplet.fill(0, 255, blue);
-            pApplet.ellipse(x + squareSize / 2.0f, y + squareSize / 2.0f, 10, 10);
+            float markerSize = Math.max(4.0f, squareSize * 0.16f);
+            pApplet.ellipse(x + squareSize / 2.0f, y + squareSize / 2.0f,
+                    markerSize, markerSize);
             pApplet.noFill();
             pApplet.stroke(0, 255, blue);
             pApplet.rect(x, y, squareSize, squareSize);

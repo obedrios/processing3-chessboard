@@ -31,6 +31,8 @@ mvn exec:java
   request confirmation before exchanging both pieces.
 - Clear selections or reset the board to the initial chess position.
 - Toggle coordinate labels and selected-square highlighting.
+- Resize the board, squares, coordinates, and pieces with the window while
+  preserving a centered square aspect ratio.
 - Open UTF-8 PGN files containing one or many games and choose a game from a
   sortable metadata table.
 - Replay the main line or click annotated variations, with manual

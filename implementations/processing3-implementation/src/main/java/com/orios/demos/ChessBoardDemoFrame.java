@@ -12,6 +12,7 @@ import com.orios.pgn.ui.PgnPlaybackPanel;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Frame;
@@ -20,6 +21,8 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.datatransfer.StringSelection;
@@ -123,6 +126,9 @@ public class ChessBoardDemoFrame  extends JFrame {
         chessBoardSketch.sketchPath(sketchPath);
         ps = chessBoardSketch.getInitSurface();
         ps.setSize(ChessBoardDemoSketch.CANVAS_SIZE, ChessBoardDemoSketch.CANVAS_SIZE);
+        // SmoothCanvas bases its maximum size on the temporary Processing frame.
+        // Mark it resizable before detaching the canvas so Swing can grow it.
+        ps.setResizable(true);
 
         //Get the SmoothCanvas that holds the PSurface
         smoothCanvas = (PSurfaceAWT.SmoothCanvas)ps.getNative();
@@ -132,6 +138,7 @@ public class ChessBoardDemoFrame  extends JFrame {
         smoothCanvas.setPreferredSize(new Dimension(
                 ChessBoardDemoSketch.CANVAS_SIZE,
                 ChessBoardDemoSketch.CANVAS_SIZE));
+        smoothCanvas.setMinimumSize(new Dimension(260, 260));
         pieceImages = new BoardImagePieces(chessBoardSketch);
 
         // Configure frame
@@ -142,7 +149,25 @@ public class ChessBoardDemoFrame  extends JFrame {
         //Add canvas as a component
         JPanel boardPanel = new JPanel();
         boardPanel.setLayout(new BorderLayout());
-        boardPanel.add(smoothCanvas, BorderLayout.CENTER);
+        JPanel canvasPanel = new JPanel(null);
+        canvasPanel.setBackground(new Color(204, 204, 204));
+        canvasPanel.setPreferredSize(new Dimension(
+                ChessBoardDemoSketch.CANVAS_SIZE,
+                ChessBoardDemoSketch.CANVAS_SIZE));
+        canvasPanel.setMinimumSize(new Dimension(260, 260));
+        canvasPanel.add(smoothCanvas);
+        canvasPanel.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent event) {
+                int canvasSide = Math.max(1,
+                        Math.min(canvasPanel.getWidth(), canvasPanel.getHeight()));
+                int canvasX = (canvasPanel.getWidth() - canvasSide) / 2;
+                int canvasY = (canvasPanel.getHeight() - canvasSide) / 2;
+                smoothCanvas.setBounds(canvasX, canvasY, canvasSide, canvasSide);
+                ps.setSize(canvasSide, canvasSide);
+            }
+        });
+        boardPanel.add(canvasPanel, BorderLayout.CENTER);
         //
         JPanel loadPositionPanel = new JPanel();
         loadPositionPanel.setLayout(new BorderLayout());
