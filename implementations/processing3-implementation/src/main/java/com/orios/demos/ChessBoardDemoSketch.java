@@ -13,11 +13,11 @@ import processing.core.PSurface;
 public class ChessBoardDemoSketch extends PApplet {
 
     public static final int CANVAS_SIZE = 600;
-    public static final float BOARD_OFFSET = 60.0f;
     public static final float SQUARE_SIZE = 60.0f;
 
     private ChessBoard chessBoard;
     private PieceSwapConfirmation swapConfirmation = (source, destination) -> false;
+    private BoardGeometry geometry = BoardGeometry.fit(CANVAS_SIZE, CANVAS_SIZE);
 
     @Override
     public void settings() {
@@ -26,6 +26,7 @@ public class ChessBoardDemoSketch extends PApplet {
 
     @Override
     public void setup() {
+        surface.setResizable(true);
         chessBoard = new ChessBoard(this, SQUARE_SIZE);
         chessBoard.setSwapConfirmation(swapConfirmation);
         chessBoard.setDefaultNewGamePosition();
@@ -34,12 +35,15 @@ public class ChessBoardDemoSketch extends PApplet {
     @Override
     public void draw() {
         background(204);
-        chessBoard.draw(BOARD_OFFSET, BOARD_OFFSET, true);
+        geometry = BoardGeometry.fit(Math.max(width, 1), Math.max(height, 1));
+        chessBoard.setSquareSize(geometry.squareSize());
+        chessBoard.draw(geometry.x(), geometry.y(), true);
     }
 
     @Override
     public void mousePressed() {
-        chessBoard.handleMousePressed(BOARD_OFFSET, BOARD_OFFSET);
+        BoardGeometry current = geometry;
+        chessBoard.handleMousePressed(current.x(), current.y());
     }
 
     public ChessBoard getChessBoard() {

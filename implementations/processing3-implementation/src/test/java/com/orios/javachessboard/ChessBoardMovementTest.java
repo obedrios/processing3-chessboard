@@ -25,6 +25,18 @@ class ChessBoardMovementTest {
     }
 
     @Test
+    void resizesAllSquaresWithoutChangingThePosition() {
+        String fen = board.getFENStringFromCurrentPosition();
+        board.setSquareSize(42.5f);
+
+        assertEquals(42.5f, board.getSquareSize());
+        for (SquareBoard square : board.getChessBoard()) {
+            assertEquals(42.5f, square.getSquareSize());
+        }
+        assertEquals(fen, board.getFENStringFromCurrentPosition());
+    }
+
+    @Test
     void movesAnOccupiedSquareToAnEmptyDestination() {
         click("E2");
         assertTrue(board.getCoordinate("E2").isSelectedSquare());

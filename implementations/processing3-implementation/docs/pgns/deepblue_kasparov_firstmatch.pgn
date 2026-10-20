@@ -1,0 +1,292 @@
+[Event "Philadelphia m"]
+[White "Kasparov,Garry"]
+[Black "Comp Deep Blue"]
+[Site "Philadelphia"]
+[Round "6"]
+[Annotator "Friedel,F"]
+[Result "1-0"]
+[Date "1996.02.17"]
+[WhiteElo "2795"]
+[PlyCount "85"]
+
+1. Nf3 {Keene Borik} d5 2. d4 c6 3. c4 e6 4. Nbd2 Nf6 5. e3 c5 {a tempo-losing
+move to deviate from game four. The Deep Blue team has prepared a line that
+should open up the position.} 6. b3 Nc6 7. Bb2 cxd4 8. exd4 Be7 9. Rc1 O-O 10. Bd3 Bd7 11. O-O Nh5 $2 {A very strange move which absolutely nobody at the
+site liked.} 12. Re1 Nf4 13. Bb1 Bd6 14. g3 Ng6 15. Ne5 Rc8 16. Nxd7 Qxd7 17. Nf3 Bb4 18. Re3 Rfd8 19. h4 Nge7 20. a3 Ba5 21. b4 Bc7 22. c5 {Four
+consecutive pawn advances which drive back all the black pieces, which are
+stumbling over each other on the queenside.} Re8 23. Qd3 g6 24. Re2 Nf5 25. Bc3 h5 26. b5 {Keene calls this "Kasparov's strategy of strangulation" and points
+out that 26.b5 doesn't just attack the knight but establishes "a giant,
+crawling mass of white pawns, rather resembling a colossal army of soldier
+ants on the move."} Nce7 27. Bd2 Kg7 28. a4 Ra8 29. a5 a6 30. b6 Bb8 {[#]
+Kasparov has shut the black bishop and rook out of play to the end of the game.
+Black's position is lost.} 31. Bc2 Nc6 32. Ba4 Re7 33. Bc3 Ne5 {actually
+accelerating the end.} 34. dxe5 Qxa4 35. Nd4 Nxd4 36. Qxd4 Qd7 {IM Otto Borik
+that other variations also lose:} (36... Qxd4 37. Bxd4 {and Rb2, c6 wins, e.g.} Re8 38. Rb2 Rc8 39. c6 Rxc6 40. Rxc6 bxc6 41. b7 Ra7 42. Bxa7 Bxa7 43. b8=Q Bxb8 44. Rxb8 )(36... Qc6 37. Bd2 Rd7 38. Bg5 Kf8 39. Bf6 {and now f3, Rg2 and
+g4 wins.} )37. Bd2 Re8 38. Bg5 Rc8 39. Bf6+ Kh7 40. c6 $1 bxc6 (40... Rxc6 41. Rec2 Rxc2 42. Rxc2 Qe8 43. Qc5 {wins} )41. Qc5 Kh6 42. Rb2 Qb7 43. Rb4 $1 {
+And the Deep Blue team reseigned for the machine. Why did Black resign? IM
+Malcolm Pein explained this on the Internet: "Black has four pieces left plus
+his king. The rook on a8 and the bishop on b8 cannot move. If the queen on b7
+moves it allows b7, winning a rook. If the rook on c8 moves White can play
+Qxc6, forcing an exchange of queens. After that there are many ways to win,
+the most prosaic being double on the c file and play Rc8. So we are left with
+Kh7! The simplest way then is Qe7 Qxe7 Bxe7 threatening b7 and if Rc8-e8 then
+b7 Ra7 Bc5 etc. Note that had Kasparov left his rook on b2 Black would have ...
+Bxe5 gaining a tempo."} (43. Rb4 Qd7 (43... Re8 44. Qxc6 Qxc6 45. Rxc6 Kh7 46. b7 Ra7 47. Rbb6 Rg8 48. Rc8 d4 49. Rbc6 g5 (49... d3 50. Rxg8 Kxg8 51. Rc8+ Kh7 52. Rh8# )50. Rxg8 Kxg8 51. Rc8+ Kh7 52. Rh8+ Kg6 53. Rg8+ Kf5 54. f3 {Threat:
+Rxg5#} Bxe5 55. Bxe5 {Threat: ditto} Kxe5 56. b8=Q+ {and mate.} )(43... Kh7 44. Qe7 Qxe7 45. Bxe7 Re8 46. b7 Ra7 47. Bc5 Rd8 48. Bxa7 Bxa7 49. Rxc6 Bb8 50. Rc8 {winning} )44. b7 )1-0
+
+[Event "Philadelphia m"]
+[White "Comp Deep Blue"]
+[Black "Kasparov,Garry"]
+[Site "Philadelphia"]
+[Round "5"]
+[Annotator "Friedel,F"]
+[Result "0-1"]
+[Date "1996.02.16"]
+[BlackElo "2795"]
+[PlyCount "90"]
+
+1. e4 {Keene Borik} e5 2. Nf3 Nf6 {Instead of the dangerous and exhausting
+Sicilians Garry prepared a save Petroff for this game, an opening he had only
+played twice before in his life.} 3. Nc3 Nc6 {turning it into a four knights.} 4. d4 exd4 5. Nxd4 Bb4 6. Nxc6 bxc6 7. Bd3 d5 8. exd5 cxd5 9. O-O O-O 10. Bg5 c6 11. Qf3 Be7 12. Rae1 Re8 13. Ne2 h6 14. Bf4 Bd6 15. Nd4 Bg4 16. Qg3 Bxf4 17. Qxf4 Qb6 18. c4 {A surprise for Kasparov, who had to now calculate 18...Qxb2...
+} Bd7 (18... Qxb2 19. Nxc6 Qxa2 20. Ne7+ Kf8 21. Nxd5 Nxd5 22. Qxg4 {which is
+quite comfortable for White.} )19. cxd5 cxd5 20. Rxe8+ Rxe8 21. Qd2 Ne4 22. Bxe4 dxe4 23. b3 Rd8 {[#] The position is slightly better for Black, but
+Kasparov offered a draw. Deep Blue also realized this and showed -0.10 to -0.
+15 for itself, but advisor Joel Benjamin decided to decline the offer. "The
+draw offer came much too early," said project manager C.J. Tan. "We are
+scientists and wanted to continue the experiment." But quite apart from that,
+with queens on the board and a bit of tactics left Benjamin wanted to see if
+Kasparov would go astray.} 24. Qc3 f5 {Garry: "I was tired and wanted to
+conserve energy for the last game. So I offered the draw in a slightly better
+position. Of course I had seen a promising, aggressive continuation. Now the
+opponent forced me to play it. My thanks to them for this assistance."} 25. Rd1 $2 {This move will cause White some headaches on the d-file. A more plausible
+continuation would have been...} (25. g3 {and after e.g.} Rc8 26. Qe3 {"the
+game would end in four or five moves in a draw" (Kasparov).} )Be6 26. Qe3 {Deep Blue still doesn't smell the danger that the pin on the d-file poses.} Bf7 27. Qc3 {just moving around aimlessly.} f4 {Deep Blue now knew it was in
+deep trouble.} 28. Rd2 Qf6 {replacing one pin by a new one. After the game
+Garry told us he should have immediately played 28...Rd5 because instead of} 29. g3 {the variation} (29. Ne2 Rxd2 30. Qxd2 Qa1+ 31. Nc1 {offered some
+drawing chances.} )Rd5 30. a3 (30. gxf4 Qxf4 31. Qe3 Rg5+ 32. Kh1 Qg4 33. Qg3 e3 34. Qxg4 Rxg4 35. Re2 exf2 36. Rxf2 Rxd4 $19 {is a simple line which
+Deep Blue can see in seconds.} )Kh7 31. Kg2 Qe5 {[#]} 32. f3 {Deep Blue
+was showing it's operator how it could finish itself off in this game. From
+all the losing variations for Black it chose the one that puts up the most
+resistance. In the commentary hall we were looking at other possible moves
+with Fritz. Everything was losing:} (32. gxf4 Qxf4 33. Qe3 Rg5+ $19 34. Kf1 (34. Kh1 Qg4 35. f3 (35. Qg3 e3 36. fxe3 Qe4+ 37. Qf3 Bd5 38. Qxe4+ Bxe4+ 39. Rg2 Rxg2 ))Qxh2 35. Qxe4+ Bg6 36. Qe3 Rg4 37. Rd1 Qg2+ 38. Ke1 Re4 )(32. b4 e3 33. fxe3 fxe3 34. Rd3 Qe4+ 35. Kg1 e2 $19 )e3 33. Rd3 e2 34. gxf4 e1=Q 35. fxe5 Qxc3 36. Rxc3 Rxd4 {and the extra pieces is enough for Black to
+win comfortably.} 37. b4 Bc4 38. Kf2 g5 39. Re3 Rd2+ 40. Ke1 Rd3 41. Kf2 Kg6 42. Rxd3 Bxd3 43. Ke3 Bc2 44. Kd4 Kf5 45. Kd5 h5 0-1
+
+[Event "Philadelphia m"]
+[White "Kasparov,Garry"]
+[Black "Comp Deep Blue"]
+[Site "Philadelphia"]
+[Round "4"]
+[Annotator "Friedel,F"]
+[Result "1/2-1/2"]
+[Date "1996.02.14"]
+[WhiteElo "2795"]
+[PlyCount "100"]
+
+1. Nf3 {Keene Borik} d5 2. d4 c6 {This time the book is on and Deep Blue
+deviates from the second game.} 3. c4 e6 4. Nbd2 Nf6 5. e3 Nbd7 6. Bd3 Bd6 7. e4 {opening up the position again. Kasparov is going to slug it out against
+the computer, and the heart of the computer expert on his team sinks.} dxe4 8. Nxe4 Nxe4 9. Bxe4 O-O 10. O-O h6 11. Bc2 e5 12. Re1 exd4 13. Qxd4 Bc5 14. Qc3 a5 15. a3 Nf6 {[#]} 16. Be3 {A calm move which gives White a slight positional
+advantage.} (16. Bxh6 {Against a human, Kasparov confided, he would have
+seriously considered this sacrifice, but not against a machine running at
+hundred million nodes per second. "The slightest miscalculation and you are
+dead!"} gxh6 17. Rad1 Nd7 (17... Qb6 18. Qxf6 Bxf2+ 19. Kh1 {and White is
+winning, because after} Bxe1 {White has} 20. Ng5 {and mate.} )18. Re4 f5 19. Re6 {with a powerful attack.} )Bxe3 17. Rxe3 Bg4 18. Ne5 Re8 19. Rae1 Be6 20. f4 Qc8 21. h3 b5 {[#] In this position Kasparov thought for quite some
+time, summoning up the courage for a very daring move.} 22. f5 $5 {Kasparov
+had to do a tremendous amount of calculation, considering e.g.} (22. f5 Bxf5 23. Nxf7 Rxe3 (23... Kxf7 24. Rxe8 Nxe8 25. Bxf5 {Black cannot capture the
+bishop because of Rf1. White is winning.} )(23... Bxc2 24. Nxh6+ $1 gxh6 25. Qxc2 Kg7 {the threat was Qg6+} 26. Rxe8 Nxe8 27. Re7+ Kf6 (27... Kf8 28. Qh7 {
+is hopeless for Black} )28. Qh7 {and White will soon win.} )24. Nxh6+ gxh6 25. Rxe3 Nh5 (25... Bxc2 26. Qxf6 Qf8 27. Qxc6 {with good chances for White} )26. Qe5 Bxc2 27. Qxh5 {threatening mate} Qf8 28. cxb5 cxb5 29. Qxb5 )Bxc4 $1 {Before it could make this move the computer crashed. For about 20 minutes the
+team worked at the terminal in the playing hall, while a distraught Kasparov,
+torn out of his calculations, complained bitterly about the disturbance. To
+compound his displeasure Deep Blue, in the end, plays a very good move. This
+looked a bit suspicious, but later we discovered that Fritz finds the same
+move in about 30 minutes. Deep Blue, being about 500 times faster, must find
+it in about four seconds.} 23. Nxc4 bxc4 24. Rxe8+ Nxe8 25. Re4 (25. Qxc4 {
+was better according to Kasparov} )Nf6 26. Rxc4 {The position looks very
+promising for White because of Black's pawn islands and the permanently weak
+pawn on c6. But Deep Blue plays very forcefully to consolidate its position
+and even go for the full point.} Nd5 27. Qe5 Qd7 28. Rg4 f6 29. Qd4 Kh7 30. Re4 Rd8 31. Kh1 $2 {Later Kasparov criticised this move off the diagonal because
+it gives the opponent unnecessary mate threats.} Qc7 32. Qf2 Qb8 33. Ba4 $2 {
+A plausible move, but later Garry called the whole plan "rubbish". 33.b3 was
+clearly better.} c5 34. Bc6 {Originally White had planned...} (34. Qe1 Qxb2 35. Be8 {threatening Bg6+ and mate, but now he realised that Black has} Nf4 $1 36. Rxf4 Rxe8 37. Qxe8 Qc1+ 38. Kh2 Qxf4+ )c4 35. Rxc4 {After a safety move
+like...} (35. Re1 {Black has} Nf4 {and ...Nd3, with prospects of playing for a
+win.} )Nb4 {threatening ...Re1+ and instant death.} 36. Bf3 Nd3 37. Qh4 {
+Kasparov is in time trouble. Against the most awesome tactical force on the
+planet he has to find a series of only moves. His hands trembles as he makes
+them.} Qxb2 38. Qg3 $1 Qxa3 39. Rc7 Qf8 40. Ra7 Ne5 41. Rxa5 Qf7 {[#] Here
+Kasparov offered a draw. After consultation with GM Benjamin the Deep Blue
+team turned down the offer.} 42. Rxe5 $1 {played after about ten minutes of
+deliberation. Kasparov finds the safest way to a draw.} fxe5 43. Qxe5 Re8 44. Qf4 {Black has no real winning chances.} Qf6 (44... Rf8 45. Bg4 Kh8 46. Qg3 {
+and now what?} )45. Bh5 Rf8 46. Bg6+ Kh8 47. Qc7 Qd4 48. Kh2 Ra8 49. Bh5 Qf6 50. Bg6 Rg8 {and draw agreed. Kasparov was feeling the pressure in what he
+described as a human defence against the onslaught of the machine. "I'm tired
+from these games, and if I was playing against a human, he would be exhausted
+too. But I'm playing against something that knows no such feelings and is
+always playing with the same strength." Deep Blue had thus far achieved a
+rating performance of 2775!} 1/2-1/2
+
+[Event "Philadelphia m"]
+[White "Comp Deep Blue"]
+[Black "Kasparov,Garry"]
+[Site "Philadelphia"]
+[Round "3"]
+[Annotator "Friedel,F"]
+[Result "1/2-1/2"]
+[Date "1996.02.13"]
+[BlackElo "2795"]
+[PlyCount "77"]
+
+1. e4 {Keene Borik} c5 2. c3 d5 3. exd5 Qxd5 4. d4 Nf6 5. Nf3 Bg4 6. Be2 e6 7. O-O Nc6 8. Be3 cxd4 9. cxd4 Bb4 10. a3 Ba5 11. Nc3 Qd6 {With the exception of
+the moves 7.h3 Bh5 we have the same position as in game one. Kasparov is
+willing to take up the battle under the same conditions.} 12. Ne5 {Obviously
+the Deep Blue team have been studying the first game and reached the
+conclusion that Black had achieved a satisfactory position. GM Joel Benjamin,
+responsible for Deep Blue's openings preparation, has a new move for Kasparov.} Bxe2 (12... Nxe5 13. dxe5 Qxd1 14. Bxd1 Bxd1 15. exf6 {and White has a clear
+advantage.} )13. Qxe2 Bxc3 (13... Nxe5 14. Bf4 Nf3+ 15. Qxf3 Qc6 16. Qxc6+ bxc6 17. b4 {is better for White.} )14. bxc3 Nxe5 15. Bf4 Nf3+ $1 16. Qxf3 Qd5 17. Qd3 Rc8 18. Rfc1 {In this line Joel Benjamin had intended...} (18. Be5 {
+but after} Nd7 19. Bxg7 Rg8 20. Qxh7 Nf6 21. Qh6 Nh5 {Black is winning a
+piece! Benjamin: "Thank heavens we didn't put 18.Be5 into the book."} )Qc4 19. Qxc4 Rxc4 {[#]  In the commentary hall the GMs were predicting an easy
+win for Kasparov. Black has a clear target - the pawn on c3 - which he can
+attack it with the moves ...Nd5, ...Kd7 and ...Rc8. But Deep Blue comes up
+with truly remarkable counterplay, which stuns the World Champion.} 20. Rcb1 $1 b6 21. Bb8 $1 {"The computer played the only moves that don't lose," Garry
+told us later. "I'd like to know how many humans would find this plan." But in
+the commentary hall Fritz is predicting all of Deep Blue's moves almost
+instantaneously.} Ra4 22. Rb4 {"Another inspired move," writes Raymond Keene
+in his book on the match. Again, Fritz took 0:00 seconds to come up with
+White's move.} Ra5 23. Rc4 {"Any human would play 23.c4, almost instinctively,
+without thinking," said Kasparov.} O-O 24. Bd6 Ra8 25. Rc6 {Note that White's
+rook has moved from the passive c1 to the dominant square c6.} b5 26. Kf1 Ra4 27. Rb1 a6 28. Ke2 h5 29. Kd3 Rd8 30. Be7 Rd7 31. Bxf6 gxf6 32. Rb3 Kg7 33. Ke3 e5 34. g3 exd4+ 35. cxd4 Re7+ (35... Rdxd4 36. Rxa6 $1 )36. Kf3 Rd7 37. Rd3 Raxd4 38. Rxd4 Rxd4 39. Rxa6 {and draw agreed by the Deep Blue team, although
+the computer showed a positive score.} 1/2-1/2
+
+[Event "Philadelphia m"]
+[White "Kasparov,Garry"]
+[Black "Comp Deep Blue"]
+[Site "Philadelphia"]
+[Round "2"]
+[Annotator "Friedel,F"]
+[Result "1-0"]
+[Date "1996.02.11"]
+[WhiteElo "2795"]
+[PlyCount "146"]
+
+{In game two Kasparov decided to play a conservative opening which required
+long-term strategy rather than tactical brilliance. He wanted to test the
+computer, give it a chance to behave like a machine. Garry was prepared to
+trade short-term advantages for long-term weaknesses.} 1. Nf3 {Keene Borik} d5 2. d4 {A very flexible move order allowing White to keep his options open for
+as long as possible. But now suddenly the machine started to think! The
+openings book had beed edited shortly before the game and copied to the wrong
+machine.} e6 {This caused Kasparov some consternation. It is a very profound
+reply originally introduced by Ivanchuk. How could Deep Blue find it by pure
+calculation?} 3. g3 c5 4. Bg2 Nc6 5. O-O Nf6 6. c4 {Here the computer operator,
+Feng-hsuing Hsu, executed the move 6..cxd4 on the board. Garry's face lit up,
+he looked like a kid who's parents had given him a big box of candy. After
+some minutes, however, Hsu suddenly discovered that the computer had displayed
+6...dxc4 on the screen. The rules allowed him to call the arbitor and correct
+the move, with a time adjustment for White. Kasparov was obviously quite upset
+to have the box of candy snatched away from him.} dxc4 7. Ne5 Bd7 (7... Nxd4 8. e3 Nf5 (8... Nc6 9. Bxc6+ bxc6 10. Qxd8+ Kxd8 11. Nxf7+ )9. Qxd8+ Kxd8 10. Nxf7+ )8. Na3 cxd4 9. Naxc4 Bc5 10. Qb3 O-O {[#] "He won't dare take the pawn
+against Deep Blue". This was the general consensus in the commentary hall...} 11. Qxb7 Nxe5 12. Nxe5 Rb8 13. Qf3 Bd6 {This is all still theory, and it was
+completely amazing to find out, after the match, that Deep Blue had found
+every move by pure calculation.} 14. Nc6 {This is a new move introduced by
+Kasparov, who didn't like...} (14. Bf4 {and the simplification after} Nd5 )(14. Nxd7 {Kasparov: "After this it was much easier for the computer to find the
+correct moves."} )Bxc6 15. Qxc6 e5 16. Rb1 {White has the advantage of
+the bishop pair and controls the light squares. The latter concept, easily
+understandable to humans, seems beyond the scope of computers, as we shall see
+in other games in this match.} (16. b3 $6 {allows Black to use c3 to penetrate
+White's position , as any Grunfeld expert knows.} )Rb6 17. Qa4 Qb8 18. Bg5 Be7 (18... Rxb2 $2 19. Rxb2 Qxb2 20. Bxf6 gxf6 21. Qd7 {with Qf5, Qh5 and
+Be4 to follow. It is remarkable that Deep Blue recognizes the gravity of this
+attack and declines the pawn offer on b2.} )19. b4 $1 Bxb4 {This time Deep
+Blue cannot resist. Maybe this is because White's attack is not quite as
+direct and the computer cannot "smell" the danger any more. Feng-Hsiung Hsu
+said this was a "positional mistake caused in part by an evaluation weighting
+error that was not caught".} (19... Rxb4 20. Rxb4 Qxb4 (20... Bxb4 $4 21. Rb1 a5 22. a3 )21. Qxa7 {and the passed a-pawn, which promotes on a square
+controlled by the light-squared bishop, gives White very good chances.} )20. Bxf6 gxf6 21. Qd7 Qc8 {Now Deep Blue calculates that it cannot afford to allow
+White to bring his pieces to bear on the black king (Qf5 or Qg4+ and Be4 would
+be deadly). It is willing to give back the pawn to prevent this.} 22. Qxa7 Rb8 (22... Ra6 23. Qb7 Qxb7 24. Bxb7 Rb6 {In the commentary room it was decided
+that this gave Black the best chances to hold the position.} )23. Qa4 Bc3 24. Rxb8 Qxb8 25. Be4 Qc7 26. Qa6 Kg7 {[#]} 27. Qd3 $6 Rb8 $1 {Kasparov expected
+27...h6 28.Qf3 with options on Qf5 or Qh5 and f4. But the computer finds a
+disconcerting active defence.} 28. Bxh7 Rb2 29. Be4 {There was a raging debate
+in the commentary room on whether White could win without the a-pawn. However
+this is somewhat academic since the pawn will fall anyway.} (29. a4 $6 Rd2 30. Qe4 Qc4 )Rxa2 30. h4 Qc8 31. Qf3 Ra1 32. Rxa1 Bxa1 33. Qh5 Qh8 34. Qg4+ Kf8 {White has a dangerous passed pawn on the h-file, Black a weak pawn on f7
+and an exposed king. Still the game could probably be held by a strong player,
+as Kasparov later admitted. However, this requires full understanding of the
+nature of the position and a strategy required to defend it. The computer
+lacks this and Kasparov is able to masterfully lure it to its distruction.} 35. Qc8+ Kg7 36. Qg4+ Kf8 {repeating to gain time to move 40.} 37. Bd5 Ke7 {
+The computer sees no danger in moving its king away from the kingside defence.} 38. Bc6 Kf8 39. Bd5 Ke7 {a few more minutes saved.} 40. Qf3 Bc3 41. Bc4 Qc8 42. Qd5 Qe6 43. Qb5 (43. Qb7+ Qd7 44. Qxd7+ Kxd7 45. Bxf7 {is not enough, since
+Black can now stop the h-pawn with his bishop and has excellent drawing
+chances. White must capture the f-pawn while still keeping the queen on the
+board.} )Qd7 44. Qc5+ Qd6 45. Qa7+ Qd7 46. Qa8 Qc7 $2 (46... Qd8 47. Qxd8+ Kxd8 48. Bxf7 {is again better for Black, since it gives him real
+drawing chances.} )47. Qa3+ Qd6 48. Qa2 {[#]} f5 $2 {A pseudo-active move. It
+is probably best to keep the pawns on the dark squares and move the king
+towards the h-file. The commentators and public were also looking ferociously
+for black counterplay with lines like...} (48... e4 $5 49. Bxf7 e3 50. Qa7+ )49. Bxf7 {the f-pawn falls with queens on the board.} e4 {With the black pawns
+advancing down the middle the public was getting a little nervous. But both
+Kasparov, Deep Blue and Fritz in the commentary room knew that Black is losing.
+} 50. Bh5 Qf6 51. Qa3+ Kd7 52. Qa7+ Kd8 53. Qb8+ Kd7 54. Be8+ Ke7 55. Bb5 Bd2 56. Qc7+ Kf8 57. Bc4 Bc3 58. Kg2 Be1 59. Kf1 Bc3 60. f4 {the f-pawn falls,
+whether Black captures or not.} exf3 61. exf3 Bd2 62. f4 Ke8 63. Qc8+ Ke7 64. Qc5+ Kd8 65. Bd3 Be3 66. Qxf5 Qc6 {now Deep Blue cannot afford to trade queens.
+..} 67. Qf8+ Kc7 68. Qe7+ Kc8 69. Bf5+ Kb8 70. Qd8+ Kb7 71. Qd7+ {but in the
+end it is forced to do so.} Qxd7 72. Bxd7 {Murray Campbell, who was brought in
+to operate the machine, phones the control center for permission to resign,
+but GM Benjamin, who has to make the decision, wants to take one last look at
+the position. Kasparov stares in disbelief as Deep Blue plays on.} Kc7 73. Bb5 Kd6 {and now Campbell is allowed to resign for the machine.} 1-0
+
+[Event "Philadelphia m"]
+[White "Comp Deep Blue"]
+[Black "Kasparov,Garry"]
+[Site "Philadelphia"]
+[Round "1"]
+[Annotator "Friedel,F"]
+[Result "1-0"]
+[Date "1996.02.10"]
+[BlackElo "2795"]
+[PlyCount "73"]
+
+1. e4 {Keene Borik} c5 2. c3 {Alapin. This was not unexpected, since at first
+glance it looks like a good choice for the computer. Kasparov is one of the
+world's leading experts in the main line of the Sicilian, so it is natural for
+the Deep Blue team to select a solid line which is not directly in the
+mainstream.} d5 {Drawing gasps from the audience and the commentators. This
+move opens up the center and plays into the kind of position computers
+normally love. But Garry has prepared something specific for the machine.} 3. exd5 Qxd5 4. d4 Nf6 5. Nf3 Bg4 6. Be2 e6 7. h3 Bh5 8. O-O Nc6 9. Be3 cxd4 10. cxd4 Bb4 $1 {Normally 10...Be7 would be considered, keeping the bishop as a
+defensive piece for the black king. But Garry has studied this line carefully
+and is prepared to do open battle against Deep Blue.} 11. a3 Ba5 12. Nc3 Qd6 13. Nb5 Qe7 14. Ne5 Bxe2 15. Qxe2 O-O 16. Rac1 Rac8 17. Bg5 Bb6 18. Bxf6 gxf6 19. Nc4 $1 Rfd8 {Naturally not...} (19... Nxd4 $2 20. Nxd4 Bxd4 21. Qg4+ {[%cal Rg4d4,Rg4g8]
+ and White wins a piece.} )20. Nxb6 axb6 21. Rfd1 f5 22. Qe3 Qf6 {[#]} 23. d5 $1 {Kasparov was taken completely by surprise. This is the
+kind of positional sacrifice computers are not supposed to play. Later we
+found that by sheer brute force Deep Blue had calculated that it could win
+back the pawn by force.} (23. Qg3+ Kh8 (23... Qg6 $6 )24. Nd6 Rg8 25. Qc3 $1 Rcd8 26. Nxf7+ $1 Qxf7 27. d5+ $16 {Fritz4} )Rxd5 (23... exd5 24. Qxb6 Qxb2 25. Qxb7 Rb8 26. Qxc6 Rxb5 (26... Qxb5 27. Qf6 $16 )27. Rc3 {threatening
+Rg3+} f4 28. Rcd3 $16 )24. Rxd5 exd5 25. b3 $1 {The computer is playing
+excellent moves. It is clear that the pawn on b6 cannot escape its fate. A
+human player might have played the rote 25.b4, but that allows a knight
+outpost in some lines after Nc6-e5-c4.} Kh8 {Kasparov goes for mate! He is
+playing too aggressively and adopts the wrong plan against a machine which
+looks at 100 million positions per second.} (25... d4 $2 26. Nxd4 $16 )(25... Qe6 26. Qd2 $1 {followed by Rc1 with ample compensation for the pawn.} (26. Qxb6 $4 Nd8 $1 $19 ))(25... Ne7 $5 26. Rxc8+ (26. Qg3+ {John Nunn} Qg7 (26... Qg6 27. Rxc8+ Nxc8 28. Qb8 Qc6 29. Na7 Qc1+ 30. Kh2 $18 )27. Rxc8+ Nxc8 28. Qc7 Qf8 (28... Qa1+ 29. Kh2 Kg7 30. a4 $1 )29. b4 {there are other good moves} Qe8 30. Qxb7 {looks promising for White} )Nxc8 27. Qe8+ Kg7 28. Qxc8 Qa1+ 29. Kh2 Qe5+ 30. g3 Qe2 31. Qxf5 {only move to avoid perpetual check} Qxb5 {
+and probably drawn.} )(25... Rd8 $1 26. Qxb6 Rd7 {should hold the game quite
+easily.} )26. Qxb6 Rg8 27. Qc5 {Naturally not...} (27. Qxb7 Qg5 {[%cal Rg5g2,Rg5c1] threatening mate and forking the rook on c1.} )d4 $2 {Better was
+probably...} (27... Qg5 28. g3 Qd2 {protecting the weak d-pawn.} 29. Qc3+ (29. Nd6 {Deep Blue would have played this and thought White has a slight edge.} )Qxc3 30. Rxc3 Rd8 31. Rd3 Kg7 {leads to a draw.} )28. Nd6 f4 29. Nxb7 {
+Time Magazine's correspondent Charles Krauthammer wrote: "Deep Blue's king was
+under savage assault by a World Champion. Any human Any human under such
+assault by a world champion would be staring at his own king trying to figure
+out how to get away. Instead, Deep Blue ignored the threat and quite
+nonchalantly went hunting for lowly pawns at the other end of the board. In
+fact, at the point of maximum peril, Deep Blue expended two moves - many have
+died giving Kasparov even one - to snap one pawn. It was as if, at Gettysburg,
+General Meade had sent his soldiers out for a spot of apple-picking moments
+before Beckett's charge, because he had calculated that they could get back to
+their positions with a half-second to spare. In humans, that is called
+sangfroid. And if you don't have any sang, you can be very froid. But then
+again if Meade had known absolutely - by calculating the precise trajectories
+of all the bullets and all the bayonets and all the cannons in Pickett's
+division - the time of arrival of the enemy he could, indeed, without fear,
+have ordered his men to pick apples. Which is exactly what Deep Blue did. It
+had calculated every possible combination of Kasparov's available moves and
+determined with absolute certainty that it could return from its pawn-picking
+expedition and destroy Kasparov exactly one move before Kasparov could destroy
+it. Which it did. It takes more than nerves of steel to do that. It takes a
+silicon brain. No human can achieve absolute certainty because no human can be
+sure to have seen everything. Deep Blue can."} Ne5 30. Qd5 f3 31. g3 Nd3 {
+To give you an impression of the volatility of the position let us take a look
+at some of the lines Kasparov had to consider:} (31... Qf4 {threatening Rxg3+
+and Qxc1} 32. Kh2 $2 (32. Rc8 $3 Qg5 33. Rc5 $1 {and White has everything
+under perfect control. However, if White instead had played} (33. h4 $4 {
+he would have run into a mating net:} Rxc8 $3 34. hxg5 Rc1+ 35. Kh2 Ng4+ 36. Kh3 Nxf2+ 37. Kh4 Rh1# ))Rxg3 $3 {and Black mates:} 33. Rc8+ Rg8+ 34. Kh1 Rxc8 {[%cal Rc8c1]} 35. Nc5 Qc1+ 36. Kh2 Qg5 37. Qxe5+ Qxe5+ 38. Kh1 Qg5 39. Ne6 Qg2# )32. Rc7 (32. Rc6 $2 Rg5 {is unclear (Hsu)} )Re8 (32... Nf4 $5 33. Qxf7 (33. Qxf3 {Deep Blue thought this gave White a large advantage.} )Nxh3+ 34. Kf1 Qxf7 (34... Qa6+ 35. Rc4 {and Qxf3} )35. Rxf7 Ng5 36. Rd7 Rc8 {with chances of saving the game.} )33. Nd6 {Deep Blue goes for the most
+ruthless win. Normal players would have opted for} (33. Qxf7 Re1+ 34. Kh2 Qxf7 35. Rxf7 {with a comfortable win for White.} )Re1+ 34. Kh2 Nxf2 {
+Kasparov is one move from mating the computer. But of course Deep Blue has
+calculated everything to the end.} 35. Nxf7+ Kg7 (35... Qxf7 36. Qd8+ Kg7 37. Rxf7+ Kxf7 38. Qd5+ Ke7 39. Qxf3 {is an easy win for White.} )36. Ng5+ Kh6 37. Rxh7+ {and Black resigned, because of} (37. Rxh7+ Kg6 38. Qg8+ Kf5 39. Nxf3 {
+after which Black's mate threat has disappeared and his is hopelessly behind
+on material.} )1-0
+

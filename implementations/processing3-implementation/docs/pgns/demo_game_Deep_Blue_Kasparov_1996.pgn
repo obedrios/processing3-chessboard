@@ -1,0 +1,65 @@
+[Event "Philadelphia m"]
+[White "Comp Deep Blue"]
+[Black "Kasparov,Garry"]
+[Site "Philadelphia"]
+[Round "1"]
+[Annotator "Friedel,F"]
+[Result "1-0"]
+[Date "1996.02.10"]
+[BlackElo "2795"]
+[PlyCount "73"]
+
+1. e4 {Keene Borik} c5 2. c3 {Alapin. This was not unexpected, since at first
+glance it looks like a good choice for the computer. Kasparov is one of the
+world's leading experts in the main line of the Sicilian, so it is natural for
+the Deep Blue team to select a solid line which is not directly in the
+mainstream.} d5 {Drawing gasps from the audience and the commentators. This
+move opens up the center and plays into the kind of position computers
+normally love. But Garry has prepared something specific for the machine.} 3. exd5 Qxd5 4. d4 Nf6 5. Nf3 Bg4 6. Be2 e6 7. h3 Bh5 8. O-O Nc6 9. Be3 cxd4 10. cxd4 Bb4 $1 {Normally 10...Be7 would be considered, keeping the bishop as a
+defensive piece for the black king. But Garry has studied this line carefully
+and is prepared to do open battle against Deep Blue.} 11. a3 Ba5 12. Nc3 Qd6 13. Nb5 Qe7 14. Ne5 Bxe2 15. Qxe2 O-O 16. Rac1 Rac8 17. Bg5 Bb6 18. Bxf6 gxf6 19. Nc4 $1 Rfd8 {Naturally not...} (19... Nxd4 $2 20. Nxd4 Bxd4 21. Qg4+ {[%cal Rg4d4,Rg4g8]
+ and White wins a piece.} )20. Nxb6 axb6 21. Rfd1 f5 22. Qe3 Qf6 {[#]} 23. d5 $1 {Kasparov was taken completely by surprise. This is the
+kind of positional sacrifice computers are not supposed to play. Later we
+found that by sheer brute force Deep Blue had calculated that it could win
+back the pawn by force.} (23. Qg3+ Kh8 (23... Qg6 $6 )24. Nd6 Rg8 25. Qc3 $1 Rcd8 26. Nxf7+ $1 Qxf7 27. d5+ $16 {Fritz4} )Rxd5 (23... exd5 24. Qxb6 Qxb2 25. Qxb7 Rb8 26. Qxc6 Rxb5 (26... Qxb5 27. Qf6 $16 )27. Rc3 {threatening
+Rg3+} f4 28. Rcd3 $16 )24. Rxd5 exd5 25. b3 $1 {The computer is playing
+excellent moves. It is clear that the pawn on b6 cannot escape its fate. A
+human player might have played the rote 25.b4, but that allows a knight
+outpost in some lines after Nc6-e5-c4.} Kh8 {Kasparov goes for mate! He is
+playing too aggressively and adopts the wrong plan against a machine which
+looks at 100 million positions per second.} (25... d4 $2 26. Nxd4 $16 )(25... Qe6 26. Qd2 $1 {followed by Rc1 with ample compensation for the pawn.} (26. Qxb6 $4 Nd8 $1 $19 ))(25... Ne7 $5 26. Rxc8+ (26. Qg3+ {John Nunn} Qg7 (26... Qg6 27. Rxc8+ Nxc8 28. Qb8 Qc6 29. Na7 Qc1+ 30. Kh2 $18 )27. Rxc8+ Nxc8 28. Qc7 Qf8 (28... Qa1+ 29. Kh2 Kg7 30. a4 $1 )29. b4 {there are other good moves} Qe8 30. Qxb7 {looks promising for White} )Nxc8 27. Qe8+ Kg7 28. Qxc8 Qa1+ 29. Kh2 Qe5+ 30. g3 Qe2 31. Qxf5 {only move to avoid perpetual check} Qxb5 {
+and probably drawn.} )(25... Rd8 $1 26. Qxb6 Rd7 {should hold the game quite
+easily.} )26. Qxb6 Rg8 27. Qc5 {Naturally not...} (27. Qxb7 Qg5 {[%cal Rg5g2,Rg5c1] threatening mate and forking the rook on c1.} )d4 $2 {Better was
+probably...} (27... Qg5 28. g3 Qd2 {protecting the weak d-pawn.} 29. Qc3+ (29. Nd6 {Deep Blue would have played this and thought White has a slight edge.} )Qxc3 30. Rxc3 Rd8 31. Rd3 Kg7 {leads to a draw.} )28. Nd6 f4 29. Nxb7 {
+Time Magazine's correspondent Charles Krauthammer wrote: "Deep Blue's king was
+under savage assault by a World Champion. Any human Any human under such
+assault by a world champion would be staring at his own king trying to figure
+out how to get away. Instead, Deep Blue ignored the threat and quite
+nonchalantly went hunting for lowly pawns at the other end of the board. In
+fact, at the point of maximum peril, Deep Blue expended two moves - many have
+died giving Kasparov even one - to snap one pawn. It was as if, at Gettysburg,
+General Meade had sent his soldiers out for a spot of apple-picking moments
+before Beckett's charge, because he had calculated that they could get back to
+their positions with a half-second to spare. In humans, that is called
+sangfroid. And if you don't have any sang, you can be very froid. But then
+again if Meade had known absolutely - by calculating the precise trajectories
+of all the bullets and all the bayonets and all the cannons in Pickett's
+division - the time of arrival of the enemy he could, indeed, without fear,
+have ordered his men to pick apples. Which is exactly what Deep Blue did. It
+had calculated every possible combination of Kasparov's available moves and
+determined with absolute certainty that it could return from its pawn-picking
+expedition and destroy Kasparov exactly one move before Kasparov could destroy
+it. Which it did. It takes more than nerves of steel to do that. It takes a
+silicon brain. No human can achieve absolute certainty because no human can be
+sure to have seen everything. Deep Blue can."} Ne5 30. Qd5 f3 31. g3 Nd3 {
+To give you an impression of the volatility of the position let us take a look
+at some of the lines Kasparov had to consider:} (31... Qf4 {threatening Rxg3+
+and Qxc1} 32. Kh2 $2 (32. Rc8 $3 Qg5 33. Rc5 $1 {and White has everything
+under perfect control. However, if White instead had played} (33. h4 $4 {
+he would have run into a mating net:} Rxc8 $3 34. hxg5 Rc1+ 35. Kh2 Ng4+ 36. Kh3 Nxf2+ 37. Kh4 Rh1# ))Rxg3 $3 {and Black mates:} 33. Rc8+ Rg8+ 34. Kh1 Rxc8 {[%cal Rc8c1]} 35. Nc5 Qc1+ 36. Kh2 Qg5 37. Qxe5+ Qxe5+ 38. Kh1 Qg5 39. Ne6 Qg2# )32. Rc7 (32. Rc6 $2 Rg5 {is unclear (Hsu)} )Re8 (32... Nf4 $5 33. Qxf7 (33. Qxf3 {Deep Blue thought this gave White a large advantage.} )Nxh3+ 34. Kf1 Qxf7 (34... Qa6+ 35. Rc4 {and Qxf3} )35. Rxf7 Ng5 36. Rd7 Rc8 {with chances of saving the game.} )33. Nd6 {Deep Blue goes for the most
+ruthless win. Normal players would have opted for} (33. Qxf7 Re1+ 34. Kh2 Qxf7 35. Rxf7 {with a comfortable win for White.} )Re1+ 34. Kh2 Nxf2 {
+Kasparov is one move from mating the computer. But of course Deep Blue has
+calculated everything to the end.} 35. Nxf7+ Kg7 (35... Qxf7 36. Qd8+ Kg7 37. Rxf7+ Kxf7 38. Qd5+ Ke7 39. Qxf3 {is an easy win for White.} )36. Ng5+ Kh6 37. Rxh7+ {and Black resigned, because of} (37. Rxh7+ Kg6 38. Qg8+ Kf5 39. Nxf3 {
+after which Black's mate threat has disappeared and his is hopelessly behind
+on material.} )1-0
+

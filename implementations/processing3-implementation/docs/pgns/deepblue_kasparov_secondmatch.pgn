@@ -1,0 +1,902 @@
+[Event "New York Man-Machine"]
+[White "Comp Deep Blue"]
+[Black "Kasparov,Garry"]
+[Site "New York"]
+[Round "6"]
+[Annotator "Nunn,J"]
+[Result "1-0"]
+[Date "1997.05.11"]
+[BlackElo "2785"]
+[PlyCount "37"]
+
+1. e4 {Granda Zuniga} c6 {As in game 4. Will Garry use the same hybrid system
+again? Wie in Partie vier. Will Garry das gleiche Hybridsystem wiederverwenden?
+} 2. d4 d5 {No: Garry switches openings and opts for a genuine Caro-Kann. An
+opening less suited to Garry's playing style could hardly be imagined, but at
+least he is very familiar with it, having had many clashes with his old rival
+Karpov, albeit on the other side of the board. Nein, er wechselt die Eröffnung
+und wählt eine echte Caro-Kann-Verteidigung. Eine Eröffnung, die weniger zum
+Kasparov-Stil paßt, kann man sich kaum vorstellen. Aber zumindest kennt er sie
+einigermaßen gut, denn er hat sie in zahlreichen Begegnungen mit seinem alten
+Rivalen Karpov gespielt - allerdings auf der anderen Seite des Brettes!} 3. Nc3 dxe4 4. Nxe4 Nd7 5. Ng5 {Ironically, Deep Blue uses the same system which
+Kasparov used to play himself against Karpov. Eine Ironie des Schicksals, daß
+Deep Blue das gleiche System benutzt, das Kasparov gegen Karpov anwandte.} Ngf6 6. Bd3 e6 7. N1f3 h6 $2 {But Karpov never played like this! This move forces
+White to sacrifice a piece, but the resulting attack is so dangerous that
+there are almost no human players willing to take Black's side. This line
+seems particularly inadvisable against a computer: a wide-open position,
+tactical ideas on all sides and a vicious attack for the silicon monster. 7...
+Bd6 is normal. So hat Karpov aber nie gespielt! Dieser Zug zwingt Weiß, eine
+Figur zu opfern, der entstehende Angriff ist aber so gefährlich, daß es kaum
+noch menschliche Spieler gibt, die das mit Schwarz spielen. Die Variante ist
+besonders unangebracht in Partien gegen den Computer. Sie ergibt völlig offene
+Stellungen mit vielen taktischen Ideen und fürchterlichen Angriffsmotiven -
+alles genau das Falsche gegen ein Silikonmonster. 7...Ld6 ist normal.} 8. Nxe6 Qe7 $2 {After this Black is just lost. The score in over-the-board play tells
+a grim story: 13/14 for White. According to current theory, Black's last
+attempt to survive in this line is 8...fxe6 9 Bg6+ Ke7 10 0-0 Qc7 11 Re1 Kd8.
+At the cost of losing a tempo with his king, Black avoids having his queen
+stuck at e7, where she blocks in the whole of Black's kingside. With the queen
+on c7, the bishop on f8 can move and Black has somewhat more freedom. Having
+said that, White's attack is still very dangerous, but it is by no means a
+forced win. Danach ist Schwarz schlicht verloren. Die Statistik zeigt eine
+niederschmetternde Bilanz: in 13 von 14 Partien hat Weiß gewonnen.} ({Nach der
+heutigen Theorie besteht die letzte vernünftige Chance für Schwarz in der
+Variante} 8... fxe6 $142 9. Bg6+ Ke7 10. O-O Qc7 11. Re1 Kd8 {Schwarz verliert
+ein Tempo mit seinem König, dafür ist die Dame nicht auf e7 gebunden, wo sie
+den ganzen schwarzen Königsflügel blockiert. Mit der Dame auf c7 kann der
+Läufer auf f8 ziehen, und Schwarz hat etwas mehr Freiheit. Der weiße Angriff
+ist immer noch brandgefährlich, aber es gibt keinen erzwungenen Gewinn.} 12. c4 (12. Rxe6 Bd6 13. Re1 Nf8 14. Bd3 Bg4 $17 )Bb4 13. Re2 Nf8 14. Ne5 (14. Bc2 Bd6 15. g3 Qe7 $1 $17 )Nxg6 15. Nxg6 Re8 16. c5 Qf7 $1 $17 {Granda
+Zuniga Der chilenische GM hältdie schwarzue Stellung für besser.} 17. Ne5 Qh5 18. f3 (18. Nc4 b5 19. Ne5 Bd7 20. a4 bxa4 21. Rxa4 a5 22. f3 Re7 $17 )Ba5 19. g4 Qh3 20. Rg2 Bc7 21. Rg3 Qh4 22. Ng6 Bxg3 $1 23. Nxh4 Bxh4 $17 {
+Wolff,P-Granda Zuniga,J/New York Reshevsky 1992/CBM 31/[Granda Zuniga]} )9. O-O fxe6 10. Bg6+ Kd8 11. Bf4 b5 {A new move, but not one which will resurrect
+this variation. A few examples should demonstrate the true horror of Black's
+situation: Ein neuer Zug, aber nicht einer, der diese Variante wiederbeleben
+dürfte. Die Idee ist, das Feld d5 für den Springer zu bekommen, der sonst mit
+c2-c4 vertrieben werden konnte. Aber der Zug gibt Weiß Gelegenheit, weitere
+Linien am Damenflügel zu öffnen und seinen a1-Turm à tempo ins Spiel zu
+bringen. Ferner bleibt das Hauptproblem von Schwarz weiter bestehen: er kann
+die Dame nicht bewegen. Das einzige Feld für sie ist b4, aber das läßt nicht
+nur den e6-Bauern ohne Verteidigung, Weiß kann die Dame jagen und dadurch
+sogar Zeit gewinnen.} (11... Ne8 12. Bg3 Nd6 13. Re1 Nf6 14. Bxd6 Qxd6 15. Ne5 Qd5 16. Nf7+ Kc7 17. Nxh8 Qg5 18. Qd3 Bd6 19. Nf7 Bxh2+ 20. Kxh2 Ng4+ 21. Kg1 Qf6 22. Qg3+ e5 23. Nxe5 {1-0 Schott,R-Kirner,M/Eppingen HT2 1988} )(11... Qb4 12. a3 Qb6 (12... Qxb2 13. Qe2 Nd5 14. Bd2 Bd6 15. Qxe6 Kc7 16. Rfb1 Qxa1 17. Rxa1 Ne5 18. Qxd6+ Kxd6 19. Nxe5 Kc7 20. c4 Ne7 21. Bf4 Rf8 22. Nf7+ Kd7 23. Bh5 b5 24. c5 Nf5 25. Ne5+ Ke6 26. Nxc6 Bb7 27. Re1+ Kf6 28. d5 g6 29. Re6+ Kg7 30. Be5+ Kg8 31. Rxg6+ Kh7 32. g4 Bxc6 33. gxf5 Rxf5 34. Rg7+ Kh8 35. Rg5+ Rxe5 36. Rxe5 Bd7 {1-0 Geller,E-Meduna,E/Sochi 1986} )13. Qe2 Be7 14. c4 Rf8 15. Bg3 a5 16. Rfe1 c5 17. d5 e5 18. Nxe5 Nxe5 19. Qxe5 Ng8 20. Qxg7 Qf6 21. Qh7 Ra6 22. Re3 Bf5 23. Bxf5 Qxf5 24. Qxf5 Rxf5 25. Rae1 Kd7 26. f3 Bf6 27. Rd3 Bxb2 28. Rb1 Rb6 29. Kf1 Rff6 30. d6 h5 31. Be5 Re6 32. Rxb2 Rxb2 33. Bxb2 Rxd6 34. Rxd6+ Kxd6 35. Ke2 Ne7 36. g4 {Bengtsson,O-Henriksson,J/SVE-ch op Vaxjo 1992/
+1-0 (46)} )(11... Nd5 12. Bg3 Qb4 13. Re1 (13. Qe2 Be7 14. c4 N5b6 15. b3 Bf6 16. Rad1 Qe7 17. Rfe1 Nf8 18. Be4 Bd7 19. Qd3 Qf7 20. a4 a5 21. Qe3 Ra6 22. Qf4 Bc8 23. d5 cxd5 24. cxd5 Ke8 25. Bd3 Ra8 26. Bb5+ Bd7 27. dxe6 Nxe6 28. Qd6 Bxb5 29. Rxe6+ Be7 30. axb5 {1-0 Dvoirys,S-Zakharevich,I/Kursk 1987} )Be7 14. Qe2 (14. a3 Qxb2 15. c4 Nc3 16. Qd3 Na4 17. Qe3 Nf8 18. Ne5 Nxg6 19. Nxg6 Rf8 20. Nxf8 Bxf8 21. Qf4 Ke8 22. Qf5 Nc3 23. Rxe6+ Bxe6 24. Qxe6+ Be7 25. Re1 {1-0 Schlosser,M-Kholmov,R/Sochi-A 1989} )Bf6 15. c4 Ne7 16. a3 Qb3 17. Bd3 Nf5 18. Bxf5 exf5 19. Qe6 Qb6 20. c5 Nxc5 21. Qd6+ Nd7 22. Ne5 Bxe5 23. Rxe5 Re8 24. Rxe8+ Kxe8 25. Re1+ Ne5 26. Rxe5+ Kf7 27. Re7+ {1-0 Chandler,
+M-Huebner,R/Biel 1987   The idea of Kasparov's move is to secure the d5-square
+for his knight against the thrust c2-c4. However, it gives White the chance to
+open new lines on the queenside and bring his a1-rook into play without loss
+of time. Moreover, it fails to deal with the main problem of Black's position
+- his inability to move his queen. The only square available to her is b4, but
+this not only leaves the e6-pawn undefended, it also allows White to gain time
+by chasing the queen.} )12. a4 Bb7 ({After Nach} 12... bxa4 13. Rxa4 Nd5 14. Bg3 {Black still cannot move the queen, while c4 is imminent. kann Schwarz
+immer noch nicht die Dame bewegen, während gleichzeitig c4 droht.} )13. Re1 Nd5 ({Attempting to keep the position closed by Der Versuch, die Stellung mit} 13... b4 {doesn't work because of geschlossen zu halten, funktioniert nicht:} 14. c4 bxc3 15. bxc3 Nd5 16. Bg3 Nxc3 {or else c4 (sonst kommt c4)} 17. Qb3 {
+attacking c3 and b7 (greift c3 und b7 an)} Qb4 18. Qxe6 Be7 19. Bf5 Nb6 20. a5 {with a decisive attack. mit spielentscheidendem Angriff.} )14. Bg3 Kc8 {
+Another move which does little to unblock the traffic jam of the kingside. Ein
+weiterer Zug, der wenig zur Auflösung des Verkehrsstaus am Königsflügel
+beiträgt.} ({However Allerdings ist} 14... Qb4 {is no better nicht besser:} 15. Rxe6 Be7 16. c3 Qxb2 17. c4 N5f6 (17... bxc4 18. Rb1 Nc3 19. Rxb2 Nxd1 20. Rxb7 {is easily winning gewinnt leicht} )18. Ne5 Nxe5 19. dxe5+ Nd7 20. Bf5 {
+and wins. und Weiß gewinnt.} )15. axb5 {The a1-rook enters the game. Der
+a1-Turm ist jetzt mit von der Partie.} cxb5 16. Qd3 Bc6 {Black must defend the
+weak pawn on b5, but 16...Nc7 loses to 17 Qc3 Nf6 18 Rxe6 Qd8 19 Bf5 Kb8 20
+Ne5 Nfd5 21 Nc6+ Bxc6 22 Qxc6. Since 16...a6 is met by 17 Bf5, as in the game,
+there is nothing better than the text-move. Schwarz muß den schwachen Bauern
+auf b5 verteidigen,} ({aber} 16... Nc7 {loses to verliert wegen} 17. Qc3 Nf6 18. Rxe6 Qd8 19. Bf5 Kb8 20. Ne5 Nfd5 21. Nc6+ Bxc6 22. Qxc6 )({Since Da auf} 16... a6 {is met by genauso wie in der Partie} 17. Bf5 {as in the game, there
+is nothing better than the text-move. folgt, gibt es letztendlich nichts
+besseres als den Textzug.} )17. Bf5 exf5 {Other moves also lose, for example
+Andere Züge verlieren ebenfalls, z.B.} (17... Nb4 18. Qc3 Kb7 19. Rxe6 Qd8 20. d5 Bxd5 21. Re8 {or oder} )(17... Nc7 18. Bxc7 Kxc7 19. Rxe6 Qd8 20. Qc3 Bd6 21. Ne5 Nb8 22. Be4 )18. Rxe7 Bxe7 {Or 18...Nxe7 19 Qc3 Nb8 (19...Kb7 20 Qa5
+mates) 20 Ne5 with a crushing attack. After the move played, Black has
+sufficient material for the queen, but his position is a complete wreck. Many
+of his pieces are still on their original squares, the ones that are developed
+are hopelessly uncoordinated and his king is horribly exposed.} ({Oder} 18... Nxe7 19. Qc3 Nb8 (19... Kb7 20. Qa5 {mates führt zum Matt} )20. Ne5 {mit einem
+vernichtenden Angriff. Nach dem Textzug hat Schwarz genügend Material für die
+Dame erhalten, aber seine Stellung ist ein Trümmerhaufen. Die Türme sind immer
+noch auf ihren Ausgangsfeldern, die entwickelten Figuren sind völlig
+unkoordiniert, und der König ist hoffnungslos exponiert.} )19. c4 {Die Aufgabe
+ist eine verständliche Entscheidung, wenn man sich die folgenden Varianten
+vergegenwärtigt:} (19. c4 bxc4 (19... Nb4 20. Qxf5 bxc4 21. Ne5 )20. Qxc4 Nb4 21. Re1 Re8 22. Nh4 Nb6 23. Qf7 N6d5 24. Nxf5 Kd8 25. Nxg7 {Ein Desaster für
+Kasparov.} )1-0
+
+[Event "New York Man-Machine"]
+[White "Kasparov,Garry"]
+[Black "Comp Deep Blue"]
+[Site "New York"]
+[Round "5"]
+[Annotator "Nunn,J"]
+[Result "1/2-1/2"]
+[Date "1997.05.09"]
+[WhiteElo "2785"]
+[PlyCount "98"]
+
+1. Nf3 d5 2. g3 {Kasparov continues his policy of playing quiet flank openings.
+} Bg4 3. Bg2 Nd7 4. h3 Bxf3 {It is perhaps more common to play 4...Bh5. The
+exchange on f3 concedes the two bishops at an early stage, but Black gains
+time and this enables him to complete his development without difficulty.} 5. Bxf3 c6 6. d3 e6 {Black's general strategy is clear: having given up his
+light-squared bishop, he must use his central pawns to maintain some
+light-squared control. This also avoids having his remaining bishop obstructed
+by his own pawns.} 7. e4 $6 {White's general strategy is to play e4, which
+serves two purposes. Firstly, it may help to break up Black's solid central
+pawn structure, and secondly a later e4-e5 will gain space and may form the
+basis of a kingside attack, should Black castle on that side of the board.
+However, it is unusual for White to play e4 so quickly; the usual logic being
+that e4 cannot be prevented, so White may as well play 0-0 and bring his king
+into safety before taking action in the centre.} ({For example, in the game
+Murshed-Rahman, Dhaka 1995, White continued} 7. Nd2 Bc5 8. Bg2 Ne7 9. e4 O-O 10. O-O a5 11. a4 Ba7 12. Kh1 Nc5 13. b3 {with a slight edge for White 
+(although the game actually ended in a quick draw). It seems to me that
+Kasparov's move is premature, and helps Black to develop the active piece play
+he needs to offset White's two bishops.} f5 14. exd5 Nxd5 15. Bb2 Nd7 16. Nc4 Qg5 17. Qf3 f4 18. Rae1 {1/2-1/2 Murshed,N-Rahman,Z/Dhaka 1995} )Ne5 8. Bg2 dxe4 {Having a well-supported pawn on d5, it looks odd to surrender this
+outpost by making a voluntary exchange on e4, but Deep Blue has seen some
+specific tactical features of the position which justify this slightly
+anti-positional exchange.} 9. Bxe4 {Already White feels some inconvenience
+from having his king in the centre. The natural reply is} (9. dxe4 Bb4+ $1 ({
+when} 9... Qxd1+ 10. Kxd1 O-O-O+ 11. Ke2 {gives White a favourable ending
+because Black has nothing in return for the two bishops. The problem is that
+Black plays 9...Bb4+} )10. c3 (10. Nd2 Qa5 11. O-O O-O-O 12. c3 Be7 {is also
+awkward because White has been forced to weaken d3} )Nd3+ 11. Ke2 Nxc1+ 12. Qxc1 Bc5 {and the opposite-coloured bishops mean complete equality. This
+is a good example of how Black can uses his lead in development and active
+pieces to nullify White's theoretical long-term advantage.} )Nf6 10. Bg2 {
+At one time this type of structure was thought good for White. However, the
+current popularity of the Scandinavian Defence (1 e4 d5) depends on Black
+accepting precisely this type of position. The central structure d4 v c6, e6
+is very solid for Black. It is hard for White to open the position and
+activate his two bishops. The current situation is more favourable for Black
+than a typical Scandinavian position, first of all because White has yet to
+advance his pawn to d4 and secondly because Black has a lead in development. I
+do not believe that White has any advantage here.} Bb4+ 11. Nd2 h5 {A
+surprising move from a computer, but a good one. The computer puts its finger
+on the slight weakness created by the move h3. This means that after a later ..
+.h4, White will be forced to either defend the g3-pawn or play g4, but then
+the square f4 is accessible to Black's pieces, especially the knight on g6.
+Some human players who like pushing their rook's pawns (Speelman, for example)
+might also have played this move, but it is certainly interesting that Deep
+Blue finds this quite sophisticated positional idea.} 12. Qe2 Qc7 13. c3 Be7 {
+After} (13... Bd6 14. d4 Ng6 15. Nc4 h4 16. Nxd6+ Qxd6 {White even has two
+bishops against two knights, but actually this also seems playable for Black,
+for example} 17. Qf3 Nh5 {exerts uncomfortable pressure on g3.} )14. d4 Ng6 15. h4 {Garry decides to halt the further advance of the h-pawn, but at the cost
+of allowing an enemy knight to hop in to g4.} e5 {Of course. Thanks to Black's
+excellent development, Deep Blue can execute this freeing advance at once.
+Normally, Black has to fight long and hard to liberate his position in this
+manner.} 16. Nf3 exd4 17. Nxd4 O-O-O 18. Bg5 Ng4 19. O-O-O Rhe8 {Black must
+not be greedy:} (19... Bxg5+ 20. hxg5 Qa5 {, attacking a2 and g5, runs into} 21. Rxh5 )20. Qc2 Kb8 {The complete liquidation of the central pawns presages
+further exchanges and a draw. White still has the theoretical advantage of the
+two bishops, but one can hardly say that the knight on g4 is any worse than a
+bishop.} 21. Kb1 Bxg5 22. hxg5 N6e5 23. Rhe1 {Not} (23. Rxh5 c5 24. Nb3 Rxd1+ 25. Qxd1 Nxf2 {and Black, if anything, is better.} )c5 24. Nf3 {
+Cautiously returning to the kingside and defending the g5-pawn. The position
+is dead equal.} Rxd1+ 25. Rxd1 Nc4 {This knight appears actively placed, but
+Kasparov finds a way to drive it back.} 26. Qa4 Rd8 27. Re1 {White plays
+quietly, forcing the c4-knight to retreat.} (27. Rxd8+ Qxd8 28. a3 {was an
+interesting alternative, for example} Qd3+ 29. Ka2 Qe2 30. Qb5 Qxf2 {not} (30... b6 $2 31. Ne5 Ngxe5 32. Qe8+ Kc7 33. Qe7+ Kc8 34. Bh3+ {and wins, but} )(30... a6 {is playable, when} 31. Qxb7+ Kxb7 32. Ng1+ Kc7 33. Nxe2 Nxf2 34. Nf4 g6 35. Bf1 Ne3 36. Bxa6 Ne4 {leads to an ending in which Black's passed h-pawn
+appears rather dangerous.} )31. Qe8+ Kc7 32. Qxf7+ Kd6 33. Qxc4 Qxg2 34. Qf4+ {
+with perpetual check as the most likely outcome.} )Nb6 28. Qc2 Qd6 29. c4 {The only defect in Black's position is the offside knight on b6, so Kasparov
+takes steps to make sure that it stays inactive.} Qg6 $2 {A very odd and
+mistaken move. Deep Blue was probably attracted to it because it temporarily
+wins a pawn, but White soon regains it and activates his pieces at the same
+time. If Black wanted to exchange queens then} (29... Qd3 {looks the best way
+to do it, for example} 30. Qxd3 Rxd3 31. Re8+ Kc7 32. Kc2 Rd8 {with an
+inevitable draw.} )({It was also possible just to bring the poorly placed
+knight back into play, for example} 29... Nc8 30. Bh3 Ne7 {(heading for c6 and
+d4)} 31. Bxg4 hxg4 32. Ne5 {not} (32. Nh2 $2 Nc6 33. Nxg4 Nb4 {and Black wins.} )Qe6 33. Nd3 Qd6 {with a draw by repetition.} )30. Qxg6 fxg6 31. b3 Nxf2 32. Re6 {The best way to regain the pawn. After} (32. Nh4 Nd3 33. Rd1 Rd7 34. Nxg6 Ne5 35. Rxd7 Nbxd7 36. Nf4 g6 37. Be4 Nf8 {Black defends everything.} )Kc7 33. Rxg6 Rd7 34. Nh4 {Having been given a chance by Deep Blue's poor
+29th move, Kasparov now plays very well to make the most of his slight
+advantage. Now he intends Nf5.} Nc8 {Meeting the threat, since 35 Nf5 can now
+be answered by 35...Ne7.} 35. Bd5 ({Trying to win the h5-pawn by} 35. Bf3 {
+leads to nothing. Black could simply play} Ng4 {or even give up the pawn to
+activate his knights by} (35... Nd6 36. Bxh5 Nfe4 ))Nd6 {Not} (35... Ng4 36. Be6 Ne5 37. Bxd7 Nxg6 38. Nxg6 Kxd7 39. Nf4 {and White wins a pawn,
+although in view of Black's more active king it is doubtful if this would
+suffice to win the game.} )36. Re6 Nb5 {Deep Blue forces the exchange of
+White's dominant bishop (since White cannot allow a second knight to jump into
+his position), but Kasparov retains the initiative.} 37. cxb5 Rxd5 38. Rg6 Rd7 ({Not} 38... Ne4 39. Rxg7+ Kb6 40. g6 Rd2 41. Re7 {and the g-pawn is too
+strong.} )39. Nf5 Ne4 40. Nxg7 ({White has no time for} 40. Kc1 {because of} Rd5 41. Rxg7+ Kb6 )Rd1+ 41. Kc2 Rd2+ 42. Kc1 Rxa2 ({Not} 42... Rg2 43. Nxh5 {and the g3-pawn is defended with gain of tempo.} )43. Nxh5 Nd2 44. Nf4 {
+[#] It seems to me that the diagram position is critical for the assessment of
+the ending. After the move played Deep Blue manages to forced a draw by means
+of a surprising tactical manoeuvre. The alternative was to play a rook move,
+delaying Nf4 in the hope of restricting Black's options.} ({The idea is} 44. Rf6 Nxb3+ ({not} 44... Ne4 45. g6 Nxf6 46. Nxf6 Rg2 47. Ne4 {and White wins} )45. Kb1 Rh2 {the point of playing the rook move first is that if Black plays} (45... Rd2 46. g6 c4 {as in the game, White can reply} 47. Rf3 {and White has
+an extra tempo through missing out Nf4, and so wins.} Rd8 48. Rf7+ Kb6 49. g7 )46. Nf4 c4 47. g6 Kd7 $1 ({after} 47... Nd2+ 48. Kc1 Nb3+ 49. Kd1 {White
+avoids the checks.} )48. Nd5 Nd2+ 49. Ka2 $1 {it would take a brave man to
+walk into this discovered check, but it is the only winning attempt, and now:} Ne4+ (49... Rg2 50. Rf7+ Ke8 (50... Kd6 51. Ne3 )51. Rxb7 Ne4+ 52. Ka3 Rxg3+ 53. Kb4 Nd6 54. Nf6+ Kf8 55. Rd7 Rxg6 56. Rxd6 Ke7 57. Rd7+ Kxf6 58. Rxa7 {
+leading to a winning ending of R+P v R.} )50. Ka3 Rh3 (50... Rg2 51. Rf3 Nxg3 52. Nf6+ Ke6 53. g7 )51. Rf3 Rh6 52. Re3 {and Black is in trouble. Perhaps
+Black has a draw somewhere in this analysis, but I think 44 Rf6 would have
+posed Deep Blue more problems than the move played.} )({Note that the similar
+idea} 44. Re6 {fails since after} Nxb3+ 45. Kb1 Rh2 46. Nf4 c4 47. g6 c3 {
+Not does} 48. Re2 {promise anything, for example} Rh1+ 49. Kc2 Nd4+ 50. Kxc3 Nxe2+ 51. Nxe2 Rh5 {and Black is better.} )Nxb3+ 45. Kb1 Rd2 {On this
+square the rook prevents a later Nd5+.} 46. Re6 c4 47. Re3 {White must take
+steps against the deadly threat of 47...c3.} ({After} 47. Re2 c3 (47... Rxe2 48. Nxe2 Kd6 49. Kc2 Nc5 50. g6 Ke6 51. Kc3 Kf6 52. Kxc4 Ne4 53. Kd5 Nd2 54. Nf4 {may also draw, but is more tricky for Black} )48. Rxd2 cxd2 49. Kc2 Kd6 50. g6 Ke7 51. Nd5+ Kf8 52. Ne3 Nd4+ 53. Kxd2 Kg7 {Black draws.} )Kb6 $1 {An excellent defensive idea. Black will lose if his rook has to return to
+stop the g-pawn, but by bringing his king into the attack he just manages to
+save the day. The question is: when did Deep Blue see this resource?} 48. g6 Kxb5 49. g7 Kb4 (49... Kb4 {After 50 g8Q or 50 Nd3+ cxd3 51 g8Q, Black just
+gives perpetual check on d1 and d2, so the only winning try is} 50. Re2 Rd1+ 51. Kb2 c3+ 52. Kc2 Rc1+ 53. Kd3 Rd1+ {and now:} 54. Ke4 {(for a long time I
+couldn't find a defence for Black after this, but there is one) and now:} (54. Ke3 Rd8 55. Nd5+ Kc4 56. Nf6 Nd4 57. Rf2 ({not} 57. g8=Q+ Rxg8 58. Nxg8 Nxe2 59. Kxe2 Kb3 {and Black wins} )c2 58. Kd2 Nf5+ 59. Kc1 Nxg7 60. Rxc2+ {
+followed by Rc7, with a draw.} )Nc5+ $1 (54... Rd4+ 55. Ke5 Rd8 56. Nd5+ Kc4 57. Re4+ (57. Nf6 Kd3 58. Rh2 c2 )Kc5 58. Nxc3 Nd2 59. Rg4 {and
+White wins.} )(54... Rd8 55. Nd5+ Kc4 56. Nf6 Nd2+ 57. Kf5 c2 58. Rxd2 c1=Q 59. Rxd8 {and again White is winning.} )55. Kf5 (55. Kf3 Rd8 56. Nd5+ Kb3 57. Re3 Kc4 58. Nxc3 Rg8 {and} )(55. Ke5 Rd8 56. Nd5+ Kc4 57. Nf6 Kd3 58. Re1 Kd2 {
+favour Black} )Rd8 56. Ng6 Rg8 57. Kf6 Kb3 {and again both sides have to
+give their rook for the opposing passed pawn, leaving Black a pawn up. Since
+line 2c can only be better for Black, Kasparov's decision to accede to the
+draw was entirely correct.} )1/2-1/2
+
+[Event "New York Man-Machine"]
+[White "Comp Deep Blue"]
+[Black "Kasparov,Garry"]
+[Site "New York"]
+[Round "4"]
+[Annotator "Nunn,J"]
+[Result "1/2-1/2"]
+[Date "1997.05.07"]
+[BlackElo "2785"]
+[PlyCount "111"]
+
+1. e4 c6 2. d4 d6 {Kasparov sticks to his anti-computer opening strategy.} 3. Nf3 {After this the game transposes to a type of Pirc. More aggressive
+responses are 3 c4, which might lead to a sort of King's Indian, or 3 f4.} Nf6 4. Nc3 Bg4 5. h3 Bh5 6. Bd3 {A slightly passive set-up; it isn't obvious
+exactly what the bishop is doing on d3. A more dynamic build-up would involve
+g4, Qe2 and Bg2.} e6 7. Qe2 d5 {Black's opening strategy is now clesr. His
+light-squared bishop has ben developed outside the pawn chain and will sooner
+or later be exchnaged off. Black then erects a light-squared barricade in the
+centre, so that if the centre becomes blocked then he will be left with his
+'good' bishop. The cost is the tempo wasted in playing ...d6 and then ...d5.
+However, in the relatively closed positions which result, this tempo is not of
+great significance.} 8. Bg5 {This appears to be a new move. Hitherto, White
+has tried} (8. exd5 Bxf3 9. Qxf3 cxd5 10. O-O Nc6 11. Ne2 Be7 12. c3 O-O 13. Bf4 a6 14. Ng3 b5 $11 {1-0 Chernyshov,K-Maiwald,J/Dresden op 1995 (39) with
+equality, Chernyshov-Maiwald, Dresden Open 1995. The position resulting from
+the exchange on d5 closely resemble the line 3 exd5 cxd5 4 Bd3 in the
+Caro-Kann.} )Be7 9. e5 ({Not} 9. O-O $2 {which runs into} Nxe4 10. Bxe7 Nxc3 11. Qe5 Qxe7 12. Qxg7 Qf8 13. Qxf8+ Rxf8 14. bxc3 Bxf3 15. gxf3 {is
+strategically winning for Black.} )Nfd7 ({If Black wanted to make sure
+that his h5-bishop was exchnaged for a knight rather than a bishop, he could
+have played} 9... Bxf3 10. Qxf3 Nfd7 11. Bxe7 Qxe7 {but the problem is that
+the b8-knight is much harder to develop. Overall, the move played in the game
+appears most accurate.} )10. Bxe7 Qxe7 11. g4 Bg6 12. Bxg6 {This looks
+slightly odd to human eyes, because the h8-rook is activated against the
+backward pawn on h3. It appears more natural to play 0-0-0, then aim to move
+the knight from f3 and play f4-f5.} hxg6 13. h4 {However, Deep Blue shows that
+the exchnage on g6 did have a point. If Black plays a later ...f6, then White
+can reply exf6, gxf6; g5, undermining Black's control of e5. WE shall see this
+idea again later.} Na6 14. O-O-O O-O-O 15. Rdg1 {Preparing for kingisde
+activity by h5.} Nc7 {A fundamental decision, over which garry thought for a
+long tiem. Black has two alternative plans: the first is to support the
+e6-square and then play ...f6. White's likely response is to swap on f6, and
+then Black can try to play ...e5. If he succeeds in this plan, Black will have
+a majority of pawns in the centre. The second plan is to attempt a queenside
+attack. If he were to go for this plan, Black would play 15...Nb6, with the
+idea of ...Nc4 and ...Qb4 to come. In this case the knight shouild stay on a6
+as it might be able to partciipate directly in the attack from this square.
+The choice in the game shows that Garry has definitely decided for the first
+plan.} 16. Kb1 ({The point of this move is not entirely clear - it even looks
+like a lazy human move, just tucking the king out of harm's way so as to avoid
+overlooking a possible check later!} 16. h5 gxh5 17. gxh5 {is more ambitious
+as the tactical idea} f6 18. Nh4 fxe5 19. Ng6 Qb4 20. Nxh8 exd4 21. a3 Qa5 {
+appears good for White after} 22. Nf7 )f6 {Challenging White's central
+control.} 17. exf6 Qxf6 $1 {An excellent and combative move. The obvious
+continuation was 17...gxf6, but then White could reply 18 g5 eliminating the
+f6-pawn and thereby preventing Black from playing ...e5. The result would be a
+general opening up of the kingisde, when White's rooks appear well-placed on
+h1 and g1. The move played leaves Black with doubled and isolated pawns,
+supposedly the chess-player's worst nightmare. However, White also has serious
+structural weaknesses; the pawns on g4 and h4 aren't doing much and, even more
+seriously, his f3-knight and f2-pawn are vulnerable to pressure down the
+f-file.} 18. Rg3 {Deep Blue takes steps to defend the exposed knight, but the
+rook is clumsily placed here.} Rde8 {Threatening to break through in the
+centre by ...e5. This would give Black a clear advantage so Deep Blue
+immediately prevents it.} 19. Re1 Rhf8 {Very natural play. The f3-knight is
+immobilised by the pressure along the f-file, since the f2-pawn is
+insufficiently defended. Garry has excellent compensation for his slight
+kingisde pawn weaknesses in the form of active piece-play - just the type of
+situation in which he normally plays very well.} 20. Nd1 $1 {Deep Blue finds
+an excellent counter to Black's plan. Although this looks passive, the knight
+wasn;t doing much on c3 and it is much more usefully employed defending the
+f2-pawn. This frees the f3-knight for action; in some lines White might be
+able to play Ne5.} e5 $5 {An amazing pawn sacrifice. The logic behind this is
+that there are only two things wrong with Black's posiiton: the backward
+e6-pawn and the poorly plaved kngith on c7, which has few active prospcets 
+(the g-pawns are not a significant factor provided Black's pieceds remain
+active, as White will not have the freedom of action to exploit them). By
+giving up a pawn, Black solves both these problems at a stroke. The c7-knight
+can move to e6, and then either to f4 or to c5 and then e4. It is certainly a
+bold stroke to offer a pawn against a computer, as machines (like Kortschnoj)
+have the annoying habit of hanging on to material. Very good judgement by
+Kasparov!} ({Another factor is that an alternative plan is hard to find.} 20... Qf4 {is met, not by} 21. Ne5 $2 Nxe5 22. Qxe5 Qxe5 23. Rxe5 Rf4 24. c3 Rh8 {
+with strong pressure against White's pawns, but by 21 Qd3 and g6 is hard to
+defend.} )({Attempting to activate the c7-knight by} 20... Nb5 21. c3 Nd6 {
+fails to} 22. Ng5 {with Rf3 to come.} )21. dxe5 ({After} 21. Nxe5 Qxh4 {
+Black has no problems.} )Qf4 22. a3 $2 {An extremely odd move which has
+no visible purpose, other than the general one of avoiidng potential back-rank
+problems.} ({Neither} 22. Qd3 Nxe5 {nor} )(22. h5 gxh5 23. gxh5 Rh8 24. Rxg7 Rxh5 {is promising for White} )({so the best move is probably} 22. Qe3 $1 Qxe3 23. Rxe3 Ne6 )Ne6 {Kasparov gratefull seizes on the free tempo to
+progress with his plan.} 23. Nc3 {Deep Blue appears is floundering. This move
+undoes all the good work that the earlier Nd1 had achieved. 23.Qe3 was still
+the best move. If White were a human being, one would say that he had 'lost
+the thead'. It seems odd that computers can have the same problem.} Ndc5 24. b4 $2 {A very ugly move. This was clearly the point of White'sprevious move: to
+be able to expel the knight from c5 without it landing on e4. However, the
+time White gains is as nothing compared to the serious weakening of his king
+position. Kasparov must have been mentally rubbing his hands with glee at the
+sight of this reckless advance.} Nd7 25. Qd3 Qf7 26. b5 {Having played b4 to
+keep the knights out of c5, it is of course inconsistent to let them back in
+again. Now White has nothing positive to show for the advance of his b-pawn,
+while his king position becomes weaker and weaker. White should have just
+remained passive, although Black has various ways of improving his position,
+for example by ...Kb8 and ...Rc8, aiming for ...c5.} (26. Nd1 Kb8 )Ndc5 27. Qe3 Qf4 {White's collection of pawn weaknesses is now so serious that
+Black feels no hesitation is swapping off queens into an ending a pawn down!
+His aim is to reach a spotion with doubled rooks on f4 and f8, when White's
+whole position will be ceaking at the seams.} 28. bxc6 bxc6 29. Rd1 {Deep Blue
+struggles to maintain control. This move prepares Nd4 in some lines.} Kc7 {
+Allowing the rooks to switch to the b-file.} 30. Ka1 Qxe3 {A surprising
+decision, but after considerable analysis I think it is correct. Here Black
+had the opportunity to play for a direct attack against the white king, which
+Kasparov might not have tunred down against a human opponent.} ({However, with
+accurate defence the upshot is far from clear} 30... Rb8 31. Rb1 Rxb1+ 32. Kxb1 Rb8+ 33. Kc1 Qc4 34. Nd2 Qa6 35. Ne2 {also achieves little} )(30... Qc4 31. Nd2 (31. Nd4 $1 Nxd4 (31... Rb8 32. Nxe6+ Nxe6 33. Qxa7+ Rb7 34. Qa5+ {looks good
+for White} )32. Rxd4 Qf1+ 33. Nd1 {and there is obvious continuation for Black.
+} )Qa6 {really is dangerous for White} )31. fxe3 Rf7 {Doubling rooks
+will force the f3-knight to move, an then Black's rooks cen penetrate to f2.} 32. Rh3 {Another odd move from Deep Blue. Up to now we could say that Black
+had a slight advantage, but now White is in deep trouble.} (32. Nd4 Ref8 33. Nxe6+ Nxe6 {looks better, although Black also has some advantage in this case.} )Ref8 33. Nd4 Rf2 34. Rb1 Rg2 35. Nce2 {Deep Blue decides to hettison
+the extra pawn, but there were by now no good alternatives.} (35. g5 Rff2 )Rxg4 ({It is also tempting to play for the attack by} 35... Rff2 36. Nxe6+ Nxe6 37. Nd4 Nxd4 38. exd4 Rxc2 39. Rf1 c5 40. dxc5 Kc6 41. Re1 Kxc5 {
+, which also strongly favours Black, but there is no reason to criticise the
+game continuation.} )36. Nxe6+ Nxe6 {All White's remaining pawns are isolated,
+and Black's pieces are all more active than their White counterparts. With all
+these advantages, it is incredible that Kasparov failed to win this position.} 37. Nd4 {Another pawn bites the dust, but this is a reasonable decsiion,
+because the knight on e6 was exrteremely well-placed and White could hardly
+avoid shedding one of the weak e-pawns in any case.} Nxd4 38. exd4 Rxd4 39. Rg1 Rc4 40. Rxg6 Rxc2 41. Rxg7+ Kb6 42. Rb3+ Kc5 43. Rxa7 {White is once again a
+pawn up, but his three scattered pawns are far less dangerous than Black's two
+connected passed pawns. Moreover, Black'sking is activ e wherea White's is
+trapped on the back rank and subjected to mating threats from the enemy rooks.
+The position should be winning for Black.} Rf1+ $2 {This move effectively
+loses a vital tempo. The somplest win was by} (43... Kc4 44. Rab7 c5 45. Rb2 (45. e6 Re2 )Rxb2 46. Rxb2 d4 47. e6 (47. Rc2+ Kb3 48. Kb1 d3 )d3 48. Rg2 Kc3 {and Black's pawns are too strong.} )44. Rb1 Rff2 45. Rb4 {Had
+Kasparov overlooked that this move threatens mate in one? If Black wants to
+play for a win then he is more or less forced to swap one pair of rooks, but
+this relieves much of the pressure against White's king.} Rc1+ 46. Rb1 Rcc2 47. Rb4 Rc1+ 48. Rb1 Rxb1+ {Black is eventually forced to exchnage rooks, but in
+comparison with the note to Black's 43rd move, his king and pawns are further
+back. The position should probably still be a win, but it is now more trickly.} 49. Kxb1 Re2 50. Re7 Rh2 51. Rh7 Kc4 $2 ({Now the game appears to be a draw.
+The correct move was} 51... d4 $1 {After} 52. Rc7 (52. e6 Re2 53. e7 Kc4 54. a4 d3 55. a5 Re1+ 56. Kb2 d2 {wins} )Rxh4 53. e6 Re4 54. e7 Kd6 {the point
+is revealed: White loses his e-pawn.} )52. Rc7 $1 {Deep Blue seizes the
+drawing chance. First of all, the rook is transferred behind the black pawns
+with gain of tempo. This is necessary, because it is of no value to push e6-e7
+while the rook is stuck on h7 - the rook must be available to restrain Black's
+pawns from behind,} c5 53. e6 Rxh4 54. e7 Re4 55. a4 {This is the second point.
+Black no longer has the move ...Kd6 available, so White keeps his e-pawn.} Kb3 {The position is just drawn. With the rook actively placed on c7, Black can
+only advance his pawns very slowly, too slowly to beat White's a-pawn to the
+queening square.} (55... Kb4 56. a5 )(55... d4 56. a5 d3 57. a6 )56. Kc1 1/2-1/2
+
+[Event "New York Man-Machine"]
+[White "Kasparov,Garry"]
+[Black "Comp Deep Blue"]
+[Site "New York"]
+[Round "3"]
+[Annotator "Nunn,J"]
+[Result "1/2-1/2"]
+[Date "1997.05.06"]
+[WhiteElo "2785"]
+[PlyCount "95"]
+
+1. d3 {An overt anti-computer measure by Kasparov, aiming to take the machine
+out of its opening book as quickly as possible.} e5 2. Nf3 Nc6 3. c4 Nf6 4. a3 {The game was heading for a more or less normal English Opening, so Kasparov
+once again steers the game into original channels.} d6 5. Nc3 Be7 {This
+position has occurred quite a few times, and the most popular response has been
+} (5... Nd4 6. Nd2 {and now:} c6 (6... Bg4 7. b4 Be7 8. h3 Bh5 9. Qa4+ c6 (9... Qd7 {9...Qd7 is safe and equal.} 10. Qxd7+ Nxd7 11. Ra2 c6 12. e3 Ne6 13. Be2 $10 )10. e3 Ne6 11. Bb2 O-O 12. Be2 d5 13. Bxh5 Nxh5 14. Qd1 d4 (14... Nf6 $13 )15. Qxh5 (15. exd4 Nhf4 $1 $17 )dxc3 16. Bxc3 Qxd3 17. Rc1 (17. Bxe5 $2 f6 18. Bb2 Qc2 19. Rb1 Rad8 20. Qe2 Rxd2 $19 )Nd4 $2 (17... Rad8 18. Qe2 f6 19. Qxd3 Rxd3 20. Ke2 $10 )18. exd4 exd4 19. Bb2 Rfe8 20. Kd1 a5 21. Qe2 $1 Qxe2+ (21... Qf5 22. Re1 $18 )22. Kxe2 axb4 23. axb4 d3+ (23... Bxb4+ 24. Kd3 $18 )24. Kf3 Bg5 25. Bc3 Re2 26. Ra1 $1 Rae8 27. Rhd1 h5 28. Nf1 Rd8 29. Bd2 Bf6 30. Ra3 Re5 31. Bf4 {1-0 Chernin,A-Morozevich,A/Podolsk 1993} )7. g3 h5 8. h3 d5 9. Bg2 a6 10. e3 Ne6 11. cxd5 cxd5 12. Nf3 Bd6 $13 13. O-O h4 14. g4 e4 15. dxe4 dxe4 16. Nd2 Ng5 17. Ndxe4 Nfxe4 18. Nxe4 Nxe4 19. Qa4+ Kf8 20. Qxe4 f5 21. gxf5 Qf6 22. Rd1 Rh6 23. Qd4 {1-0 Panno,O-Bronstein,L/ARG-ch 1989  Both
+these games ended in White wins, although this had nothing to do with the
+opening. It is not surprising that Black has relatively few problems
+equalising after an innocuous move such as a3.} )(5... g6 {is another sensible
+response. The system adopted by Deep Blue looks a little passive since the
+bishop is not well placed on e7.} )6. g3 O-O 7. Bg2 Be6 8. O-O Qd7 {Deep Blue
+intends to exchange bishops with ...Bh3.} 9. Ng5 {Surprisingly, this position
+has occurred in a game between two leading grandmasters:} (9. Bg5 Nd4 10. Nd2 Bh3 11. e3 Bxg2 12. Kxg2 Ne6 13. Bxf6 Bxf6 14. Nde4 Bd8 15. f4 f5 16. Nf2 c6 $11 {1/2-1/2 Kortschnoj,V-Adams,M/Moscow PCA 1994 (39)  Kasparov adopts a
+different line, avoiding the bishop exchange at the cost of misplacing his
+knight.} )Bf5 10. e4 Bg4 11. f3 Bh5 12. Nh3 {It is very hard for White to
+achieve anything while his knight occupies a vulnerable position on g5, for
+example after} (12. Bh3 Qd8 13. g4 Bg6 14. f4 exf4 15. Bxf4 Ne5 {both g4 and
+g5 are exposed to attack and White's whole build-up looks rather shaky.} )({
+The immediate} 12. g4 Bg6 {is no better; White cannot play 13 f4 because his
+g4-pawn is hanging.} )Nd4 13. Nf2 h6 14. Be3 {Threatening 15 Bxd4 exd4
+16 Ne2, followed by g4 and f4, completely shutting Black's light-squared
+bishop out of the game.} c5 {The general opinion expressed by other
+commentators has been that this position clearly favours White, but in my
+opinion White only has a slight edge. True, Deep Blue has played the opening
+in a way which appears very odd to human eyes, because it doesn't fit any of
+the normal patterns for playing with Black against the English Opening.
+Ideally, White would like to set his kingside pawns in motion, but it isn't
+easy to achieve this. The f-pawn is pinned, and White cannot unpin it by
+moving his queen, because then f3 would be hanging. Moreover, there is no
+attractive square to put the queen (ironically, the move a2-a3 cuts out a
+possible Qd2). Of course, White could play 15 g4 Bg6 16 f4, but then 16...exf4
+17 Bxf4 Rae8 is fine for Black; he intends ...b5 and the f2-knight is badly
+placed. White wants to play f4 without g4, so as to meet ...exf4 by gxf4. The
+manoeuvre which Kasparov plays later in the game (involving Bh3) is not
+possible here because 15 Bh3 loses a pawn to 15...Bxf3. Therefore Kasparov
+gives up any immediate idea of kingside expansion, and opens a second front on
+the queenside.} 15. b4 (15. Bh3 $2 Bxf3 )(15. g4 $6 Bg6 16. f4 exf4 17. Bxf4 Rae8 )b6 16. Rb1 Kh8 {The computer cannot find a constructive plan. A
+human might have played 16...Rab8, preparing for the possible opening of the
+b-file.} 17. Rb2 ({Once again} 17. Bh3 {is doubtful, because of} Bxf3 18. Bxd7 Bxd1 19. Rbxd1 Nxd7 20. Bxd4 cxd4 21. Nd5 {and White has little to show for
+the pawn.} )a6 {Deep Blue shows signs of life; this looks as if it
+intends ...b5, opening up the queenside completely, so Kasparov decides to
+pre-empt this by taking action himself.} 18. bxc5 ({White would undoubtedly
+have preferred to play the immediate} 18. Bh3 {, but after} Bxf3 19. Bxd7 Bxd1 20. Nfxd1 Nxd7 21. bxc5 dxc5 {Black can keep the b-file closed, when White
+does not have enough for the pawn.} )bxc5 19. Bh3 {Now this is possible,
+because the tactics work in White's favour.} Qc7 {Deep Blue simply moves the
+queen but, thanks to the (necessary) preliminary exchange on c5, the queen has
+a route to the active square a5.} (19... Nxf3+ $2 20. Kh1 {followed by g4, and
+Black loses material} )(19... Bxf3 20. Bxd7 Bxd1 21. Nfxd1 Nxd7 22. Rb7 Rad8 23. Ra7 {and White regains the pawn with an endgame advantage. One possible
+line runs} Bg5 24. Rxa6 Bxe3+ 25. Nxe3 Ra8 26. Rxa8 Rxa8 27. Rxf7 Rxa3 28. Ncd5 Ra7 29. Nf5 Nxf5 30. exf5 Kg8 31. Re7 Kf8 32. Re6 {and Black is under pressure.
+} )20. Bg4 {This is point of White's last move. The pressure on f3 is relieved.
+} Bg6 ({After either} 20... Nxg4 21. fxg4 Bg6 22. Nd5 {or} )(20... Bxg4 21. Nxg4 {the f6-knight is eliminated and White well on the way to a position with
+a knight on d5 against Black's bad dark-squared bishop.} )21. f4 exf4 22. gxf4 Qa5 {A key moment. White has achieved his strategic ambitions on the kingside,
+but at the cost of allowing annoying counterplay on the queenside.} 23. Bd2 {
+It is understandable that Kasparov does not want to retreat his knight to b1,
+but the only alternative is to sacrifice a pawn. In return, White obtains
+considerable positional pressure, but is only enough to balance the pawn
+deficit.} Qxa3 24. Ra2 {A surprising decision. Kasparov forces the exchange of
+queens. 24 Rb7 looks much more combative. After 24...Nxg4 25 Qxg4 Bf6 26 Nd5
+Qa2 White can try either 27 Rd1 Bh4 28 f5 or 27 Be3 Qe2 28 Qxe2 Nxe2+ 29 Kg2,
+with an unclear position in both cases. Black still has an extra pawn, but his
+light-squared bishop is dismally placed.} (24. Rb7 {looks much more combative.
+After} Nxg4 25. Qxg4 Bf6 26. Nd5 Qa2 {White can try either} 27. Be3 (27. Rd1 Bh4 28. f5 {or} )Qe2 28. Qxe2 Nxe2+ 29. Kg2 {with an unclear position in
+both cases. Black still has an extra pawn, but his light-squared bishop is
+dismally placed.} )Qb3 25. f5 Qxd1 26. Bxd1 Bh7 {Better than} (26... Bh5 27. Bxh5 Nxh5 28. Nd5 Bg5 29. Bxg5 hxg5 30. Rfa1 {, when White regains his
+pawn with some advantage, because the d6-pawn is weak.} )27. Nh3 Rfb8 28. Nf4 Bd8 29. Nfd5 {Intending Bf4; Deep Blue takes steps to shield the d6-pawn.} Nc6 30. Bf4 Ne5 31. Ba4 Nxd5 32. Nxd5 a5 33. Bb5 Ra7 {The outlines of a draw are
+already visible. The active knight on d5 and Black's bishop on h7 provide
+sufficient compensation for the pawn, but there are no real weaknesses in
+Black's position so White cannot make progress.} 34. Kg2 g5 $1 {Perhaps
+Kasparov imagined that he could manoeuvre very slowly, for example playing his
+king to e2, and continuing with Rfa1 and Bd2, to put pressure and perhaps win
+the a-pawn. Black could have defended passively by ...f6 and ...Bg8-f7, but
+this blocks in the d8-bishop and creates a backward g-pawn. However, Deep Blue
+very correctly takes action itself.} 35. Bxe5+ {There is nothing better, for
+example} (35. fxg6 Bxg6 36. Bxh6 Nxd3 {is fine for Black.} )({White could play
+} 35. Bg3 {but then Black has a pleasant choice; either to play ...f6 and ...
+Bg8-f7, having improved the position of his g-pawn, or to play ...h5 with a
+possible ...g4 and ...Bg5 to come.} h5 )dxe5 36. f6 Bg6 37. h4 gxh4 38. Kh3 Kg8 39. Kxh4 Kh7 40. Kg4 Bc7 {If Black simply waits, then White could
+eventually attack on the kingside, for example} (40... Rbb7 41. Rh1 Rb8 42. Ba4 (42. Rah2 h5+ 43. Kg5 a4 44. Rxh5+ Bxh5 45. Rxh5+ Kg8 46. Kf5 a3 47. Rg5+ Kf8 48. Rh5 {and} )(42. Rxh6+ Kxh6 43. Rh2+ Bh5+ 44. Rxh5+ Kg6 {are drawn.} )Rbb7 $2 (42... Rab7 {is still OK} )43. Rah2 h5+ 44. Kg5 Kg8 45. Bd1 Rb1 46. Bxh5 Rxh1 47. Rxh1 Bxh5 48. Rxh5 a4 49. Rh2 {followed by Kf5, and Black is in
+trouble. The move played clears the back rank in case a black rook is needed
+on the kingside.} )41. Nxc7 {Acceding to the draw.} ({After} 41. Rh1 {Not} Raa8 $2 (41... Rg8 42. Kf3 Bd6 43. Rah2 h5 44. Ba4 Kh6 45. Bd1 Rb8 46. Ke3 Rb1 47. Nc3 )({the simplest line is} 41... h5+ 42. Kf3 (42. Kg5 Rg8 )Bd6 43. Ba4 Kh6 44. Rah2 Rab7 {with ...Rb2 or ...Rb1 to come, and White has no time to
+step up the pressure on h5.} )42. Rxh6+ Kxh6 43. Rh2+ Bh5+ 44. Rxh5+ Kg6 45. Bd7 {and mates} )Rxc7 42. Rxa5 Rd8 43. Rf3 Kh8 {This position is just
+drawn. Neither side can make any real progress.} 44. Kh4 Kg8 45. Ra3 Kh8 46. Ra6 Kh7 47. Ra3 {It would be nice to transfer the bishop to d5,} ({but} 47. Bc6 {is met by} Rd6 )Kh8 48. Ra6 1/2-1/2
+
+[Event "New York Man-Machine"]
+[White "Comp Deep Blue"]
+[Black "Kasparov,Garry"]
+[Site "New York"]
+[Round "2"]
+[Annotator "Nunn,J"]
+[Result "1-0"]
+[Date "1997.05.04"]
+[BlackElo "2785"]
+[PlyCount "90"]
+
+1. e4 e5 {Certainly one of Black's most solid defences to 1 e4.} 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. h3 h6 {Kasparov
+adopts a rather antiquated and passive defence known as the Smyslov Variation.
+White's basic plan is to play d4 and then Sbd2-f1-g3. This securely defends
+his central pawn structure, while making it possible for his remaining pieces
+to be developed. The current thinking is that Black should obstruct this plan,
+and the best way to do this is to adopt the Zaitsev System, in which Black
+plays Kasparov wählt eine etwas antiquierte und passive Verteidigung, die
+Smyslov-Variante. Der Grundplan von Weiß besteht darin, d4 und anschließend
+Sbd2-f1-g3 zu spielen. Damit wird seine Bauernstruktur im Zentrum sicher
+verteidigt, während gleichzeitig die übrigen Figuren entwickelt werden können.
+Die herrschende Meinung ist, daß Schwarz den Plan mit dem Zaitsev-System (9...
+Lb7 10.d4 Te8 11.Sbd2 Lf8) durchkreuzen sollte. Der Druck auf e4 macht 12.Sf1
+unmöglich, da 12...exd4 einen Bauern gewinnt. Also muß der Springer auf d2
+bleiben. Das wiederum blockiert den Läufer auf c1 und erschwert die weiße
+Entwicklung. Kasparov hat diese Variante wohl deswegen abgelehnt, weil sie zu
+sehr scharfen, zweischneidigen Stellungen führen kann.} (9... Bb7 10. d4 Re8 11. Nbd2 Bf8 {The pressure against e4 makes 12 Nf1 impossible (as 12...exd4
+would win a pawn), and so the knight must stay on d2. This, in turn, blocks in
+the bishop on c1 and makes White's development more difficult. Kasparov
+probably did not like this line because it can lead to very sharp and
+double-edged positions.} )10. d4 Re8 11. Nbd2 Bf8 12. Nf1 {Possible now
+because 12...exd4 13 cxd4 Nxe4 ... Jetzt ist der Zug möglich, weil nach 12...
+exd4 13.cxd4 Sxe4 Weiß mit der Gabel 14.Ld5 Material gewinnt. Das funktioniert
+nur, weil Schwarz mit ...h6 ein Tempo verschwendet hat, anstatt ...Lb7 wie in
+der obigen Anmerkung zu spielen.} Bd7 (12... exd4 13. cxd4 Nxe4 {would lose
+material to 14 Bd5 forking the knights on e4 and c6. This only works because
+Black has spent a tempo on ...h6 instead of playing ...Bb7 as in the previous
+note.} )13. Ng3 {Without any difficulty, White has achieved his optimum piece
+set-up. Ohne größere Schwierigkeiten hat Weiß eine optimale Figurenaufstellung
+bekommen.} Na5 14. Bc2 c5 15. b3 Nc6 16. d5 {Deep Blue blocks the centre, even
+though blocked centres are supposed to favour humans over computers. However,
+the machine's play in this game shows that Deep Blue suffers from this defect
+far less than other computers. Deep Blue blockiert das Zentrum, auch wenn das
+für den menschlichen Spieler Vorteile bringen soll. Die weitere Partieführung
+zeigt, daß dieser Rechner weit besser in solchen Stellungen klarkommt als die
+anderen Schachprogramme.} Ne7 17. Be3 {This is a theoretical position which
+has occurred a number of times in grandmaster chess. The earlier games suggest
+that White is slightly better, but with very accurate play Black retains
+equalising chances. The first point to note is that Black faces more problems
+on the queenside than the kingside. The e7-knight can move to g6, when Black
+has sufficient minor pieces to defend the kingside. The queenside, on the
+other hand, is looking a little bare. White's aim is to play a4 and b4. If
+Black is forced to play ...c4, then White will have a virtually guaranteed
+advantage. He can double or even triple on the a-file, and Black will probably
+be forced to concede the a-file. In view of Black's total lack of counterplay
+elsewhere, this could be very unpleasant for him. Moreover, the move ...c4
+opens up the e3-a7 diagonal for White's bishop, which would then control
+squares in the very heart of Black's position. As Black's dark-squared bishop
+is locked away on f8, there would be no means by which Black could contest
+this control. It follows that Black must avoid meeting b4 by ...c4. This
+implies that his queen and rooks belong on the queenside, supporting the
+c5-square and being prepared to seize open files if pawn exchanges occur. Das
+ist eine theoretische Stellung, die häufig genug im Großmeisterschach
+vorgekommen ist. Die früheren Partien legen nahe, daß Weiß etwas besser steht,
+aber mit genauem Spiel behält Schwarz Ausgleichschancen. Man sollte sich als
+erstes vergegenwärtigen, daß Schwarz am Damenflügel die größeren Probleme
+besitzt. Der Springer auf e7 kann nach g6 ziehen, wonach Schwarz genügend
+Leichtfiguren hat, um den Königsflügel abzusichern. Am Damenflügel dagegen
+sieht es karger aus. Weiß will a4 und b4 spielen. Falls Schwarz gezwungen ist,
+...c4 zu spielen, hat Weiß fast immer einen Vorteil. Er kann auf der a-Linie
+verdoppeln oder sogar verdreifachen, so daß Schwarz gezwungen ist, diese Linie
+aufzugeben. Angesichts des Fehlens jeglichen Gegenspiels ist das sehr
+unangenehm. Ferner öffnet der Zug ...c4 die e3-a7-Diagonale für den weißen
+Läufer, der anschließend die wichtigsten Felder der schwarzen Stellung
+kontrolliert. Da der schwarzfeldrige Läufer auf f8 eingesperrt ist, kann
+Schwarz wenig dagegen unternehmen. Aus all dem folgt, daß Schwarz es vermeiden
+muß, auf b4 ...c4 spielen zu müssen. Also muß er seine Dame und die Türme am
+Damenflügel behalten, um das Feld c5 zu stützen und die offenen Linien zu
+besetzen, falls Bauern abgetauscht werden.} Ng6 {This is not really wrong,
+although other players have given preference to arranging the queenside pieces,
+for example Das ist nicht wirklich schlecht, obwohl andere Spieler einen
+anderen Aufbau bevorzugen, z.B.} (17... Qc7 {17...Qc8 and 17...Nc8 have also
+been played, but these moves appear less logical 17...Dc8 und 17...Sc8 wurden
+auch gespielt, sind aber weniger einleuchtend} 18. a4 {and now: und nun:} bxa4 {(ich persönlich mag diesen Zug nicht, da er das Feld c4 aufgibt)} (18... Ng6 19. Qd2 Reb8 20. Ra2 Qb7 21. Rea1 Ne8 22. a5 Nf6 {1/2-1/2 Gipslis-Reshevsky,
+Sousse Interzonal 1967} )(18... Rec8 19. Qd2 Ng6 20. Ra2 Qb7 21. Rea1 (21. b4 cxb4 22. cxb4 bxa4 23. Bxa4 Bxa4 24. Rxa4 Rc4 {is fine for Black} )Ne8 22. Nh5 Be7 {1/2-1/2 Gipslis-Matanovic, Sousse Interzonal 1967} )19. bxa4 {
+I don't like this move, which concedes the square c4} Reb8 20. Qe2 {followed
+by Nd2-c4, and White is slightly better. gefolgt von Sd2-c4, und Weiß steht
+etwas besser.} Ng6 (20... Qa5 21. Nd2 Ng6 22. Nc4 Qd8 23. Qd2 Ne8 24. a5 Ra7 25. Nb6 Nc7 26. Nxd7 Qxd7 27. Ba4 Qc8 28. c4 Rab7 {Rodriguez,A-Augustin,J/
+Halle 1976/0-1 (62)} )21. Reb1 Bc8 22. Nd2 Nd7 23. Nf5 Nf4 24. Qf3 g6 25. Ng3 Bg7 26. Nc4 Nb6 27. Nxb6 Rxb6 28. Rxb6 Qxb6 29. Rb1 Qc7 30. Ne2 Nxe2+ 31. Qxe2 {1/2-1/2 Balashov,Y-Augustin,J/Halle 1976  A completely different plan, which
+is also playable, is 18...g6 19 Qd2 Kh7, followed by ...Bg7, which improves
+the position of the dark-squared bishop. This is especially useful if White
+later becomes active on the kingside with f2-f4. Ein ganz anderer, ebenfalls
+spielbarer Plan ist 18...g6 19.Dd2 Kh7, gefolgt von ...Lg7, womit die Stellung
+des schwarzfeldrigen Läufers verbessert wird. Das ist besonders nützlich,
+falls Weiß später mit f2-f4 am Königsflügel aktiv wird.} )18. Qd2 Nh7 $2 {
+The start of a very poor plan, which costs Black a great deal of time. 18...
+Qg6 would transpose to the previous note, while 18...Qc8 19 Kh2 Qb7 20 a4 Reb8
+was played in Knezevic-Djuric, Paris Open 1995 and led to a draw. As we can
+see, the most popular plan involves ...Qc7 followed by ...Rec8 or ...Reb8. Der
+Anfang eines sehr schwachen Plans, der Schwarz eine Menge Zeit kostet. 18...
+Dc7 hätte zur vorhin empfohlenen Variante geführt, während 18...Dc8 19.Kh2 Db7
+20.a4 Teb8 in der Partie Knezevic-Djuric, Paris Open 1995, gespielt wurde und
+zum Remis führte. Wie wir sehen können, sieht der bevorzugte Plan ...Dc7
+gefolgt von ...Tec8 oder ...Teb8 vor.} (18... Qc8 19. Kh2 Qb7 20. a4 Reb8 21. a5 Rc8 22. b4 Rc7 23. Rac1 Re8 24. Bb1 Qc8 25. Red1 Kh8 26. Ba2 Kg8 27. Bb1 Qb8 28. Ba2 Rec8 29. Kg1 Be8 30. Bb1 Bd7 31. Ba2 Be8 32. Bb1 {1/2-1/2 Knezevic,
+B-Djuric,S/Paris op 1995} )19. a4 Nh4 {I do not believe that Kasparov would
+have played like this against a strong human player. Of course, in a cramped
+position it is desirable to exchange pieces, but Kasparov spends far too much
+time arranging this exchange. The queen will be needed to defend the queenside
+and returning to d8 will cost further tempi. Perhaps the first game led
+Kasparov to believe that the computer would not undertake direct aggressive
+action, but this time Deep Blue pursue its aims with admirable directness. Ich
+glaube nicht, daß Kasparov das gegen einen starken menschlichen Gegner
+gespielt hätte. Natürlich ist es wünschenwert, in einer beengten Stellung
+Figuren abzutauschen, aber Schwarz verschwendet zuviel Zeit mit der
+Vorbereitung des Abtauschs. Die Dame wird benötigt, um den Damenflügel zu
+verteidigen, und die Rückkehr nach d8 wird weitere Tempi kosten. Vielleicht
+hat Kasparov aus der ersten Partie geschlossen, daß der Computer keine
+direkten aggressiven Aktivitäten entfalten würde, aber diesmal verfolgt Deep
+Blue seine Ziele mit bewundernswerter Geradlinigkeit.} 20. Nxh4 Qxh4 21. Qe2 $1 {The threat is 22 Bd3, forcing Black to either commit his b5-pawn or concede
+the a-file. The queen has to return. Die Drohung ist 22.Ld3, was Schwarz
+zwingt, seinen b5-Bauern festzulegen oder die a-Linie aufzugeben. Die Dame muß
+zurück.} Qd8 ({After Nach} 21... bxa4 {White can retain the advantage either
+by behält Weiß sowohl mit} 22. bxa4 (22. b4 cxb4 23. cxb4 Bb5 24. Nf5 (24. Qd1 )Bxe2 25. Nxh4 Bb5 {or als auch mit} )Reb8 23. Bd3 {die Oberhand.} )22. b4 Qc7 23. Rec1 c4 $6 {Exactly what Black is trying to avoid in this line
+- playing ....c4 while White still has the possibility of opening the a-file.
+Das ist genau das, was Schwarz in dieser Variante zu vermeiden trachtet: ....
+c4 zu spielen, während Weiß noch die Möglichkeit hat, die a-Linie zu öffnen.} ({It is true that Es ist richtig, daß} 23... Be7 24. c4 {is very dangerous for
+Black, sehr gefährlich für Schwarz sein kann, aber ich glaube, daß} )({but I
+think it would have been better to play} 23... Qb7 {White has a slight
+advantage after die bessere Wahl gewesen wäre. Weiß hat nach} 24. f4 exf4 25. Bxf4 Nf6 {but less than in the game. einen leichten Vorteil, aber weniger als
+in der Partie.} )24. Ra3 Rec8 25. Rca1 Qd8 26. f4 $1 {A stunning move played
+by a computer. Human beings know very well that opening a second front against
+a position under pressure can often cause it to collapse completely, but for a
+computer to find this idea is exceptional. None of the home computer programs
+I tested found this move at a tournament time-limit. Ein atemberaubender Zug,
+gespielt von einem Computer. Wir Menschen wissen, daß, wenn der Gegner unter
+Druck steht, man durch das Öffnen einer zweiten Front den Zusammenbruch
+schnell herbeiführen kann. Daß ein Computer das zu begreifen scheint, ist
+außergewöhnlich. Keines der Schachprogramme, die ich getestet habe, findet
+diesen Zug in der Turnierbedenkzeit. Eine Alternative wäre die Verdreifachung
+auf der a-Linie, z.B.} ({Another plausible plan is to triple on the a-file,
+for example} 26. Bd1 Be7 27. Qa2 Bg5 28. Bxg5 Qxg5 29. axb5 Bxb5 30. Ba4 {
+White is better in this line, too, but play could become a little murky after
+Auch hier steht Weiß besser, aber nach} Rab8 31. Bxb5 axb5 32. Ra6 Rd8 33. Nf5 g6 34. Nxd6 Qe7 {könnte das Spiel sich etwas trüben.} )Nf6 ({The
+desperate Das verzweifelte} 26... exf4 27. Bxf4 g5 28. Be3 Bg7 {leads nowhere
+after führt nirgendwohin. Nach} 29. Bd4 {exchanging the active bishop and
+leaving Black's kingside weakened. wird der aktive Läufer abgetauscht, und der
+schwarze Königsflügel bleibt geschwächt.} )27. fxe5 {An interesting decision.
+This opens up the f-file and creates a protected passed pawn, but a diagonal
+is opened for this bishop on f8. However, this latter factor is of little
+significance since the solid pawn chain c3-b4 effectively restricts the
+bishop's activity. Eine interessante Entscheidung. Das öffnet die f-Linie und
+schafft einen gedeckten Freibauern. Aber es öffnet sich gleichzeitig eine
+Diagonale für den Läufer auf f8. Allerdings ist letzteres weniger relevant, da
+die solide Bauernkette c3-b4 die Aktivität des Läufers effektiv einschränkt.} dxe5 28. Qf1 ({It would have been slightly more accurate to play Es war etwas
+genauer, sofort} 28. Qf2 {immediately. zu spielen.} )Ne8 ({Black could
+have set a trap by Schwarz konnte mit} 28... Bd6 {, when the greedy eine Falle
+aufstellen, weil das gierige} 29. axb5 (29. Nf5 $1 Bxf5 30. Qxf5 )axb5 30. Rxa8 Rxa8 31. Rxa8 Qxa8 32. Bxh6 {would have come to nothing after zu
+nichts führt:} Qa2 33. Bb1 Qb3 34. Bd2 Bxb4 {. However, White could continue
+simply by 29 Nf5 Bxf5 30 Qxf5, with a clear positional advantage. Allerdings
+konnte Weiß einfach mit 29.Sf5 Lxf5 30.Dxf5 klare positionelle Vorteile
+erlangen.} )29. Qf2 Nd6 {The transfer of the knight to d6 may appear to favour
+Black, but actually the knight is doing nothing active and it can be put under
+pressure by Bc5 and Nf5. Meanwhile, Black's problems on the a-file persist.
+The need to meet axb5 by ...axb5 (a piece recapture would leave the a6-pawn
+horribly weak) means that all Black's major pieces are tied to the back rank,
+leaving him with few constructive ideas. Die Überführung des Springers nach d6
+könnte gut für Schwarz aussehen, aber in Wirklichkeit ist der Springer nicht
+aktiv und kann mit Lc5 und Sf5 unter Druck gesetzt werden. Gleichzeitig
+bleiben die schwarzen Probleme auf der a-Linie erhalten. Die Notwendigkeit,
+axb5 mit ...axb5 zu beantworten (nach Wiedernehmen mit einer Figur wäre der
+a6-Bauer extrem schwach), bedeutet, daß alle schwarzen Schwerfiguren an die
+hintere Reihe gebunden sind und er sehr wenige konstruktive Ideen hat.} 30. Bb6 Qe8 31. R3a2 Be7 32. Bc5 Bf8 $2 {After this the position is just lost. Perhaps
+the last chance was Hiernach ist die Stellung einfach verloren. Vielleicht war
+die letzte Chance} (32... Qd8 {with the idea mit der Idee} 33. Nf5 Bxf5 34. exf5 a5 {and Black's position is at least showing a few signs of life. The
+tactical justification for this line is , und die schwarze Stellung zeigt
+zumindest einige Lebenszeichen. Die taktische Rechtfertigung ist} 35. Bb6 Bh4 $1 {and White has nothing clear-cut. , wonach es für Weiß keine klaren Ziele
+gibt.} )33. Nf5 Bxf5 34. exf5 f6 {The only way to prevent White making further
+inroads on the kingside by f6, but now Deep Blue comes up with a deceptively
+simple solution. Nur so kann man Weiß daran hindern, weitere Einbrüche am
+Königsflügel mit f6 zu erzielen. Aber nun wartet Deep Blue mit einer täuschend
+einfachen Lösung auf.} 35. Bxd6 $1 Bxd6 36. axb5 $1 ({It would be wrong to
+play Falsch wäre} 36. Qb6 Rd8 (36... Bc7 $2 37. Qe6+ Kh7 38. Qxe8 {wins gewinnt
+} )37. axb5 Rab8 38. Qxa6 e4 {when, at the cost of two pawns, Black has
+developed considerable counterplay based on ...Qe5 and possibly ...e3. However,
+this is again a remarkable move by Deep Blue; most computers (including Fritz
+and Hiarcs) go for the material without hesitation. Did Deep Blue reject this
+line based on very deep analysis, is there some subtle programming involved?
+Für zwei Bauern hätte Schwarz danach erhebliches Gegenspiel, das auf ...De5
+und möglicherweise ...e3 beruht. Aber wieder findet Deep Blue einen höchst
+bemerkenswerten Zug. Die meisten Programme, z.B. Fritz und Hiarcs, nehmen ohne
+Zögern das Material. Hat Deep Blue die Variante auf Grund einer sehr tiefen
+Berechnung oder mit Hilfe von sehr subtilen positionellen Bewertungskriterien
+abgelehnt?} )axb5 37. Be4 {A cruel move. Black's only chance of
+counterplay is to activate his bishop by ...e4, but Deep Blue cuts the rope
+which might have saved the drowning Kasparov. Ein grausamer Zug. Die einzige
+Chance für Schwarz, Gegenspiel zu bekommen, wäre, seinen Läufer durch ...e4 zu
+aktivieren. Aber Deep Blue durchtrennt das einzige Seil, das den ertrinkenden
+Kasparov retten konnte.} Rxa2 38. Qxa2 {This position is just lost. Black's
+bishop must stay on d6 to block the d5-pawn, but Black cannot both maintain
+this bishop and defend the weak pawn on b5. Black's total lack of counterplay
+is the deciding factor: White has plenty of time to slowly infiltrate with his
+queen and rook. Die Stellung ist verloren. Der schwarze Läufer muß auf d6
+bleiben, um den d5-Bauern zu blockieren, aber Schwarz kann nicht den Läufer
+dort behalten und gleichzeitig den schwachen Bauern auf b5 verteidigen. Das
+vollständige Fehlen jeden Gegenspiels ist entscheidend. Weiß hat viel Zeit,
+mit Dame und Turm die schwarze Stellung zu infiltrieren.} Qd7 39. Qa7 Rc7 ({
+Or Oder} 39... Qxa7+ 40. Rxa7 Rd8 41. Ra5 Rb8 42. Ra6 Rd8 43. Rb6 {and the
+first pawn falls. und der erste Bauer fällt.} )40. Qb6 Rb7 41. Ra8+ Kf7 42. Qa6 Qc7 43. Qc6 Qb6+ 44. Kf1 $2 (44. Kh1 $1 Rb8 45. Ra6 Qe3 (45... Qf2 46. Qxd6 Re8 47. Ra1 )46. Qxd6 Re8 47. Ra1 Qxe4 48. Ra7+ Kg8 49. Qd7 $18 )Rb8 45. Ra6 {Ergebnispatzer} (45. Ra6 Qe3 $1 46. Qxd6 Re8 47. h4 h5 (47... Re7 48. Bf3 Qc1+ 49. Kf2 Qd2+ 50. Kg3 Qe1+ 51. Kg4 h5+ 52. Kxh5 Qg3 53. Qe6+ Rxe6 54. dxe6+ Kg8 55. Ra8+ Kh7 56. Rh8+ Kxh8 57. e7 Kh7 58. e8=Q $18 )48. Bf3 Qc1+ 49. Kf2 Qd2+ 50. Be2 Qf4+ $11 )h5 1-0
+
+[Event "New York Man-Machine"]
+[White "Kasparov,Garry"]
+[Black "Comp Deep Blue"]
+[Site "New York"]
+[Round "1"]
+[Annotator "Nunn,J"]
+[Result "1-0"]
+[Date "1997.05.03"]
+[WhiteElo "2785"]
+[PlyCount "89"]
+
+1. Nf3 d5 2. g3 Bg4 3. b3 {Kasparov adopts a very quiet opening - not a bad
+policy against a computer. Kasparov wählt eine sehr ruhige Eröffnung – keine
+schlechte Politik bei Partien gegen einen Computer} Nd7 4. Bb2 e6 5. Bg2 Ngf6 6. O-O c6 7. d3 Bd6 8. Nbd2 O-O 9. h3 Bh5 {By a slightly riundabout route we
+have reached a position which has occurred many times in master and
+grandmaster chess. White's basic plan is to gain space in the ecntre with e4.
+Black will sooner or later have to deal with the threat of e5, either by
+moving his minor pieces out of the way, or by playing ...e5 himself. In the
+latter case, there will be a slight weakness on f5 which might be able to
+exploit by Nh4-f5. At the moment this last manoeuvre is impossible, because
+the f3-knight is pinned, but this explains why one often sees the odd-looking
+move Qe1 in this system: White wants to support the push of his e-pawn, while
+at the same time freeing his knight from the pin. Auf Umwegen haben wir eine
+Stellung erreicht, die man in vielen Meister- und GM-Partien findet. Der weiße
+Plan besteht darin, im Zentrum Platz mit e4 zu gewinnen. Schwarz muß früher
+oder später mit der Drohung e5 fertig werden, indem er entweder seine
+Leichtfiguren aus dem Weg räumt oder selber ...e5 spielt. Im zweiten Falle
+entsteht eine leichte Schwächung des Feldes f5, die Weiß mit Sf3-h4-f5
+ausnützen könnte. Im Augenblick ist das Manöver natürlich unmöglich, da der
+Springer gefesselt ist. Aber man versteht, warum der Weißspieler in diesem
+System häufig zum merkwürdig aussehenden Zug De1 greift: Weiß will den Vorstoß
+des e-Bauern unterstützen und gleichzeitig den Springer von der Fesslung
+befreien.} 10. e3 {A very unusual move, indeed I can find no examples of it
+from practical play. The normal moves here are 10 e4 and 10 Qe1. Of the two, I
+would judge 10 e4 to be the more flexible. In this way White can reserve the
+option of either Qe1 or Qe2, depending on Black's reply. The merits of 10 e3
+are rather hard to find; Kasparov soon adopts the Qe1 and e4 plan, but having
+lost a tempo in the process. Perhaps his idea was simply to take DB out of its
+opening book. Ein sehr ungewöhnlicher Zug, für den ich kein Beispiel in
+praktischen Partien finde. Die normalen Züge sind hier 10.e4 und 10.De1. Den
+ersten halte ich für den flexibleren. Weiß hält sich je nach schwarzer
+Erwiderung die beiden Optionen De1 oder De2 offen. Der Vorteil von 10.e3 ist
+nicht leicht zu erkennen. Kasparov wählt den Plan De1 nebst e4, aber er hat
+dabei ein Tempo verloren. Vielleicht wollte er lediglich Deep Blue aus dem
+Eröffnungsbuch werfen.} h6 {Kasparov's deviation at once earns its reward.
+Instead of putting the extra tempo to use by developing queenside counterplay,
+for example by 10...a5, the computer makes a pawn move which is worse than
+useless, because it weakens the kingisde slightly. In a few moves we will see
+the importance of this. Now that the extra tempo has been handed back, the
+balance again slightly favours White and now the computer is on its own.
+Kasparovs Abweichung trägt sofort Früchte. Statt das Extratempo für die
+Entwicklung von Gegenspiel am Damenflügel, etwa mit 10...a5, zu nutzen, macht
+der Rechner einen Zug, der schlimmer als wertlos ist, weil er den Königsflügel
+etwas schwächt. In einigen Zügen werden wir sehen, warum das so wichtig ist.
+Somit hat Weiß das Extratempo zurückerhalten, und die Stellung ist günstiger
+für Weiß, besonders weil der Computer eigenständig spielen muß.} 11. Qe1 Qa5 {
+The play of DB in the phase of the game leaves much to be desired. It quite
+reasonably plans ...Ba3 to exchange off the active bishop on b2, but this plan
+is easily countered and then the queen is doing little on a5. Die Spielweise
+von Deep Blue in dieser Partiephase läßt viel zu wünschen übrig. Der
+vernünftige Plan ...La3 mit Abtausch des aktiven Läufers auf b2 wird leicht
+pariert, und danach hat die Dame keine Zukunft auf dem Feld a5.} 12. a3 Bc7 $6 {And this is very odd. There are two possible reasons behind this move. First
+of all, it may simply be anticipating e4-e5 by White; secondly, DB may want to
+have its queen defended in case of a line such as Ein merkwürdiger Zug, für
+den ich zwei mögliche Gründe sehe. Zunächst einmal kann er in Erwartung eines
+weißen Bauernvorstoßes e3-e4-e5 gespielt worden sein; zum anderen könnte Deep
+Blue seine Dame decken wollen, um Varianten wie} (12... Rad8 13. Bxf6 Nxf6 14. Ne4 Qxe1 15. Nxf6+ gxf6 16. Rfxe1 {although this is nothing to fear as Black's
+active bishops easily compensate for the insignificant weakeneing of the
+kingside pawn structure. zu vermeiden, obwohl die aktiven schwarzen Läufer für
+die geringfügige Schwächung der Bauernstruktur am Königsflügel genügend
+Kompensation bieten.} )({I would prefer Ich hätte den Zug} 12... Bg6 {which
+prepares to answer e4 by ...e5. The prophylactic ...Bg6 is necessary in this
+case because otherwise ...e5 can be met by Nh4. This is particularly strong
+because of the poor move ...h6, which means that after a possible exchnage of
+knight for bishop on g6, Black cannot make the natural recapture with the
+h-pawn. Thus Black has to play ...Bg6 in advance, ready to meet Nh4 by ...Bh7.
+In this phase of the game DB just responds to each momentary problem on a
+move-by-move, without creating any coherent plan for developing counterplay.
+In this respect Kasparov's choice of opening appears very intelligent.
+bevorzugt, der auf e4 die Antwort ...e5 vorbereitet. Das prophylaktische ...
+Lg6 ist dabei notwendig, da sonst ...e5 durch Sh4 entkräftet wird. Das ist
+besonders effektiv nach dem schwachen Zug ...h6, weil nach dem Abtausch des
+Springers für den Läufer auf g6 Schwarz nicht mit dem h-Bauern wiedernehmen
+kann. Somit muß Schwarz im voraus ...Lg6 spielen, um auf Sh4 mit ...Lh7 zu
+antworten. In dieser Partiephase reagiert Deep Blue Zug für Zug auf jedes
+auftauchende Problem, ohne einen zusammenhängenden Plan für Gegenspiel zu
+entwickeln. In dieser Hinsicht scheint Kasparovs Eröffnungwahl sehr klug
+gewesen zu sein.} )13. Nh4 {A rather awkward move to meet. The threat is 14 g4
+Bg6 15 Nxg6, and Black has to make the ugly capture ...fxg6. Nevertheless, I
+think that this would have been less serious than the further kingisde
+weakening resulting from Black's next move. Ein unbequemer Zug. Die Drohung
+ist 14.g4 Lg6 15.Sxg6, und Schwarz muß den häßlichen Schlagzug ...fxg6
+ausführen. Dennoch glaube ich, daß es weniger ernst gewesen wäre als die
+Schwächung des Königsflügels, die nun folgt.} g5 $2 14. Nhf3 e5 {All this
+looks absolutely horrible to the human eye. Having pushed both e- and g-pawns,
+the f5-square has become a serious weakness. If White could plant a knight
+there, then the game would be decided. However, DB isn't as stupid as that;
+there is no straightforward route by which a knight can reach the key square.
+Nevertheless, this long-term weakness remains a lasting burden for Black. Das
+sieht alles für das menschliche Auge ziemlich schrecklich aus. Durch den
+Vorstoß der e- und g-Bauern ist das Feld f5 sehr schwach geworden. Kann Weiß
+einen Springer dort plazieren, wäre die Partie bereits entschieden. Ganz so
+dumm ist Deep Blue freilich nicht. Es gibt für den Springer keinen direkten
+Weg zum Schlüsselfeld. Dennoch bleibt die langfristige Schwäche eine bleibende
+Last für Schwarz.} 15. e4 {Kasparov at once takes steps to fix the weakness on
+f5. Kasparov ergreift sofort Maßnahmen, um die Schwäche von f5 festzuschreiben.
+} Rfe8 16. Nh2 {Kasparov proceeds cautiously. His plan is Qc1, Re1 and then
+Nf1-e3-f5. This is rather slow, but as White's position is solid if will be
+hard for Black to develop ny real counterplay. Kasparov geht vorsichtig ans
+Werk. Sein Plan ist Dc1, Te1 und dann Sf1-e3-f5. Das ist ziemlich langsam,
+aber da die weiße Stellung sehr stabil ist, wird es für Schwarz nicht leicht
+sein, ein echtes Gegenspiel aufzuziehen.} ({So far as I can see, he could have
+started this plan immediately with Soweit ich es beurteilen kann, hätte Weiß
+den Plan sofort mit} 16. Qc1 {, since einleiten können, da} g4 {is not a worry
+because of keine Drohung darstellt, denn Weiß könnte mit} 17. Nh4 {and the
+knight takes a short cut to f5. den Springer auf kürzestem Weg nach f5 bringen.
+} )Qb6 17. Qc1 a5 {At last DB hits upon a plan for developing
+counterplay, although in this prticular position it is not very effective. The
+natural follow-up is ...a4 to induce b4, and then ...c5. However, ...c5 is
+hard to arrange because of the pressure on d5, and if Black exchanges first on
+e4, then the route Nc4-e3-f5 is opened up for the knight on d2. We can see how,
+time and time again, Black's naturalplans are frstrated because they would
+seriously expose the weakness on f5. Endlich findet Deep Blue einen Plan, wie
+er Gegenspiel erhalten kann. Allerdings ist der Plan in dieser Stellung nicht
+sehr effektiv. Die natürliche Fortsetzung wäre ...a4, um b4 zu provozieren,
+wonach ...c5 folgt. Allerdings läßt sich ...c5 wegen des Drucks auf d5 nur
+schwer durchsetzen, und wenn Schwarz zunächst auf e4 tauscht, dann ist der Weg
+für Sd2-c4-e3-f5 offen. Wir sehen immer wieder in dieser Partie, wie die
+natürlichen Pläne von Schwarz durch die Schwäche von f5 durchkreuzt werden.} 18. Re1 Bd6 19. Ndf1 dxe4 {Now that the knight has moved away from d2, the
+possibility of Nc4 disappears and so this exchnage becomes feasible. However,
+the kniught is already on its way to f5 by a different route. Jetzt, wo der
+Springer von d2 weggezogen ist, verschwindet die Möglichkeit von Sc4, also
+wird der Abtausch ausführbar. Aber der Springer ist bereits auf dem Wege nach
+f5, allerdings auf einer anderen Route.} 20. dxe4 Bc5 21. Ne3 Rad8 22. Nhf1 {
+Black has hit upon a good method of keeping the knight out of f5 , temporarily
+at any rate. The f2-pawn is quite hard to defend, and until White nullfifies
+the pressure against it along the b6-f2 diagonal, the knight cannot hop into
+f5. Kasparov's idea is Nd2-c4; then, if Black wants to mainatin the pressure
+against f2 he must play ...Qa7, but White continues with b4, exploiting the
+line-up of a1-rook with the enemy queen, and Black is in trouble. Schwarz hat
+eine gute Methode gefunden, den Springer von f5 fernzuhalten, jedenfalls
+vorübergehend. Der f2-Bauer läßt sich schwer verteidigen, und bevor Weiß den
+Druck auf der b6-f2 Diagonale neutralisiert hat, kann der Springer nicht nach
+f5 hüpfen. Kasparovs Idee ist Sd2-c4; will Schwarz danach den Druck auf f2
+aufrechterhalten, muß er ...Da7 spielen, aber Weiß setzt mit b4 fort, und da
+der a-Turm die Dame im Auge hat, gerät Schwarz in Schwierigkeiten.} g4 {
+The computer desperately seeks to disturb White's plan. Although this move
+creates further kingisde weaknesses, it enable Black to develop some piece
+activity. This is the critical phase. Everybody who has played a computer
+knows the scenario: you get a strategically winning position, the computer
+makes some desperate tactical lunge, you make a couple of inaccuracies and
+suddenly the machine is all over you. Der Computer versucht verzweifelt, den
+weißen Plan zu stören. Obwohl dieser Zug weitere Schwächen am Königsflügel
+bewirkt, bekommt Schwarz aktiveres Figurenspiel. Das ist eine kritische Phase.
+Jeder, der gegen einen Computer gespielt hat, kennt das Szenario: man bekommt
+eine strategische Gewinnstellung, der Computer macht einen verzweifelten
+taktischen Vorstoß, man begeht einige kleine Ungenauigkeiten, und plötzlich
+hat die Maschine die Oberhand.} 23. hxg4 Nxg4 24. f3 $2 {In this desire to
+achieve his straegic ends without making the slightest concession, Kasparov
+commits an inaccuracy which allows the machine to develop significant
+counterplay. Kasparov will seine strategischen Ziele ohne Konzessionen
+erreichen. Er begeht infolgedessen eine ernsthafte Ungenauigkeit und erlaubt,
+daß die Maschine signifikantes Gegenspiel bekommt.} ({The most obvious plan is
+Der offensichtlichste Plan ist} 24. Nxg4 Bxg4 25. Ne3 {. Kasparov probably
+realised that after . Kasparov hat wahrscheinlich erkannt, daß es nach} Be6 {
+, it is not so easy to make progress, because Black has manoeuvred his
+light-squared bishop to a reasonable active square. For example 26 Qd1,
+heading for h5, is met by 26...Bd4. However, I think that this was his best
+option; after nicht leicht ist, Fortschritte zu erzielen, weil Schwarz seinen
+weißfeldrigen Läufer auf ein verhältnismäßig aktives Feld gebracht hat. Zum
+Beispiel wird 26.Dd1, mit dem Ziel Dh5, durch 26...Ld4 durchkreuzt. Allerdings
+glaube ich, daß es seine beste Option war; nach} 26. Re2 Kh7 27. Qe1 {White's
+remaining pieces come into play, and Black's kingisde weaknesses are not going
+to run away. Here, for example kommen die übrigen weißen Figuren ins Spiel,
+während die schwarzen Schwächen am Königsflügel nicht verschwinden. Nach z.B.} Bd4 {runs into kommt} 28. Bxd4 exd4 29. Nd5 $1 cxd5 30. exd5 {with a large
+advantage for White. mit einem deutlichen Vorteil für Weiß.} )Nxe3 25. Nxe3 Be7 $1 {An excellent defensive move. A human would find it hard to
+abandon the pressure on the b6-g1 diagonal, but the computer ispots that the
+bishop has an even better square on g5, both shielding the kingside weaknesses
+and pinning the e3-knight from a different sirection. Ein hervorragender
+Verteidigungszug. Ein Mensch hätte es schwer gefunden, den Druck auf der b6-g1
+Diagonale aufzugeben, aber der Computer merkt, daß der Läufer einen noch
+besseren Platz auf g5 hat, von wo aus er die Schwächen am Königsflügel
+abschirmt und gleichzeitig den Springer auf e3 aus einer ganz anderen Richtung
+fesselt.} 26. Kh1 Bg5 27. Re2 {Kasparov recovers well. He intends Qg1 followed
+by Nf5, and the damage is repaired, but the computer strikes first. Kasparov
+hat das gut überstanden. Er beabsichtigt Dg1, gefolgt von Sf5, und der durch
+die frühere Ungenauigkeit entstandene Schaden ist beseitigt. Aber der Computer
+schlägt zuerst zu.} a4 {A good introductory move. As we shall see, having c4
+avilable helps Black. Ein guter Einleitungszug. Wie wir sehen werden, hilft
+die Verfügbarkeit von c4 Schwarz.} 28. b4 f5 {Correct. Black must make use of
+his temporary piece activity to make some inroads. Passive play would allow
+White to get back on track exploiting his strategic advantages. Richtig.
+Schwarz muß seine vorübergehende Figurenaktivität dazu benutzen, um vorwärts
+zu kommen. Passives Spiel würde Weiß erlauben, seine strategischen Vorteile
+auszuspielen.} 29. exf5 $5 ({If White tries Wenn Weiß} 29. Qe1 fxe4 30. Nc4 {
+versuchen würde, dann zeigt uns} Qa6 {Now we see why one reason why Black
+prepared this line with ...a4; the attack against the c4-knight is awkward.
+einen Grund, warum Schwarz dieses Abspiel mit ...a4 vorbereitete. Der Angriff
+gegen den Springer auf c4 wirkt unbeholfen, und nach} 31. Rxe4 Nf6 {and White
+must jettison some material. He will always get some compensation, for example
+here 32 Nxe5 is unclear, but at least DB has randomised the game. The move
+Kasparov plays alsoinvolves an exchnage sacrifice. muß Weiß Material abwerfen.
+Wegen des geschwächten Königsflügels bekommt er einige Kompensation z.B. ist
+hier 32.Sxe5 unklar, aber zumindest hat Deep Blue ein Zufallselement in die
+Partie hineingebracht. Der Zug von Kasparov führt zu einem Qualitätsopfer.} )e4 30. f4 Bxe2 ({Schwarz darf nicht gierig sein:} 30... Bxf4 31. gxf4 Bxe2 32. Qd2 Bh5 {Forced, or else White also has the possibility of Ng4
+erzwungen, sonst hat Weiß die Möglichkeit zu Sg4.} 33. Qc3 Re7 34. Nc4 Qc7 35. Qh8+ Kf7 36. Qxh6 {and wins. mit Gewinn.} )31. fxg5 Ne5 {Black must block the
+long diagonal. Schwarz muß die lange Diagonale versperren.} (31... hxg5 32. Nd5 {wins at once. gewinnt sofort.} )32. g6 ({Nach} 32. gxh6 {spielt Schwarz} Kh7 {
+is a more reasonable reply, when Black has much better chances than in the
+game. und hat bessere Chancen als in der Partie.} ({nicht} 32... Rd6 $2 {
+The Chess Monthly web site comments that 32 gxh6 Rd6 gives Black a decisive
+attack, although White can win in one move by 33 Nc4!. wonach Weiß mit} 33. Nc4 $1 {einzügig gewinnen kann.} ))Bf3 33. Bc3 {A good prophylactic move. In
+many lines the queens are exchanged or White would like to send his queen away
+to the kingside. In these cases it is important not to allow ...Rd2. Ein guter
+Vorbeugezug. In vielen Varianten werden die Damen getauscht, oder Weiß schickt
+seine Dame zum Königsflügel. In solchen Fällen ist es wichtig, ...Td2 zu
+verhindern.} Qb5 $2 {A serious error. DB sees that this will probably lead to
+the exchange of queens, and has no objection in view of Black's material
+advantage. However, in the ending White's advanced pawns and general grip on
+the poisition count for more than the small material plus of rook for bishop
+and pawn. Instead, Black should have kept the queens on the board. Ein
+ernsthafter Fehler. Deep Blue erkennt, daß dies zum Damentausch führt, und der
+Rechner hat nichts dagegen. Schließlich hat Schwarz Materialvorteil.
+Allerdings zählen im Endspiel die verbundenen Freibauern von Weiß und seine
+generelle Beherrschung der Stellung mehr als der kleine Materialvorteil von
+Turm gegen Läufer und Bauer.} ({Natürlich sollte Schwarz die Damen auf dem
+Brett lassen. Eine Möglichkeit dazu wäre} 33... h5 {is one possibility. In
+many line Black gains a tempo because White acnnot now play his queen to f1 in
+one move. One line runs , und in vielen Varianten gewinnt Schwarz ein Tempo,
+da Weiß nun seine Dame nicht nach f1 ziehen kann. Ein Beispiel dafür ist} 34. Qe1 Qb5 35. Qf1 Ng4 36. Nxg4 (36. Qxb5 cxb5 37. f6 Nxe3 38. f7+ Kf8 39. fxe8=Q+ Rxe8 40. Bxf3 exf3 41. Kg1 {is probably a draw ist wahrscheinlich remis} )hxg4 37. Qxb5 cxb5 38. f6 Re6 {and Black can defend. und Schwarz kann sich
+verteidigen.} )({Another idea is Eine andere Idee ist} 33... Qc7 {intending to
+move the queen over to the kingside. Either of these options would have left
+the position unclear, whereas now Deep Blue slides downhill. mit der Absicht,
+die Dame auf den Königsflügel zu bringen. Jede dieser Optionen hätte zu einer
+unklaren Stellung geführt, während Deep Blue nach dem Textzug den Berg
+herunterrutscht.} )34. Qf1 Qxf1+ {Nun ist} ({Now} 34... Ng4 {is impossible
+because of unmöglich wegen} 35. Qxb5 cxb5 36. Nxg4 Bxg4 37. f6 )35. Rxf1 h5 36. Kg1 $1 {At first sight this position shouldn't be too bad for Black, since the
+e5-knight's attack on the g6-pawn means that the pawns cannot advance for the
+moment. However, Kasparov's move makes it all clear; he can afford to take his
+time, because Black has no constructive moves. The f3-bishop cannot move
+because of f6 and f7+, the knight must stay on e5 to cover g6, and this ties
+down the e8-rook too. The rook on d8 cannot achieve anything by itself, since
+the d-file penetration squares are under control, which leaves only Black's
+king. Auf den ersten Blick sollte die Stellung für Schwarz nicht allzu
+schlecht sein, da der Springer auf e5 den Vorstoß des Bauern auf g6 für den
+Augenblick verhindert. Kasparovs Züge machen indes klar, daß er in Ruhe
+vorgehen kann, da Schwarz keine konstruktiven Züge hat. Der Läufer auf f3 kann
+wegen f6 und f7+ nicht ziehen, der Springer muß auf e5 verharren und g6
+überwachen, was auch den Turm auf e8 bindet. Sein Partner auf d8 kann alleine
+nichts ausrichten, da die Eindringfelder auf der d-Linie alle unter weißer
+Kontrolle sind. Übrig bleibt nur der schwarze König.} Kf8 37. Bh3 b5 38. Kf2 Kg7 $6 {Making life easy for White by allowing g4 under favourable
+circumstances. Macht das Leben für Weiß etwas leichter, da nun g4 unter
+günstigen Bedingungen möglich wird.} 39. g4 Kh6 40. Rg1 hxg4 41. Bxg4 Bxg4 42. Nxg4+ Nxg4+ 43. Rxg4 Rd5 44. f6 Rd1 {See Frederic's piece for an analysis of
+44...Rf5+.} (44... Rf5+ 45. Kg3 (45. Ke2 Rg8 46. g7 Kh5 47. Rg2 Rf3 48. Bd4 Kh6 49. c3 Kh5 50. Rg1 Kh6 51. Rg4 Kh5 52. Rxe4 Rf5 53. Re6 Kg6 54. Rxc6 Re8+ 55. Kd2 Rh5 56. Re6 Rh2+ 57. Kd3 Rh3+ 58. Be3 Rd8+ 59. Ke4 Kf7 60. Rc6 )(45. Ke3 $1 Rf3+ 46. Ke2 Rxc3 47. f7 Rd8 48. g7 Rxc2+ 49. Ke1 Rc1+ 50. Kf2 Rc2+ (50... e3+ 51. Kg2 e2 52. g8=Q Rxg8 53. fxg8=Q Rg1+ 54. Kf3 Rxg4 55. Qh8+ Kg6 56. Qe8+ Kf5 57. Qf7+ Ke5 58. Kxg4 )51. Kg3 Rc3+ 52. Kh4 Rc1 (52... Rd1 53. g8=N+ )53. g8=Q Rh1+ 54. Kg3 Rg1+ 55. Kf4 Rf1+ 56. Ke5 Rd5+ 57. Ke6 Rf6+ 58. Kxf6 Rd6+ )Rf3+ 46. Kh4 Rd8 47. f7 Rd5 )45. g7 {A well-played game by Kasparov, from both
+the chess and the psychological point of view. Eine gut gespielte Partie von
+Kasparov, sowohl vom schachlichen als auch vom psychologischen Gesichtspunkt.} 1-0
+

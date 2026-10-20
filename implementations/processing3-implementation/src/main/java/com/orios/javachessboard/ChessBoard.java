@@ -20,7 +20,7 @@ public final class ChessBoard {
     private final Map<String, SquareBoard> boardCoordinates = new HashMap<>();
     private final SquareBoard[] squares = new SquareBoard[SQUARE_COUNT];
     private final BoardImagePieces boardImagePieces;
-    private final float squareSize;
+    private float squareSize;
 
     private boolean whiteToMove = true;
     private boolean whiteCanShortCastle = true;
@@ -233,6 +233,18 @@ public final class ChessBoard {
         return squareSize;
     }
 
+    /** Resizes every square while preserving the current board position. */
+    public void setSquareSize(float squareSize) {
+        if (!Float.isFinite(squareSize) || squareSize <= 0) {
+            throw new IllegalArgumentException("Square size must be a positive finite number");
+        }
+        if (Float.compare(this.squareSize, squareSize) == 0) return;
+        this.squareSize = squareSize;
+        for (SquareBoard square : squares) {
+            square.setSquareSize(squareSize);
+        }
+    }
+
     public boolean isWhiteToMove() {
         return whiteToMove;
     }
@@ -362,6 +374,7 @@ public final class ChessBoard {
     public void draw(float x, float y, boolean boardCoordinates) {
         float boardPixels = squareSize * BOARD_SIZE;
         float framePadding = boardPixels * 0.025f;
+        float labelSize = Math.max(9.0f, squareSize * 0.26f);
 
         pApplet.pushStyle();
         pApplet.fill(0);
@@ -369,11 +382,13 @@ public final class ChessBoard {
                 boardPixels + framePadding * 2, boardPixels + framePadding * 2);
 
         if (boardCoordinates) {
+            pApplet.textAlign(PApplet.CENTER, PApplet.CENTER);
+            pApplet.textSize(labelSize);
             for (int index = 0; index < BOARD_SIZE; index++) {
                 pApplet.fill(0);
                 pApplet.text(COLUMNS[index], index * squareSize + x + squareSize / 2.0f,
-                        y - framePadding * 1.5f);
-                pApplet.text(Integer.toString(BOARD_SIZE - index), x - framePadding * 2.5f,
+                        y - framePadding * 2.0f);
+                pApplet.text(Integer.toString(BOARD_SIZE - index), x - framePadding * 2.0f,
                         index * squareSize + y + squareSize / 2.0f);
             }
         }
