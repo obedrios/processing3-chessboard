@@ -45,7 +45,8 @@ Choose **File → Open PGN…**, select a game, and use the transport controls
 below the board. Click any move in **Notation** to enter that variation, or a
 cell in **Scoresheet** to jump within the active line. Choose
 **File → Close game** to return to the exact editor position that was visible
-before playback.
+before playback. While a game is loaded, click the read-only FEN field to copy
+the current position to the system clipboard.
 
 The player supports standard chess, comments, NAGs, nested RAV variations, and
 `SetUp`/`FEN` starting positions. Chess960 and other variants are intentionally

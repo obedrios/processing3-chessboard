@@ -17,8 +17,12 @@ import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.lang.reflect.InvocationTargetException;
@@ -279,6 +283,14 @@ public class ChessBoardDemoFrame  extends JFrame {
 
     private void configWidgetActions(){
         chessBoardSketch.setSwapConfirmation(this::confirmPieceSwap);
+        textFieldStrFen.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent event) {
+                if (playbackController.hasGame()) {
+                    copyPlaybackFenToClipboard();
+                }
+            }
+        });
         playbackController.addListener(state -> SwingUtilities.invokeLater(() -> {
             chessBoardSketch.getChessBoard().setPositionFromFENString(state.fen());
             textFieldStrFen.setText(state.fen());
@@ -562,11 +574,29 @@ public class ChessBoardDemoFrame  extends JFrame {
 
     private void setEditorModeEnabled(boolean enabled) {
         setEnabledRecursively(editorPanel, enabled);
-        textFieldStrFen.setEnabled(enabled);
+        textFieldStrFen.setEnabled(true);
+        textFieldStrFen.setEditable(enabled);
+        textFieldStrFen.setToolTipText(enabled
+                ? null : "Click to copy the current FEN position");
+        textFieldStrFen.setCursor(enabled
+                ? java.awt.Cursor.getPredefinedCursor(java.awt.Cursor.TEXT_CURSOR)
+                : java.awt.Cursor.getPredefinedCursor(java.awt.Cursor.HAND_CURSOR));
         buttonSetFenPos.setEnabled(enabled);
         buttonClearBoard.setEnabled(enabled);
         buttonClearSquareSel.setEnabled(enabled);
         buttonSetDefaultPos.setEnabled(enabled);
+    }
+
+    private void copyPlaybackFenToClipboard() {
+        String fen = textFieldStrFen.getText();
+        try {
+            Toolkit.getDefaultToolkit().getSystemClipboard()
+                    .setContents(new StringSelection(fen), null);
+            textFieldStrFen.selectAll();
+            showMessage("FEN copied to clipboard: " + fen);
+        } catch (IllegalStateException exception) {
+            showMessage("Clipboard is currently unavailable. Try again.");
+        }
     }
 
     private static void setEnabledRecursively(Component component, boolean enabled) {
