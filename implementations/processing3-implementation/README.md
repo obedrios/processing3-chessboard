@@ -2,4 +2,4 @@
 
 This is a java chessboard demo prototype using Processing 3.4
 
-![Java Chessboard demo](chess_demo.png)
+![Java Chessboard demo](docs/images/chess_demo.png)
